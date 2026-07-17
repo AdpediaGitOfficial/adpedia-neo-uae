@@ -48,7 +48,13 @@
       "Bash(git config *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(command -v gh)"
+      "Bash(command -v gh)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git ls-remote *)",
+      "Bash(ssh-add -l)",
+      "Bash(GIT_SSH_COMMAND=\"ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=5\" timeout 12 ssh -T git@github.com)",
+      "Bash(git commit -q -m 'chore: update local Claude Code permission allowlist *)"
     ]
   }
 }
