@@ -27,6 +27,21 @@
     -webkit-text-size-adjust: 100%;
   }
 
+  /* Lenis smooth-scroll (see SmoothScroll provider) */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
   body {
     background-color: theme("colors.ink.DEFAULT");
     color: theme("colors.paper.DEFAULT");
@@ -100,6 +115,22 @@
       transparent
     );
     mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+  /* Wider horizontal edge fade — used on the logo strip so ~2 logos dissolve each side */
+  .marquee-mask-wide {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 13%,
+      #000 87%,
+      transparent
+    );
+    mask-image: linear-gradient(to right, transparent, #000 13%, #000 87%, transparent);
+  }
+  /* Fade a marquee toward the bottom — used on the hero showcase strip */
+  .marquee-fade-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, #000 42%, transparent 97%);
+    mask-image: linear-gradient(to bottom, #000 42%, transparent 97%);
   }
   .pause-on-hover:hover [data-marquee],
   .pause-on-hover:focus-within [data-marquee] {

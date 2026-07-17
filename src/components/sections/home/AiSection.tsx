@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { Parallax } from "@/components/ui/Parallax";
 import { aiContent } from "@/lib/home-content";
 
 export function AiSection() {
@@ -22,13 +23,15 @@ export function AiSection() {
 
         <Reveal delay={0.1} className="relative my-4 w-full max-w-4xl">
           <div className="relative aspect-[1920/900] w-full">
-            <Image
-              src="/images/ai/wave.png"
-              alt="Abstract neural wave visualization representing AI-driven systems"
-              fill
-              sizes="(max-width: 1024px) 100vw, 896px"
-              className="object-contain"
-            />
+            <Parallax speed={0.06} className="absolute inset-0">
+              <Image
+                src="/images/ai/wave.png"
+                alt="Abstract neural wave visualization representing AI-driven systems"
+                fill
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-contain"
+              />
+            </Parallax>
           </div>
         </Reveal>
 

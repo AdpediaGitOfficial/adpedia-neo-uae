@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { Reveal } from "@/components/ui/Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { industriesSection, industries } from "@/lib/home-content";
 import { cn } from "@/lib/utils";
@@ -19,12 +19,11 @@ export function Industries() {
           />
         </Reveal>
 
-        <ul className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6">
-          {industries.map((industry, i) => (
-            <Reveal
+        <Stagger as="ul" className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6" gap={0.07}>
+          {industries.map((industry) => (
+            <StaggerItem
               as="li"
               key={industry.name}
-              delay={(i % 3) * 0.05}
               className={cn(
                 "rounded-card border border-ink/[0.07] bg-white p-6",
                 industry.wide ? "lg:col-span-3" : "lg:col-span-2"
@@ -37,9 +36,9 @@ export function Industries() {
               <div className="mt-5 rounded-lg bg-paper-200 p-5">
                 <p className="text-sm leading-relaxed text-ink/60">{industry.body}</p>
               </div>
-            </Reveal>
+            </StaggerItem>
           ))}
-        </ul>
+        </Stagger>
       </Container>
     </section>
   );

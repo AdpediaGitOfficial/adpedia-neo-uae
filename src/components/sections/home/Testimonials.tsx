@@ -5,7 +5,8 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Play, X, Asterisk } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Reveal } from "@/components/ui/Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Parallax } from "@/components/ui/Parallax";
 import {
   testimonialsSection,
   featuredTestimonial,
@@ -56,13 +57,15 @@ export function Testimonials() {
           {/* Featured video testimonial */}
           <Reveal>
             <figure className="group relative h-full min-h-[420px] overflow-hidden rounded-card">
-              <Image
-                src={featuredTestimonial.image}
-                alt={`Portrait of ${featuredTestimonial.name}`}
-                fill
-                sizes="(max-width: 1024px) 100vw, 640px"
-                className="object-cover"
-              />
+              <Parallax cover speed={0.06} className="absolute inset-0">
+                <Image
+                  src={featuredTestimonial.image}
+                  alt={`Portrait of ${featuredTestimonial.name}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 640px"
+                  className="object-cover"
+                />
+              </Parallax>
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
 
               <button
@@ -86,9 +89,9 @@ export function Testimonials() {
           </Reveal>
 
           {/* 2x2 grid of quotes */}
-          <div className="grid gap-6 sm:grid-cols-2">
-            {testimonials.map((t, i) => (
-              <Reveal as="div" key={t.name} delay={(i % 2) * 0.06} className="h-full">
+          <Stagger className="grid gap-6 sm:grid-cols-2" gap={0.08}>
+            {testimonials.map((t) => (
+              <StaggerItem key={t.name} className="h-full">
                 <figure className="flex h-full flex-col rounded-card border border-white/10 bg-ink-800 p-6">
                   <Image
                     src={t.avatar}
@@ -104,9 +107,9 @@ export function Testimonials() {
                     <Attribution name={t.name.toUpperCase()} role={t.role.toUpperCase()} tone="dark" />
                   </figcaption>
                 </figure>
-              </Reveal>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </Container>
 

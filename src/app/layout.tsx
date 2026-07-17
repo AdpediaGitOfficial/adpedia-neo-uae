@@ -4,6 +4,7 @@ import { fontVariables } from "@/lib/fonts";
 import { siteConfig } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -75,9 +76,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to content
         </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <Header />
+          <main id="main">{children}</main>
+          <Footer />
+        </SmoothScroll>
         <Script
           id="org-jsonld"
           type="application/ld+json"

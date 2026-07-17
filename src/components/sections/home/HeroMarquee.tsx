@@ -5,7 +5,7 @@ import { heroShowcase } from "@/lib/home-content";
 export function HeroMarquee() {
   const items = [...heroShowcase, ...heroShowcase];
   return (
-    <div className="pause-on-hover marquee-mask relative w-full overflow-hidden">
+    <div className="pause-on-hover marquee-fade-bottom relative w-full overflow-hidden">
       <ul
         data-marquee
         className="animate-marquee flex w-max items-stretch gap-5"
