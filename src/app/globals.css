@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-display: "Space Grotesk", var(--font-sans);
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    /* Token mirror of tailwind.config colors (for raw CSS usage) */
+    --color-ink: #000000;
+    --color-ink-800: #0e0e0e;
+    --color-paper: #ffffff;
+    --color-paper-200: #f7f7f7;
+    --color-accent: #3631bf;
+
+    --header-height: 88px;
+  }
+
+  * {
+    border-color: theme("colors.ink.600");
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: theme("colors.ink.DEFAULT");
+    color: theme("colors.paper.DEFAULT");
+    font-family: theme("fontFamily.sans");
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Accessible focus ring across interactive elements */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: 2px solid theme("colors.accent.400");
+    outline-offset: 2px;
+    border-radius: 0;
+  }
+
+  ::selection {
+    background-color: theme("colors.accent.600");
+    color: #fff;
+  }
+
+  /* Honour reduced-motion for all animation utilities */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Eyebrow / kicker label used above section headings */
+  .eyebrow {
+    @apply font-sans text-eyebrow font-medium text-accent-400;
+  }
+
+  /* Mono uppercase tracking used on nav, buttons, footer headers, attribution */
+  .mono-label {
+    @apply font-mono text-label font-medium uppercase;
+  }
+
+  .section-pad {
+    @apply py-section;
+  }
+
+  /* Skip-link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]
+      focus:rounded-md focus:bg-accent-600 focus:px-4 focus:py-2 focus:text-sm focus:text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Fade both horizontal edges of a marquee track */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+  .pause-on-hover:hover [data-marquee],
+  .pause-on-hover:focus-within [data-marquee] {
+    animation-play-state: paused;
+  }
+}
