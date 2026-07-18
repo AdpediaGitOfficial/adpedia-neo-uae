@@ -1,17 +1,19 @@
 import { cn } from "@/lib/utils";
+import { Eyebrow, Heading, Subtitle } from "@/components/ui/typography";
 
 type SectionHeadingProps = {
   eyebrow?: string;
   title: React.ReactNode;
   subtitle?: string;
   align?: "left" | "center";
-  /** Light heading uses the humanist sans (hero-style); display uses the geometric face. */
+  /** display → medium weight; sans → light weight (kept for back-compat). */
   face?: "display" | "sans";
   tone?: "dark" | "light";
   className?: string;
   as?: "h1" | "h2";
 };
 
+/** Composed section header (eyebrow + heading + subtitle) built on the typography primitives. */
 export function SectionHeading({
   eyebrow,
   title,
@@ -20,9 +22,11 @@ export function SectionHeading({
   face = "display",
   tone = "dark",
   className,
-  as: Tag = "h2",
+  as = "h2",
 }: SectionHeadingProps) {
   const isCenter = align === "center";
+  const surface = tone === "light" ? "light" : "dark";
+
   return (
     <div
       className={cn(
@@ -31,26 +35,14 @@ export function SectionHeading({
         className
       )}
     >
-      {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-      <Tag
-        className={cn(
-          "text-balance",
-          face === "display" ? "font-display text-display-md font-medium" : "font-sans text-display-md font-light",
-          tone === "dark" ? "text-white" : "text-ink"
-        )}
-      >
+      {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
+      <Heading as={as} size="md" weight={face === "display" ? "medium" : "light"} surface={surface}>
         {title}
-      </Tag>
+      </Heading>
       {subtitle ? (
-        <p
-          className={cn(
-            "max-w-2xl text-pretty text-base leading-relaxed",
-            isCenter ? "mx-auto" : "",
-            tone === "dark" ? "text-white/60" : "text-ink/60"
-          )}
-        >
+        <Subtitle surface={surface} className={cn("max-w-2xl", isCenter && "mx-auto")}>
           {subtitle}
-        </p>
+        </Subtitle>
       ) : null}
     </div>
   );
