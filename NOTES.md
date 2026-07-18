@@ -4,7 +4,7 @@ Short handoff note. See `README.md` for stack/architecture.
 
 ## Status
 
-Home page is **built and complete**. Design-system refactor is **4 of 6 phases done**.
+Home page is **built and complete**. Design-system refactor is **complete (6/6 phases)** — see `DESIGN-SYSTEM.md`.
 Production build passes (`npm run build`). Dev: `PORT=3000 npm run dev`.
 
 ## Design system
@@ -36,7 +36,7 @@ Fonts: **one Inter family** (+ JetBrains Mono for nav/buttons/labels) — `lib/f
 | 4b Testimonials + Footer → primitives | see log | done |
 | 4c MegaMenuPanels chips + MobileMenu icon buttons | see log | done |
 | 5 form primitives (Field/Input/Textarea/Select) | see log | done |
-| 6 strip legacy `rounded-*`, write DESIGN-SYSTEM.md | — | **next** |
+| 6 strip legacy `rounded-*`, write DESIGN-SYSTEM.md | see log | done |
 
 Rule for the refactor: **pixel-identical** (verified via computed styles), except
 opacities snapped to the scale (approved; sub-perceptual).

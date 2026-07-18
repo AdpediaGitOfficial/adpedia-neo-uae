@@ -58,7 +58,7 @@ export function ServiceMegaPanel({ onNavigate }: { onNavigate: () => void }) {
               <Link
                 href={item.href}
                 onClick={onNavigate}
-                className="flex h-full gap-3.5 rounded-xl border border-transparent p-4 transition-colors hover:border-white/10 hover:bg-ink-700"
+                className="flex h-full gap-3.5 border border-transparent p-4 transition-colors hover:border-white/10 hover:bg-ink-700"
               >
                 <span className="grid h-10 w-10 shrink-0 place-items-center bg-accent-600/15 text-accent-300">
                   <Icon className="h-[18px] w-[18px]" aria-hidden />
@@ -103,7 +103,7 @@ export function PortfolioMegaPanel({ onNavigate }: { onNavigate: () => void }) {
             <Link
               href={project.href}
               onClick={onNavigate}
-              className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-ink-700 transition-colors hover:border-white/25"
+              className="group flex h-full flex-col overflow-hidden border border-white/10 bg-ink-700 transition-colors hover:border-white/25"
             >
               <span className="relative block aspect-[16/10] overflow-hidden bg-ink">
                 <Image

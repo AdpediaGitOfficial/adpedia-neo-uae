@@ -15,7 +15,7 @@ export function HeroMarquee() {
           <li
             key={`${item.src}-${i}`}
             aria-hidden={i >= heroShowcase.length}
-            className="relative aspect-[16/10] w-[clamp(280px,28vw,420px)] shrink-0 overflow-hidden rounded-card border border-white/10 bg-ink-800"
+            className="relative aspect-[16/10] w-[clamp(280px,28vw,420px)] shrink-0 overflow-hidden border border-white/10 bg-ink-800"
           >
             <Image
               src={item.src}
