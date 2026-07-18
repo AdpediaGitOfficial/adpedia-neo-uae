@@ -95,21 +95,11 @@ export const footerColumns = [
   {
     title: "Services",
     links: [
-      { label: "UI/UX design", href: "/services/ui-ux-design" },
-      { label: "Website Development", href: "/services/web-development" },
-      { label: "Web app development", href: "/services/web-development" },
-      { label: "App development", href: "/services/mobile-app-development" },
-      { label: "MVP Development", href: "/services/product-development" },
-    ],
-  },
-  {
-    title: "Capabilities",
-    links: [
-      { label: "MVP Development", href: "/services/product-development" },
-      { label: "Project Management", href: "/services" },
+      { label: "UI/UX Design", href: "/services/ui-ux-design" },
+      { label: "Web Development", href: "/services/web-development" },
+      { label: "Mobile App Development", href: "/services/mobile-app-development" },
       { label: "AI & Data Science", href: "/services/ai-data-science" },
-      { label: "Business Intelligence", href: "/services/ai-data-science" },
-      { label: "Team Augmentation", href: "/services" },
+      { label: "DevOps Services", href: "/services/devops" },
     ],
   },
 ];
