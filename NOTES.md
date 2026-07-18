@@ -35,8 +35,8 @@ Fonts: **one Inter family** (+ JetBrains Mono for nav/buttons/labels) — `lib/f
 | 4a 9 sections → primitives | `c79393a` | done |
 | 4b Testimonials + Footer → primitives | see log | done |
 | 4c MegaMenuPanels chips + MobileMenu icon buttons | see log | done |
-| 5 form primitives (Input/Textarea/Select/Field/Form) | — | **next** |
-| 6 strip legacy `rounded-*`, write DESIGN-SYSTEM.md | — | todo |
+| 5 form primitives (Field/Input/Textarea/Select) | see log | done |
+| 6 strip legacy `rounded-*`, write DESIGN-SYSTEM.md | — | **next** |
 
 Rule for the refactor: **pixel-identical** (verified via computed styles), except
 opacities snapped to the scale (approved; sub-perceptual).
