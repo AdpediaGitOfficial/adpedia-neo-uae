@@ -114,94 +114,61 @@ export type ServiceItem = {
   images: { src: string; alt: string }[];
 };
 
+const servicePreviews = [
+  { src: "/images/services/brand-cybersabra.png", alt: "Project preview" },
+  { src: "/images/services/brand-v-icon.jpeg", alt: "Project preview" },
+  { src: "/images/services/brand-flex.png", alt: "Project preview" },
+];
+
 export const serviceItems: ServiceItem[] = [
-  {
-    id: "brand-design",
-    title: "Brand Design",
-    body: "We craft distinctive visual identities that reflect your brand's essence and create lasting impressions across every touchpoint.",
-    tags: ["Logo Design", "Brand Assets", "Social Media"],
-    images: [
-      { src: "/images/services/brand-v-icon.jpeg", alt: "Glowing brand app icon" },
-      { src: "/images/services/brand-cybersabra.png", alt: "CyberSabra brand collateral" },
-      { src: "/images/services/brand-flex.png", alt: "Flex brand website" },
-    ],
-  },
-  {
-    id: "brand-strategy",
-    title: "Brand Strategy",
-    body: "We define positioning, messaging, and brand architecture that align your business goals with what your audience truly values.",
-    tags: ["Positioning", "Messaging", "Research"],
-    images: [
-      { src: "/images/services/brand-cybersabra.png", alt: "Brand strategy collateral" },
-      { src: "/images/services/brand-flex.png", alt: "Brand strategy website" },
-      { src: "/images/services/brand-v-icon.jpeg", alt: "Brand mark exploration" },
-    ],
-  },
   {
     id: "ui-ux-design",
     title: "UI/UX Design",
     body: "We turn complex ideas into intuitive, accessible interfaces — from wireframes and prototypes to polished, production-ready design systems.",
     tags: ["Wireframes", "Prototyping", "Design Systems"],
-    images: [
-      { src: "/images/services/brand-flex.png", alt: "UI design showcase" },
-      { src: "/images/services/brand-cybersabra.png", alt: "UX exploration" },
-      { src: "/images/services/brand-v-icon.jpeg", alt: "App interface" },
-    ],
+    images: servicePreviews,
   },
   {
     id: "web-development",
     title: "Web Development",
     body: "We build fast, scalable, and secure websites and web apps engineered for performance, maintainability, and long-term growth.",
     tags: ["Next.js", "Headless CMS", "E-commerce"],
-    images: [
-      { src: "/images/services/brand-flex.png", alt: "Web development project" },
-      { src: "/images/services/brand-cybersabra.png", alt: "Web app interface" },
-      { src: "/images/services/brand-v-icon.jpeg", alt: "Product website" },
-    ],
+    images: servicePreviews,
   },
   {
-    id: "app-development",
-    title: "App Development",
+    id: "custom-software-solutions",
+    title: "Custom Software Solutions",
+    body: "We design and build tailored software that fits your workflows exactly — reliable, secure systems that scale with your business.",
+    tags: ["Web Apps", "Integrations", "Automation"],
+    images: servicePreviews,
+  },
+  {
+    id: "mobile-app-development",
+    title: "Mobile App Development",
     body: "We create scalable mobile apps focused on clarity, usability, and seamless interaction across iOS and Android platforms.",
     tags: ["iOS", "Android", "Cross-platform"],
-    images: [
-      { src: "/images/services/brand-v-icon.jpeg", alt: "Mobile app icon" },
-      { src: "/images/services/brand-cybersabra.png", alt: "App collateral" },
-      { src: "/images/services/brand-flex.png", alt: "App landing page" },
-    ],
+    images: servicePreviews,
   },
   {
-    id: "mvp-development",
-    title: "MVP Development",
-    body: "We help startups validate ideas fast with lean, research-driven MVPs — built to launch quickly and scale confidently.",
+    id: "product-development",
+    title: "Product Development",
+    body: "We help teams validate ideas fast with lean, research-driven MVPs — built to launch quickly and scale confidently.",
     tags: ["Discovery", "Rapid Build", "Iteration"],
-    images: [
-      { src: "/images/services/brand-cybersabra.png", alt: "MVP concept" },
-      { src: "/images/services/brand-flex.png", alt: "MVP web app" },
-      { src: "/images/services/brand-v-icon.jpeg", alt: "MVP brand" },
-    ],
+    images: servicePreviews,
   },
   {
-    id: "digital-marketing",
-    title: "Digital Marketing",
-    body: "We grow brands with performance marketing, SEO, and content strategy designed to reach the right audience and convert.",
-    tags: ["SEO", "Performance", "Content"],
-    images: [
-      { src: "/images/services/brand-flex.png", alt: "Marketing campaign" },
-      { src: "/images/services/brand-cybersabra.png", alt: "Campaign assets" },
-      { src: "/images/services/brand-v-icon.jpeg", alt: "Ad creative" },
-    ],
-  },
-  {
-    id: "ai-data-solutions",
-    title: "AI & Data Solutions",
+    id: "ai-data-science",
+    title: "AI & Data Science",
     body: "We build intelligent systems and data pipelines that unlock insights, automate processes, and drive smarter decisions.",
     tags: ["Machine Learning", "Analytics", "Automation"],
-    images: [
-      { src: "/images/services/brand-cybersabra.png", alt: "AI dashboard" },
-      { src: "/images/services/brand-v-icon.jpeg", alt: "Data product" },
-      { src: "/images/services/brand-flex.png", alt: "Analytics platform" },
-    ],
+    images: servicePreviews,
+  },
+  {
+    id: "devops-services",
+    title: "DevOps Services",
+    body: "We set up reliable delivery pipelines, cloud infrastructure, and automation so your teams ship faster with confidence.",
+    tags: ["CI/CD", "Cloud", "Monitoring"],
+    images: servicePreviews,
   },
 ];
 
