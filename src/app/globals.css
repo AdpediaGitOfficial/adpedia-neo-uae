@@ -8,13 +8,6 @@
     --font-display: var(--font-sans);
     --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-    /* Token mirror of tailwind.config colors (for raw CSS usage) */
-    --color-ink: #000000;
-    --color-ink-800: #0e0e0e;
-    --color-paper: #ffffff;
-    --color-paper-200: #f7f7f7;
-    --color-accent: #3631bf;
-
     --header-height: 88px;
   }
 
@@ -85,10 +78,6 @@
   /* Mono uppercase tracking used on nav, buttons, footer headers, attribution */
   .mono-label {
     @apply font-mono text-label font-medium uppercase;
-  }
-
-  .section-pad {
-    @apply py-section;
   }
 
   /* Skip-link */

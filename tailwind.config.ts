@@ -9,18 +9,6 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: ["./src/**/*.{ts,tsx,mdx}"],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1.25rem", // 20px — matches the ~100px page gutter at 1920 scaled down
-        sm: "1.5rem",
-        lg: "2rem",
-        xl: "2.5rem",
-      },
-      screens: {
-        "2xl": "1360px", // design content column max
-      },
-    },
     extend: {
       colors: {
         // Core surfaces
@@ -65,6 +53,13 @@ const config: Config = {
         "display-lg": ["clamp(2.25rem, 4.6vw, 4rem)", { lineHeight: "1.05", letterSpacing: "-0.015em" }],
         "display-md": ["clamp(1.9rem, 3.2vw, 3rem)", { lineHeight: "1.08", letterSpacing: "-0.01em" }],
         "display-sm": ["clamp(1.6rem, 2.4vw, 2.25rem)", { lineHeight: "1.12", letterSpacing: "-0.01em" }],
+        // Text scale (non-display) — one source for titles, body, and captions.
+        "title-lg": ["clamp(1.5rem, 2.4vw, 2rem)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
+        title: ["1.5rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        subtitle: ["1.125rem", { lineHeight: "1.5" }],
+        body: ["1rem", { lineHeight: "1.625" }],
+        "body-sm": ["0.875rem", { lineHeight: "1.6" }],
+        caption: ["0.8125rem", { lineHeight: "1.5" }],
         eyebrow: ["0.8125rem", { lineHeight: "1", letterSpacing: "0.04em" }],
         label: ["0.75rem", { lineHeight: "1.1", letterSpacing: "0.14em" }],
       },
@@ -95,18 +90,9 @@ const config: Config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
-        "fade-up": {
-          from: { opacity: "0", transform: "translateY(24px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        "accent-glow": {
-          "0%, 100%": { opacity: "0.5" },
-          "50%": { opacity: "0.9" },
-        },
       },
       animation: {
         marquee: "marquee var(--marquee-duration, 40s) linear infinite",
-        "fade-up": "fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
