@@ -3,22 +3,26 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { Card } from "@/components/ui/Card";
+import { Title, Text } from "@/components/ui/typography";
 import { clarityContent } from "@/lib/home-content";
 
 const cards = clarityContent.cards;
 const GAP = 16;
 
-function Card({ image, title, body }: { image: string; title: string; body: string }) {
+function ClarityCard({ image, title, body }: { image: string; title: string; body: string }) {
   return (
-    <article className="flex items-center gap-5 border border-white/[0.07] bg-ink-800 p-4">
+    <Card as="article" padding="sm" className="flex items-center gap-5">
       <div className="relative h-[132px] w-[132px] shrink-0 overflow-hidden bg-ink">
         <Image src={image} alt="" fill sizes="132px" className="object-cover" />
       </div>
       <div>
-        <h3 className="text-lg font-medium text-white">{title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-white/50">{body}</p>
+        <Title as="h3" size="sm" weight="medium">
+          {title}
+        </Title>
+        <Text className="mt-2">{body}</Text>
       </div>
-    </article>
+    </Card>
   );
 }
 
@@ -55,7 +59,7 @@ export function ClarityCards() {
     return (
       <div className="flex flex-col gap-4">
         {cards.map((c) => (
-          <Card key={c.title} {...c} />
+          <ClarityCard key={c.title} {...c} />
         ))}
       </div>
     );
@@ -64,13 +68,13 @@ export function ClarityCards() {
   return (
     <div ref={containerRef} className="flex flex-col gap-4">
       <motion.div style={{ y: upY, opacity: sideOpacity }} className="relative z-0">
-        <Card {...cards[0]} />
+        <ClarityCard {...cards[0]} />
       </motion.div>
       <div ref={middleRef} className="relative z-10">
-        <Card {...cards[1]} />
+        <ClarityCard {...cards[1]} />
       </div>
       <motion.div style={{ y: downY, opacity: sideOpacity }} className="relative z-0">
-        <Card {...cards[2]} />
+        <ClarityCard {...cards[2]} />
       </motion.div>
     </div>
   );

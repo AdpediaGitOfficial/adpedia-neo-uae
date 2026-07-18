@@ -1,5 +1,7 @@
 import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { Heading, Subtitle } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/Reveal";
 import { closingCta } from "@/lib/home-content";
 
@@ -22,7 +24,7 @@ export function CtaBand({
   cta = closingCta.cta,
 }: CtaBandProps) {
   return (
-    <section className="relative overflow-hidden bg-ink">
+    <Section className="relative overflow-hidden" padded={false} container={false}>
       {/* soft indigo glow rising from the bottom */}
       <div
         aria-hidden
@@ -30,13 +32,15 @@ export function CtaBand({
       />
       <Container className="relative py-section text-center">
         <Reveal className="flex flex-col items-center gap-6">
-          <h2 className="text-balance font-sans text-display-md font-light text-white">{title}</h2>
-          <p className="max-w-xl text-pretty text-base leading-relaxed text-white/60">{subtitle}</p>
+          <Heading as="h2" size="md">
+            {title}
+          </Heading>
+          <Subtitle className="max-w-xl">{subtitle}</Subtitle>
           <Button href={cta.href} size="lg" className="mt-2">
             {cta.label}
           </Button>
         </Reveal>
       </Container>
-    </section>
+    </Section>
   );
 }

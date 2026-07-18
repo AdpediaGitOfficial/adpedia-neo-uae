@@ -4,7 +4,11 @@ import { useRef } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { IconButton } from "@/components/ui/IconButton";
+import { Tag } from "@/components/ui/Tag";
+import { Eyebrow, Heading, Subtitle, Label, Title, Text } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/Reveal";
 import { storiesSection, projectStories } from "@/lib/home-content";
 
@@ -20,19 +24,17 @@ export function Stories() {
   };
 
   return (
-    <section className="bg-ink py-section" aria-labelledby="stories-heading">
+    <Section container={false} aria-labelledby="stories-heading">
       <Container>
         <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="flex flex-col gap-4">
-            <span className="eyebrow">{storiesSection.eyebrow}</span>
-            <h2 id="stories-heading" className="font-sans text-display-lg font-light text-white">
+            <Eyebrow>{storiesSection.eyebrow}</Eyebrow>
+            <Heading as="h2" id="stories-heading" size="lg" balance={false}>
               {storiesSection.title}
-            </h2>
-            <p className="max-w-md text-pretty text-base leading-relaxed text-white/60">
-              {storiesSection.subtitle}
-            </p>
+            </Heading>
+            <Subtitle className="max-w-md">{storiesSection.subtitle}</Subtitle>
           </div>
-          <Button href={storiesSection.cta.href} variant="primary" size="lg" className="self-start md:self-auto">
+          <Button href={storiesSection.cta.href} size="lg" className="self-start md:self-auto">
             {storiesSection.cta.label}
           </Button>
         </Reveal>
@@ -42,31 +44,26 @@ export function Stories() {
         <Container>
           <ul
             ref={trackRef}
-            className="hide-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {projectStories.map((project) => (
-              <li
-                key={project.brand + project.title}
-                data-card
-                className="w-[min(90vw,880px)] shrink-0 snap-start"
-              >
-                <article className="grid gap-6 rounded-card border border-white/10 bg-ink-800 p-4 sm:grid-cols-[0.85fr_1.15fr] sm:p-5">
+              <li key={project.brand + project.title} data-card className="w-[min(90vw,880px)] shrink-0 snap-start">
+                <article className="grid gap-6 border border-white/10 bg-ink-800 p-4 sm:grid-cols-[0.85fr_1.15fr] sm:p-5">
                   <div className="flex flex-col justify-center p-3 sm:p-5">
-                    <p className="mono-label text-white/45">{project.brand}</p>
-                    <h3 className="mt-4 font-sans text-2xl font-normal text-white">{project.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/55">{project.body}</p>
-                    <ul className="mt-6 flex flex-wrap gap-2.5">
+                    <Label className="text-white/45">{project.brand}</Label>
+                    <Title as="h3" size="md" weight="normal" className="mt-4">
+                      {project.title}
+                    </Title>
+                    <Text className="mt-3">{project.body}</Text>
+                    <div className="mt-6 flex flex-wrap gap-2.5">
                       {project.tags.map((tag) => (
-                        <li
-                          key={tag}
-                          className="rounded-md border border-white/15 px-3 py-1.5 text-xs text-white/70"
-                        >
+                        <Tag key={tag} size="sm">
                           {tag}
-                        </li>
+                        </Tag>
                       ))}
-                    </ul>
+                    </div>
                   </div>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-ink">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-ink">
                     <Image
                       src={project.image.src}
                       alt={project.image.alt}
@@ -81,25 +78,15 @@ export function Stories() {
           </ul>
 
           <div className="mt-6 flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => scrollBy(-1)}
-              aria-label="Previous projects"
-              className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white transition-colors hover:bg-white/5"
-            >
+            <IconButton size="lg" variant="outline" label="Previous projects" onClick={() => scrollBy(-1)}>
               <ArrowLeft className="h-5 w-5" aria-hidden />
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollBy(1)}
-              aria-label="Next projects"
-              className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white transition-colors hover:bg-white/5"
-            >
+            </IconButton>
+            <IconButton size="lg" variant="outline" label="Next projects" onClick={() => scrollBy(1)}>
               <ArrowRight className="h-5 w-5" aria-hidden />
-            </button>
+            </IconButton>
           </div>
         </Container>
       </div>
-    </section>
+    </Section>
   );
 }

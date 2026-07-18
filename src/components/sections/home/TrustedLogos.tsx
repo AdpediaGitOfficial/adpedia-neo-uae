@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { trustedLogos } from "@/lib/home-content";
 
@@ -9,10 +10,15 @@ export function TrustedLogos() {
   const items = [...trustedLogos, ...trustedLogos, ...trustedLogos, ...trustedLogos];
 
   return (
-    <section className="bg-ink pt-16 pb-28 sm:pt-20 sm:pb-36" aria-labelledby="trusted-heading">
+    <Section
+      padded={false}
+      container={false}
+      className="pt-16 pb-28 sm:pt-20 sm:pb-36"
+      aria-labelledby="trusted-heading"
+    >
       <Container>
         <Reveal>
-          <h2 id="trusted-heading" className="text-center text-base text-white/70">
+          <h2 id="trusted-heading" className="text-center text-body text-white/60">
             Trusted by many, and you
           </h2>
         </Reveal>
@@ -28,7 +34,7 @@ export function TrustedLogos() {
             <li
               key={`${logo.name}-${i}`}
               aria-hidden={i >= trustedLogos.length}
-              className="flex h-24 w-[clamp(150px,15vw,200px)] shrink-0 items-center justify-center border border-white/[0.06] bg-ink-800"
+              className="flex h-24 w-[clamp(150px,15vw,200px)] shrink-0 items-center justify-center border border-white/10 bg-ink-800"
             >
               <Image
                 src={logo.src}
@@ -41,6 +47,6 @@ export function TrustedLogos() {
           ))}
         </ul>
       </div>
-    </section>
+    </Section>
   );
 }
