@@ -2,7 +2,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 type IconButtonSize = "sm" | "md" | "lg" | "xl";
-type IconButtonVariant = "ghost" | "outline" | "soft" | "scrim";
+type IconButtonVariant = "ghost" | "outline" | "soft" | "scrim" | "plain";
 
 const base =
   "grid shrink-0 place-items-center rounded-full transition-colors focus-visible:outline-none";
@@ -17,6 +17,7 @@ const variants: Record<IconButtonVariant, string> = {
   outline: "border border-white/15 text-white hover:bg-white/5",
   soft: "bg-white/15 text-white backdrop-blur-sm hover:bg-white/25",
   scrim: "bg-black/50 text-white hover:bg-black/70",
+  plain: "text-white",
 };
 
 type StyleProps = {

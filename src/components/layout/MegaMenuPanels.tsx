@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Code2, PenTool, Rocket, Server, Smartphone, Sparkles, type LucideIcon } from "lucide-react";
+import { TagLink } from "@/components/ui/Tag";
 import { serviceMenu, portfolioMenu } from "@/lib/site";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -88,17 +89,9 @@ export function PortfolioMegaPanel({ onNavigate }: { onNavigate: () => void }) {
         <ul className="mt-5 flex flex-wrap gap-2">
           {portfolioMenu.filters.map((filter, i) => (
             <li key={filter.href + filter.label}>
-              <Link
-                href={filter.href}
-                onClick={onNavigate}
-                className={`inline-block rounded-lg border px-3 py-1.5 text-[0.8rem] transition-colors ${
-                  i === 0
-                    ? "border-accent-600 bg-accent-600 text-white"
-                    : "border-white/15 text-white/70 hover:border-white/40 hover:text-white"
-                }`}
-              >
+              <TagLink href={filter.href} onClick={onNavigate} active={i === 0}>
                 {filter.label}
-              </Link>
+              </TagLink>
             </li>
           ))}
         </ul>

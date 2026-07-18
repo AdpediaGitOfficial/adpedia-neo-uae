@@ -34,8 +34,8 @@ Fonts: **one Inter family** (+ JetBrains Mono for nav/buttons/labels) — `lib/f
 | 3 Section/Card/Tag/IconButton | `3684fd1` | done |
 | 4a 9 sections → primitives | `c79393a` | done |
 | 4b Testimonials + Footer → primitives | see log | done |
-| 4c MegaMenuPanels, Header/MobileMenu (icon buttons, tags) | — | **next** |
-| 5 form primitives (Input/Textarea/Select/Field/Form) | — | todo |
+| 4c MegaMenuPanels chips + MobileMenu icon buttons | see log | done |
+| 5 form primitives (Input/Textarea/Select/Field/Form) | — | **next** |
 | 6 strip legacy `rounded-*`, write DESIGN-SYSTEM.md | — | todo |
 
 Rule for the refactor: **pixel-identical** (verified via computed styles), except

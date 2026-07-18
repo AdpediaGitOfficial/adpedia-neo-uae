@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { IconButton } from "@/components/ui/IconButton";
 import { mainNav } from "@/lib/site";
 
 export function MobileMenu() {
@@ -32,15 +33,15 @@ export function MobileMenu() {
 
   return (
     <div className="lg:hidden">
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        aria-label="Open menu"
+      <IconButton
+        size="md"
+        variant="plain"
+        label="Open menu"
         aria-expanded={open}
-        className="grid h-10 w-10 place-items-center text-white"
+        onClick={() => setOpen(true)}
       >
         <Menu className="h-6 w-6" aria-hidden />
-      </button>
+      </IconButton>
 
       <AnimatePresence>
         {open ? (
@@ -56,14 +57,9 @@ export function MobileMenu() {
           >
             <div className="flex h-[--header-height] items-center justify-between px-5">
               <span className="mono-label text-white/60">Menu</span>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-                className="grid h-10 w-10 place-items-center text-white"
-              >
+              <IconButton size="md" variant="plain" label="Close menu" onClick={() => setOpen(false)}>
                 <X className="h-6 w-6" aria-hidden />
-              </button>
+              </IconButton>
             </div>
 
             <nav aria-label="Mobile" className="px-5 pt-6">
