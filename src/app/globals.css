@@ -116,16 +116,16 @@
     );
     mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
   }
-  /* Wider horizontal edge fade — used on the logo strip so ~2 logos dissolve each side */
+  /* Wide horizontal edge fade — logo strip dissolves softly to black across ~40% each side */
   .marquee-mask-wide {
     -webkit-mask-image: linear-gradient(
       to right,
-      transparent,
-      #000 13%,
-      #000 87%,
-      transparent
+      transparent 0%,
+      #000 40%,
+      #000 60%,
+      transparent 100%
     );
-    mask-image: linear-gradient(to right, transparent, #000 13%, #000 87%, transparent);
+    mask-image: linear-gradient(to right, transparent 0%, #000 40%, #000 60%, transparent 100%);
   }
   /* Fade a marquee toward the bottom — used on the hero showcase strip */
   .marquee-fade-bottom {

@@ -67,7 +67,9 @@ const config: Config = {
         label: ["0.75rem", { lineHeight: "1.1", letterSpacing: "0.14em" }],
       },
       maxWidth: {
-        content: "1360px",
+        // Matches the Figma 1920 canvas: box caps at 1920, and 100px inner gutters (xl:px-[100px])
+        // leave a ~1720px content column. Every section uses <Container>, so width stays consistent.
+        content: "1920px",
       },
       spacing: {
         section: "clamp(4.5rem, 9vw, 9rem)", // vertical section rhythm

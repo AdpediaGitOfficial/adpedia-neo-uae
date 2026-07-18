@@ -15,7 +15,13 @@ export function Container<T extends React.ElementType = "div">({
 }: ContainerProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof ContainerProps<T>>) {
   const Tag = as ?? "div";
   return (
-    <Tag className={cn("mx-auto w-full max-w-content px-5 sm:px-6 lg:px-10", className)} {...rest}>
+    <Tag
+      className={cn(
+        "mx-auto w-full max-w-content px-5 sm:px-8 lg:px-16 xl:px-[100px]",
+        className
+      )}
+      {...rest}
+    >
       {children}
     </Tag>
   );

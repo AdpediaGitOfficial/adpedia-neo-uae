@@ -35,7 +35,7 @@ export function TrustedLogos() {
                 alt={i < trustedLogos.length ? logo.name : ""}
                 width={200}
                 height={80}
-                className="h-auto max-h-12 w-auto max-w-[70%] object-contain opacity-80 transition-opacity hover:opacity-100"
+                className="h-auto max-h-16 w-auto max-w-[84%] object-contain opacity-80 transition-opacity hover:opacity-100"
               />
             </li>
           ))}
