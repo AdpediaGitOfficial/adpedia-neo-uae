@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Card } from "@/components/ui/Card";
+import { IconButton } from "@/components/ui/IconButton";
+import { Label, Text } from "@/components/ui/typography";
 import { siteConfig, footerColumns } from "@/lib/site";
 
 const socials = [
@@ -17,7 +20,10 @@ export function Footer() {
     <footer className="bg-ink pb-12">
       <Container>
         {/* Card is inset narrower than the content column, matching the Figma footer. */}
-        <div className="relative mx-auto max-w-[1560px] overflow-hidden border border-white/10 bg-ink-800 px-8 py-14 sm:px-12 lg:px-16">
+        <Card
+          padding="none"
+          className="relative mx-auto max-w-[1560px] overflow-hidden px-8 py-14 sm:px-12 lg:px-16"
+        >
           {/* subtle ambient glow — keeps the card reading cleanly black */}
           <div
             aria-hidden
@@ -34,22 +40,23 @@ export function Footer() {
                 height={50}
                 className="h-8 w-auto"
               />
-              <p className="mt-6 text-sm leading-relaxed text-white/55">
+              <Text className="mt-6">
                 We are a creative digital studio crafting impactful brand experiences through strategy,
                 design, and technology
-              </p>
+              </Text>
               <ul className="mt-7 flex items-center gap-4">
                 {socials.map(({ label, href, Icon }) => (
                   <li key={label}>
-                    <a
+                    <IconButton
                       href={href}
+                      size="sm"
+                      variant="ghost"
+                      label={label}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={label}
-                      className="grid h-9 w-9 place-items-center rounded-full text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                     >
                       <Icon className="h-[18px] w-[18px]" aria-hidden />
-                    </a>
+                    </IconButton>
                   </li>
                 ))}
               </ul>
@@ -58,7 +65,9 @@ export function Footer() {
             {/* Link columns */}
             {footerColumns.map((col, i) => (
               <nav key={`${col.title}-${i}`} aria-label={col.title}>
-                <h3 className="mono-label text-white/50">{col.title}</h3>
+                <Label as="h3" className="text-white/45">
+                  {col.title}
+                </Label>
                 <ul className="mt-5 space-y-3.5">
                   {col.links.map((link) => (
                     <li key={link.label}>
@@ -76,7 +85,9 @@ export function Footer() {
 
             {/* Contact column */}
             <div>
-              <h3 className="mono-label text-white/50">Contact us</h3>
+              <Label as="h3" className="text-white/45">
+                Contact us
+              </Label>
               <ul className="mt-5 space-y-3.5 text-sm text-white/70">
                 <li>
                   <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-white">
@@ -93,7 +104,7 @@ export function Footer() {
           </div>
 
           {/* Bottom bar — inside the card, matching Figma */}
-          <div className="relative mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <div className="relative mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-body-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
             <p>
               {siteConfig.shortName} © {year} All rights reserved
             </p>
@@ -109,7 +120,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-        </div>
+        </Card>
       </Container>
     </footer>
   );

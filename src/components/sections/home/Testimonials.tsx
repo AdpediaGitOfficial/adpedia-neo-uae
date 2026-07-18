@@ -5,6 +5,10 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Play, X, Asterisk } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
+import { IconButton } from "@/components/ui/IconButton";
+import { Eyebrow, Heading, Subtitle } from "@/components/ui/typography";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { Parallax } from "@/components/ui/Parallax";
 import {
@@ -41,22 +45,20 @@ export function Testimonials() {
   }, [modalOpen]);
 
   return (
-    <section className="bg-ink py-section" aria-labelledby="testimonials-heading">
+    <Section container={false} aria-labelledby="testimonials-heading">
       <Container>
         <Reveal className="flex flex-col items-center gap-5 text-center">
-          <span className="eyebrow">{testimonialsSection.eyebrow}</span>
-          <h2 id="testimonials-heading" className="font-sans text-display-md font-light text-white">
+          <Eyebrow>{testimonialsSection.eyebrow}</Eyebrow>
+          <Heading as="h2" id="testimonials-heading" size="md" balance={false}>
             {testimonialsSection.title}
-          </h2>
-          <p className="max-w-xl text-pretty text-base leading-relaxed text-white/60">
-            {testimonialsSection.subtitle}
-          </p>
+          </Heading>
+          <Subtitle className="max-w-xl">{testimonialsSection.subtitle}</Subtitle>
         </Reveal>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {/* Featured video testimonial */}
           <Reveal>
-            <figure className="group relative h-full min-h-[420px] overflow-hidden rounded-card">
+            <figure className="group relative h-full min-h-[420px] overflow-hidden">
               <Parallax cover speed={0.06} className="absolute inset-0">
                 <Image
                   src={featuredTestimonial.image}
@@ -68,14 +70,15 @@ export function Testimonials() {
               </Parallax>
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
 
-              <button
-                type="button"
+              <IconButton
+                size="xl"
+                variant="soft"
+                label={featuredTestimonial.videoLabel}
                 onClick={() => setModalOpen(true)}
-                aria-label={featuredTestimonial.videoLabel}
-                className="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-transform duration-300 ease-out-expo hover:scale-110 hover:bg-white/25"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out-expo hover:scale-110"
               >
                 <Play className="h-6 w-6 translate-x-0.5 fill-current" aria-hidden />
-              </button>
+              </IconButton>
 
               <figcaption className="absolute inset-x-0 bottom-0 p-7 sm:p-8">
                 <blockquote className="text-pretty text-lg font-light leading-snug text-white">
@@ -92,7 +95,7 @@ export function Testimonials() {
           <Stagger className="grid gap-6 sm:grid-cols-2" gap={0.08}>
             {testimonials.map((t) => (
               <StaggerItem key={t.name} className="h-full">
-                <figure className="flex h-full flex-col rounded-card border border-white/10 bg-ink-800 p-6">
+                <Card as="figure" padding="md" className="flex h-full flex-col">
                   <Image
                     src={t.avatar}
                     alt={`Portrait of ${t.name}`}
@@ -100,13 +103,13 @@ export function Testimonials() {
                     height={48}
                     className="h-12 w-12 rounded-full object-cover"
                   />
-                  <blockquote className="mt-6 flex-1 text-sm leading-relaxed text-white/75">
+                  <blockquote className="mt-6 flex-1 text-body-sm leading-relaxed text-white/60">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <figcaption className="mt-6">
                     <Attribution name={t.name.toUpperCase()} role={t.role.toUpperCase()} tone="dark" />
                   </figcaption>
-                </figure>
+                </Card>
               </StaggerItem>
             ))}
           </Stagger>
@@ -133,17 +136,18 @@ export function Testimonials() {
               exit={{ scale: 0.96, opacity: 0 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-3xl overflow-hidden rounded-card border border-white/10 bg-ink-800"
+              className="relative w-full max-w-3xl overflow-hidden border border-white/10 bg-ink-800"
             >
-              <button
+              <IconButton
                 ref={closeRef}
-                type="button"
+                size="md"
+                variant="scrim"
+                label="Close testimonial"
                 onClick={() => setModalOpen(false)}
-                aria-label="Close testimonial"
-                className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-full bg-black/50 text-white hover:bg-black/70"
+                className="absolute right-3 top-3 z-10"
               >
                 <X className="h-5 w-5" aria-hidden />
-              </button>
+              </IconButton>
               {/* Poster + quote fallback (drop a videoUrl in content to enable playback) */}
               <div className="relative aspect-video w-full">
                 <Image
@@ -165,6 +169,6 @@ export function Testimonials() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-    </section>
+    </Section>
   );
 }

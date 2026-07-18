@@ -31,7 +31,7 @@ type AsLink = StyleProps & { href: string } & Omit<
     React.ComponentPropsWithoutRef<typeof Link>,
     "href" | "className" | "children" | "aria-label"
   >;
-type AsButton = StyleProps & { href?: undefined } & Omit<
+type AsButton = StyleProps & { href?: undefined; ref?: React.Ref<HTMLButtonElement> } & Omit<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     "className" | "children" | "aria-label"
   >;
