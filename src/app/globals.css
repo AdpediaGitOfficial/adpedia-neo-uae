@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --font-sans: "Inter", system-ui, sans-serif;
-    --font-display: "Space Grotesk", var(--font-sans);
+    --font-display: var(--font-sans);
     --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
     /* Token mirror of tailwind.config colors (for raw CSS usage) */

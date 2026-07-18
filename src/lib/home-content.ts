@@ -75,15 +75,14 @@ export const aiContent = {
 
 export const clarityContent = {
   eyebrow: "Digital growth starts with clarity, not noise.",
-  leadStrong:
-    "Real progress doesn't come from chasing tools or trends. It begins with understanding what's holding your brand back,",
-  leadMuted:
-    " what truly drives it forward, and where meaningful growth lives. We bring strategy, creativity, and technology together to create digital solutions that feel intuitive, purposeful, and built to move your brand with confidence and impact.",
+  lead: "Real progress doesn't come from chasing tools or trends. It begins with understanding what's holding your brand back, what truly drives it forward, and where meaningful growth lives. We bring strategy, creativity, and technology together to create digital solutions that feel intuitive, purposeful, and built to move your brand with confidence and impact.",
   cta: { label: "Let's build something meaningful", href: "/contact" },
+  // Card order top→bottom. The middle (Technology) is the anchor; Conversion spreads
+  // up and Creativity spreads down from it on scroll.
   cards: [
     {
       title: "Conversion",
-      body: "Design that moves people to act. We shape journeys that guide, persuade emotionally, and shape every experience that follows.",
+      body: "Results are intentional. Through thoughtful design and smart user journeys, we turn attention into action and experiences into measurable outcomes.",
       image: "/images/clarity/conversion.png",
     },
     {
@@ -93,11 +92,11 @@ export const clarityContent = {
     },
     {
       title: "Creativity",
-      body: "Creativity with intent. Every idea is crafted to connect, differentiate your brand, and turn attention into lasting momentum.",
-      image: "/images/clarity/creativity.jpeg",
+      body: "Creativity isn't decoration—it's direction. We turn ideas into compelling brand stories that communicate clearly, connect emotionally, and shape every experience that follows.",
+      image: "/images/clarity/creativity.png",
     },
   ],
-};
+} as const;
 
 export const servicesSection = {
   eyebrow: "Service",

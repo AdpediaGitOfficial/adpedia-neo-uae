@@ -54,7 +54,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
+        // Single family site-wide (matches Figma); `display` reuses sans, emphasis
+        // comes from weight. Kept as a role so headings can be retargeted in one place.
+        display: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
