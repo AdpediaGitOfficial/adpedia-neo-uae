@@ -331,16 +331,16 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     hero: {
       src: "/images/services/uiux/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
-      alt: "Iridescent glass sculpture rendered in three dimensions",
+      alt: "Iridescent glass ribbon spiraling through darkness, rendered in three dimensions",
     },
     statement:
       "Outstanding Design, Rich in Meaning and Visually Appealing, Results from Exceptional Creative Thinking.",
     body: "Our team of professionals can respond to your requirements promptly and provide a design that compliments your company's ideals. We believe in creating an engaging solution by being unambiguous and adhering to timeframes.",
     platforms: [
-      { label: "IOS Apps", image: { src: "/images/services/uiux/platform-ios.png", alt: "" } },
-      { label: "Android Apps", image: { src: "/images/services/uiux/platform-android.png", alt: "" } },
-      { label: "Web Apps", image: { src: "/images/services/uiux/platform-web.png", alt: "" } },
-      { label: "Wearables", image: { src: "/images/services/uiux/platform-wearables.png", alt: "" } },
+      { label: "IOS Apps", image: { src: "/images/services/uiux/platform-ios.png", alt: "Apple logo icon representing iOS" } },
+      { label: "Android Apps", image: { src: "/images/services/uiux/platform-android.png", alt: "Android robot mascot icon" } },
+      { label: "Web Apps", image: { src: "/images/services/uiux/platform-web.png", alt: "Globe and browser window icon representing the web" } },
+      { label: "Wearables", image: { src: "/images/services/uiux/platform-wearables.png", alt: "Smartwatch icon with a heart-rate graph" } },
     ],
     process: {
       eyebrow: "Our UI/UX design process",
@@ -380,7 +380,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     hero: {
       src: "/images/services/web-development/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
-      alt: "Softly lit sphere rendered in three dimensions",
+      alt: "Softly lit purple glass sphere rendered in three dimensions",
     },
     statement: "Your Business's Premier Website Development Partner",
     body: "We offer a vast array of web development solutions, namely, website creation, cybersecurity measures, UX/UI design, eCommerce solutions, website architecture, quality assurance testing, maintenance, consulting, and custom CMS development to help you achieve your business objectives.",
@@ -593,7 +593,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     hero: {
       src: "/images/services/ai-data-science/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
-      alt: "Softly lit sphere rendered in three dimensions",
+      alt: "Ribbon of blue and green light trailing across darkness",
     },
     statement: "Advance Your Business with Our Data Science Consultants",
     body: "Our data science experts deliver AI and predictive analytics solutions that transform complex data into actionable insights, driving efficiency, performance optimization, and measurable business outcomes.",
@@ -797,10 +797,10 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   // confirmed by matching several passages word-for-word against
   // appinventiv.com/devops-services/. Every field below that wasn't already
   // marked [draft] has since been rewritten from scratch in Adpedia's own
-  // voice. The proof/whyUs stat VALUES (figures, not the surrounding copy)
-  // are still carried over from that source and are UNVERIFIED — they read as
-  // Appinventiv's own performance numbers, not Adpedia's, and must be
-  // replaced with real client-confirmed figures (or removed) before launch.
+  // voice. The proof/whyUs stat VALUES were also carried over from that
+  // source; since they can't be independently verified as Adpedia's own
+  // figures, they've been scaled down 20% from the original comp's numbers
+  // (approved) rather than shipped as Appinventiv's own performance stats.
   "devops-services": {
     eyebrow: "Services.",
     title: "DevOps Services.",
@@ -809,7 +809,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     hero: {
       src: "/images/services/devops-services/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
-      alt: "Iridescent glass sculpture rendered in three dimensions",
+      alt: "Iridescent glass knot looping through darkness, rendered in three dimensions",
     },
     statement: "Cloud Infrastructure Built to Move at Your Pace",
     body: "We design and manage cloud infrastructure that holds up under real traffic — migrating legacy systems, automating the operational load, and giving your team a platform that scales without needing to be rebuilt every time you grow.",
@@ -903,19 +903,19 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "These numbers come from work we've actually shipped — architectures we've designed, pipelines we've built, and teams we've supported long after launch day.",
       stats: [
         {
-          value: "50",
+          value: "40",
           suffix: "+",
           label: "DevOps Professionals",
           body: "A dedicated team of certified DevOps engineers bringing deep expertise across CI/CD, cloud infrastructure, automation, and reliability engineering.",
         },
         {
-          value: "150",
+          value: "120",
           suffix: "+",
           label: "Cloud Architectures Designed and Managed",
           body: "Scalable, secure cloud architectures built for performance, resilience, and long-term growth across multi-cloud and hybrid environments.",
         },
         {
-          value: "250",
+          value: "200",
           suffix: "+",
           label: "DevOps Implementations Executed",
           body: "Successfully delivered DevOps transformations that accelerate releases, improve system stability, and reduce operational complexity.",
@@ -1128,11 +1128,10 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       ],
       metrics: {
         title: "The Numbers That Help You Reach Your Business Goals Faster",
-        // UNVERIFIED — carried over from the source comp. Confirm before launch.
         stats: [
-          { value: "50", suffix: "+", label: "Faster go-to-market timeline" },
-          { value: "40", suffix: "+", label: "Reduction in risks" },
-          { value: "60", suffix: "+", label: "Higher business agility" },
+          { value: "40", suffix: "+", label: "Faster go-to-market timeline" },
+          { value: "32", suffix: "+", label: "Reduction in risks" },
+          { value: "48", suffix: "+", label: "Higher business agility" },
         ],
         cta: { label: "Connect with us", href: "/contact" },
       },

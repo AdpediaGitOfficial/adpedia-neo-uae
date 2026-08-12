@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Section } from "@/components/ui/Section";
 import { Heading, Title, Label, Text } from "@/components/ui/typography";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -14,6 +15,7 @@ import {
   posts,
   relatedPosts,
 } from "@/lib/blog-content";
+import { siteConfig } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -27,13 +29,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = postBySlug(slug);
   if (!post) return {};
 
+  const title = post.seoTitle ?? post.title;
   return {
-    title: post.title,
+    title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: "article",
-      title: post.title,
+      title,
       description: post.excerpt,
       publishedTime: post.date,
       images: [{ url: post.cover.src }],
@@ -47,9 +50,46 @@ export default async function PostPage({ params }: Params) {
   if (!post) notFound();
 
   const related = relatedPosts(post.slug);
+  const url = `${siteConfig.domain}/blog/${post.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `${siteConfig.domain}${post.cover.src}`,
+    datePublished: post.date,
+    author: post.author
+      ? { "@type": "Person", name: post.author.name }
+      : { "@type": "Organization", name: siteConfig.name },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: { "@type": "ImageObject", url: `${siteConfig.domain}/images/brand/logo-white.png` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.domain },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${siteConfig.domain}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
 
   return (
     <>
+      <Script
+        id="post-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <Script
+        id="post-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Section
         padded={false}
         className="pt-[calc(var(--header-height)+2rem)]"

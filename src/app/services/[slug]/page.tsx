@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { ServiceDetailHero } from "@/components/sections/services/detail/ServiceDetailHero";
 import { ServicePlatforms } from "@/components/sections/services/detail/ServicePlatforms";
@@ -24,6 +25,7 @@ import { ServiceExpertise } from "@/components/sections/services/detail/ServiceE
 import { ServiceWork } from "@/components/sections/services/detail/ServiceWork";
 import { serviceDetail, serviceDetailSlugs } from "@/lib/service-detail-content";
 import { services } from "@/lib/services";
+import { siteConfig } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -49,6 +51,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: label,
     description: detail.description,
     alternates: { canonical: `/services/${slug}` },
+    openGraph: { type: "website", title: label, description: detail.description },
   };
 }
 
@@ -57,8 +60,38 @@ export default async function ServiceDetailPage({ params }: Params) {
   const detail = serviceDetail(slug);
   if (!detail) notFound();
 
+  const label = services.find((s) => s.slug === slug)?.label ?? detail.title;
+  const url = `${siteConfig.domain}/services/${slug}`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: label,
+    description: detail.description,
+    url,
+    provider: { "@type": "Organization", name: siteConfig.name, url: siteConfig.domain },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.domain },
+      { "@type": "ListItem", position: 2, name: "Services", item: `${siteConfig.domain}/services` },
+      { "@type": "ListItem", position: 3, name: label, item: url },
+    ],
+  };
+
   return (
     <>
+      <Script
+        id="service-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <Script
+        id="service-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <ServiceDetailHero detail={detail} />
       {detail.platforms ? <ServicePlatforms detail={detail} /> : null}
       {detail.platformGrid ? <ServicePlatformGrid detail={detail} /> : null}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Section } from "@/components/ui/Section";
 import { Title, Text } from "@/components/ui/typography";
 import { Tag } from "@/components/ui/Tag";
@@ -14,6 +15,7 @@ import { ProjectQuote } from "@/components/sections/portfolio/ProjectQuote";
 import { RelatedProjects } from "@/components/sections/portfolio/RelatedProjects";
 import { projectDetail } from "@/lib/portfolio-content";
 import { projectBySlug, projects } from "@/lib/projects";
+import { siteConfig } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -46,6 +48,16 @@ export default async function ProjectPage({ params }: Params) {
 
   const hasNarrative = Boolean(project.narrative?.length);
   const hasAside = project.tags.length > 0 || Boolean(project.website);
+  const url = `${siteConfig.domain}/portfolio/${project.slug}`;
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.domain },
+      { "@type": "ListItem", position: 2, name: "Portfolio", item: `${siteConfig.domain}/portfolio` },
+      { "@type": "ListItem", position: 3, name: project.name, item: url },
+    ],
+  };
 
   /* Kept out of the JSX so it can sit either beside the write-up or, when a
      project has none yet, on its own — an empty first grid column would
@@ -74,6 +86,11 @@ export default async function ProjectPage({ params }: Params) {
 
   return (
     <>
+      <Script
+        id="project-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <ProjectDetailHero project={project} />
 
       <Section padded={false} innerClassName="pb-16" aria-labelledby="project-summary-heading">

@@ -15,6 +15,19 @@ import { serviceHref } from "@/lib/services";
  */
 const builtRoutes = ["/", "/about", "/services", "/portfolio", "/blog", "/careers", "/contact"];
 
+/**
+ * Real per-content update dates, keyed by path — only blog posts carry a
+ * genuine date in their data. `lastModified` is omitted for every other
+ * route rather than stamped with the build time: a sitemap that claims every
+ * URL changed "now" on every deploy is a false freshness signal that erodes
+ * search engines' trust in the field over time, which is worse than leaving
+ * it unset.
+ */
+function lastModifiedFor(path: string): string | undefined {
+  const post = posts.find((p) => postHref(p.slug) === path);
+  return post?.date;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const unique = Array.from(
     new Set([
@@ -26,8 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ])
   );
   return unique.map((path) => ({
-    url: `${siteConfig.domain}${path === "/" ? "" : path}`,
-    lastModified: new Date(),
+    url: `${siteConfig.domain}${path === "/" ? "/" : path}`,
+    lastModified: lastModifiedFor(path),
     changeFrequency: "monthly",
     priority: path === "/" ? 1 : 0.7,
   }));

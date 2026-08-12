@@ -39,6 +39,8 @@ export type Block =
 export type Post = {
   slug: string;
   title: string;
+  /** Shorter <title>-tag variant for posts whose full title overflows ~60 chars once " | Adpedia Neo" is appended. Falls back to `title` when unset. */
+  seoTitle?: string;
   excerpt: string;
   category: PostCategoryId;
   /** ISO date — formatted for display at render time. */
@@ -56,6 +58,7 @@ export const posts: Post[] = [
   {
     slug: "web-development-meets-ai",
     title: "Web Development Meets AI: Building Smarter Digital Experiences",
+    seoTitle: "Web Development Meets AI: What's Changing",
     excerpt:
       "How artificial intelligence is reshaping the way websites are built, experienced, and improved.",
     category: "development",
@@ -120,21 +123,13 @@ export const posts: Post[] = [
       },
     ],
   },
-  {
-    slug: "the-rise-of-edge-computing",
-    title: "The Rise of Edge Computing: Bringing Data Processing Closer to the Source",
-    excerpt: "Discover the latest design trends shaping the digital world and how they impact business.",
-    category: "development",
-    date: "2026-01-22",
-    cover: {
-      src: "/images/blog/edge-computing.png",
-      alt: "Editorial layout exploring edge computing",
-    },
-    // Title, excerpt, and date come from the index comp; the article itself has
-    // not been written. The detail page renders only the blocks that exist, so
-    // this publishes as a stub rather than a broken page.
-    body: [],
-  },
+  // "the-rise-of-edge-computing" — title, excerpt, and date came from the index
+  // comp, but the article itself was never written (body: []). Publishing an
+  // indexed, sitemap-listed page with no body is a thin-content SEO risk, so
+  // the entry is removed rather than shipped empty. Re-add it here (with a
+  // written body) once the article exists — everything that lists posts
+  // (sitemap, blog index, the blog mega menu, related-posts) reads this array
+  // directly, so restoring the entry is enough to bring the page back.
 ];
 
 export const POSTS_PER_PAGE = 6;

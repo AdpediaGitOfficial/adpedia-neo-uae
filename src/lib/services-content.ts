@@ -22,19 +22,28 @@ export const buildBrands = {
     {
       id: "designing",
       label: "Designing",
-      image: { src: "/images/services/step-designing.png", alt: "" },
+      image: {
+        src: "/images/services/step-designing.png",
+        alt: "Tablet showing a dark fintech website interface with trading and liquidity dashboards",
+      },
       body: "We craft your brand story with influential designs that engage your audience. Our talented designers create a radiant profile for your company online, helping you stand out with superior user experience and website design. We reflect your brand values in every detail.",
     },
     {
       id: "develop",
       label: "Develop",
-      image: { src: "/images/services/step-develop.png", alt: "" },
+      image: {
+        src: "/images/services/step-develop.png",
+        alt: "Magnifying glass zoomed in on colorful lines of code on a screen",
+      },
       body: "Our expert developers create impactful digital solutions for web, mobile, e-commerce, and enterprise applications. We employ best practices to develop cutting-edge technology solutions. Contact us for dedicated developers and top-notch services.",
     },
     {
       id: "digitalise",
       label: "Digitalise",
-      image: { src: "/images/services/step-digitalise.png", alt: "" },
+      image: {
+        src: "/images/services/step-digitalise.png",
+        alt: "Glowing abstract app interface panel with navigation icons on a dark background",
+      },
       body: "We welcome digitization opportunities for your organization's transformation to achieve goals. We integrate digital and physical activities across channels. Our experts help you deliver a quick, safe, and lasting experience to customers.",
     },
   ],
