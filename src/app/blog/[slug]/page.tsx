@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { Heading, Title, Label, Text } from "@/components/ui/typography";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { ArticleBody } from "@/components/sections/blog/ArticleBody";
 import { PostCard } from "@/components/sections/blog/PostCard";
@@ -57,7 +57,8 @@ export default async function PostPage({ params }: Params) {
         aria-labelledby="post-heading"
       >
         <article className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-          <Reveal className="lg:sticky lg:top-32 lg:self-start">
+          {/* Rendered immediately (no Reveal) since it's the LCP image. */}
+          <div className="lg:sticky lg:top-32 lg:self-start">
             <div className="relative aspect-[734/949] w-full overflow-hidden bg-ink-800">
               <Image
                 src={post.cover.src}
@@ -68,7 +69,7 @@ export default async function PostPage({ params }: Params) {
                 className="object-cover"
               />
             </div>
-          </Reveal>
+          </div>
 
           <div>
             <Label as="p" className="text-white/45">

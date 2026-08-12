@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Heading, Subtitle } from "@/components/ui/typography";
 import { Reveal } from "@/components/ui/Reveal";
+import { ServiceMedia } from "@/components/sections/services/detail/ServiceMedia";
 import { aiContent } from "@/lib/home-content";
 
 export function AiSection() {
@@ -20,18 +20,20 @@ export function AiSection() {
       </Reveal>
 
       <Reveal delay={0.1} className="relative my-4 w-full max-w-4xl">
-        {/* Animated loop (1920x1080). `unoptimized` is required: the Next image
-            optimizer would collapse an animated GIF to a single frame, and there
-            is no reason to run a 44 MB file through sharp anyway. Aspect matches
-            the asset (16:9) so it neither letterboxes nor crops. */}
+        {/* Same loop, now served as an MP4 (was a 43MB animated GIF) so the
+            browser streams/decodes it instead of downloading the whole file
+            as a still-image request. Aspect matches the asset (16:9) so it
+            neither letterboxes nor crops. */}
         <div className="relative aspect-[16/9] w-full">
-          <Image
-            src="/videos/AI.gif"
-            alt="Abstract neural wave animation representing AI-driven systems"
-            fill
-            unoptimized
+          <ServiceMedia
+            image={{
+              src: "/images/ai/ai-section-poster.jpg",
+              alt: "Abstract neural wave animation representing AI-driven systems",
+            }}
+            video="/videos/ai-section.mp4"
             sizes="(max-width: 1024px) 100vw, 896px"
-            className="object-cover"
+            feather={false}
+            priority={false}
           />
         </div>
       </Reveal>
