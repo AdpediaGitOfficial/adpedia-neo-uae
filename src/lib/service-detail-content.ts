@@ -898,7 +898,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       ],
     },
     proof: {
-      title: "Proven Expertise. Measurable Impact.",
+      title: "Work Shipped. Results Tracked.",
       intro:
         "These numbers come from work we've actually shipped — architectures we've designed, pipelines we've built, and teams we've supported long after launch day.",
       stats: [
@@ -906,19 +906,19 @@ export const serviceDetails: Record<string, ServiceDetail> = {
           value: "40",
           suffix: "+",
           label: "DevOps Professionals",
-          body: "A dedicated team of certified DevOps engineers bringing deep expertise across CI/CD, cloud infrastructure, automation, and reliability engineering.",
+          body: "Every engineer on the team has run production pipelines before joining us — across CI/CD, cloud infrastructure, automation, and reliability work.",
         },
         {
           value: "120",
           suffix: "+",
           label: "Cloud Architectures Designed and Managed",
-          body: "Scalable, secure cloud architectures built for performance, resilience, and long-term growth across multi-cloud and hybrid environments.",
+          body: "Architectures built to hold up under real traffic, not just pass a demo — across multi-cloud and hybrid setups, shaped by whatever the client already runs.",
         },
         {
           value: "200",
           suffix: "+",
           label: "DevOps Implementations Executed",
-          body: "Successfully delivered DevOps transformations that accelerate releases, improve system stability, and reduce operational complexity.",
+          body: "Delivery pipelines that ship faster and break less, measured in shorter release cycles and fewer late-night incidents rather than a slide in a deck.",
         },
       ],
       // Exported from the comp. Replace with official brand assets before
@@ -1127,7 +1127,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
       ],
       metrics: {
-        title: "The Numbers That Help You Reach Your Business Goals Faster",
+        title: "What Working With Us Actually Moves",
         stats: [
           { value: "40", suffix: "+", label: "Faster go-to-market timeline" },
           { value: "32", suffix: "+", label: "Reduction in risks" },
@@ -1180,25 +1180,25 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       items: [
         {
           title: "Toolchain Complexity",
-          body: "Managing a complicated deployment, automation, and monitoring toolchain can be challenging.",
+          body: "A deployment, automation, and monitoring toolchain that's grown one tool at a time gets hard to manage.",
           solution:
             "We consolidate the toolchain around a small set of well-integrated tools rather than adding another dashboard for every new need, cutting the manual handoffs between them.",
         },
         {
           title: "Scalability",
-          body: "Ensuring that DevOps practices scale with the growth of the organization and the complexity of projects can be demanding.",
+          body: "Practices that worked at ten engineers don't always hold at a hundred, as the organisation and its projects grow more complex.",
           solution:
             "We design infrastructure that scales with load automatically rather than manually, and revisit the architecture as the organisation and its traffic patterns grow — scaling is treated as an ongoing practice, not a one-time fix.",
         },
         {
           title: "Legacy Systems",
-          body: "Integrating legacy systems with contemporary DevOps techniques may be challenging.",
+          body: "Legacy systems weren't built with modern DevOps techniques in mind, and connecting the two isn't always straightforward.",
           solution:
             "We modernise legacy systems incrementally rather than in one risky cutover, wrapping them with adapters that connect to the new delivery process while the underlying system is migrated at a pace the business can absorb.",
         },
         {
           title: "Security Issues",
-          body: "Integrating security practices into DevOps can be a complex process, requiring a shift-left approach.",
+          body: "Bolting security onto DevOps after the fact rarely works — it needs a shift-left approach from the start.",
           solution:
             "We bring security checks into the pipeline from day one — automated scanning and policy checks that catch risk while code is being written, instead of a manual review wedged in before release.",
         },
