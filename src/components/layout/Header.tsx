@@ -84,8 +84,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        solid ? "border-b border-white/10 bg-ink/90 backdrop-blur-md" : "bg-transparent"
+        "fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-colors duration-300",
+        solid ? "bg-ink/90 backdrop-blur-md" : "bg-transparent"
       )}
       onMouseLeave={scheduleClose}
       onBlur={(e) => {
