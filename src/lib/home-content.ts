@@ -57,7 +57,7 @@ export const stats = [
     suffix: "+",
     unit: "Brands",
     title: "Trusted Worldwide",
-    body: "Clients across India, New Zealand, Singapore, and beyond — most come back for a second project once the first one ships.",
+    body: "Clients across India, the UAE, Singapore, and beyond — most come back for a second project once the first one ships.",
   },
   {
     value: "100",

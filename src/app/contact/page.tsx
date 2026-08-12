@@ -6,7 +6,7 @@ import { ContactOffices } from "@/components/sections/contact/ContactOffices";
 import { ContactForm } from "@/components/sections/contact/ContactForm";
 
 const description =
-  "Have an idea? Share your vision with Adpedia Neo and we'll help turn it into a user-focused experience. Offices in India, New Zealand, and Singapore.";
+  "Have an idea? Share your vision with Adpedia Neo and we'll help turn it into a user-focused experience. Offices in India, the UAE, and Singapore.";
 
 export const metadata: Metadata = {
   title: "Contact",

@@ -166,11 +166,11 @@ export const offices = [
     phoneHref: "tel:+919447768570",
   },
   {
-    country: "New Zealand",
-    address: ["G06/430 Queen Street,", "Auckland CBD Auckland 1010-", "New Zealand"],
+    country: "UAE",
+    address: ["Alsuaidi Building", "Al Mararr, Deira,", "Dubai, UAE"],
     email: "info@adpedia.in",
-    phone: "+64 210 285 6948",
-    phoneHref: "tel:+642102856948",
+    phone: "+971 54 407 4982",
+    phoneHref: "tel:+971544074982",
   },
   {
     country: "Singapore",
