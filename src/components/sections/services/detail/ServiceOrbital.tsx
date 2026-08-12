@@ -6,6 +6,7 @@ import {
   Compass,
   BarChart3,
   BrainCircuit,
+  Workflow,
   type LucideIcon,
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -25,6 +26,7 @@ const iconMap: Record<string, LucideIcon> = {
   Compass,
   BarChart3,
   BrainCircuit,
+  Workflow,
 };
 
 /**

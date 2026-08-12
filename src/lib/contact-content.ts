@@ -3,7 +3,7 @@
 export const contactHero = {
   title: "Get in Touch.",
   intro:
-    "Have an idea? Let's discuss and create something meaningful. Share your vision, and we'll help turn it into a user-focused experience.",
+    "Tell us what you're building and where it's stuck. We'll reply with next steps, not a sales deck.",
 };
 
 export const contactForm = {

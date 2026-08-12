@@ -327,15 +327,14 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     eyebrow: "Services.",
     title: "UI/UX Design.",
     intro:
-      "We aim for simplicity, making things effortless. Our goal is to eliminate complexity for a seamless experience. Ease is key to navigating our platform.",
+      "We design interfaces people don't have to think about — where the right action is always the obvious one, and nothing stands between your users and what they came to do.",
     hero: {
       src: "/images/services/uiux/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
       alt: "Iridescent glass ribbon spiraling through darkness, rendered in three dimensions",
     },
-    statement:
-      "Outstanding Design, Rich in Meaning and Visually Appealing, Results from Exceptional Creative Thinking.",
-    body: "Our team of professionals can respond to your requirements promptly and provide a design that compliments your company's ideals. We believe in creating an engaging solution by being unambiguous and adhering to timeframes.",
+    statement: "Interfaces Built on Judgment, Not Just Aesthetics.",
+    body: "We move fast without skipping the thinking — research and iteration inform every screen, and what we ship reflects how your brand actually works, not a generic template with your logo on it.",
     platforms: [
       { label: "IOS Apps", image: { src: "/images/services/uiux/platform-ios.png", alt: "Apple logo icon representing iOS" } },
       { label: "Android Apps", image: { src: "/images/services/uiux/platform-android.png", alt: "Android robot mascot icon" } },
@@ -346,7 +345,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Our UI/UX design process",
       title: "How We Turn Ideas into Intuitive Experiences",
       intro:
-        "Our design process blends strategy, creativity, and usability to deliver intuitive interfaces that solve real user problems and drive engagement.",
+        "Every screen starts with a real user problem, not a blank canvas. Strategy shapes the structure, usability keeps it honest, and the visual layer comes last.",
       variant: "cards",
       image: {
         src: "/images/services/uiux/process.png",
@@ -355,15 +354,15 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       steps: [
         {
           title: "Wireframes",
-          body: "A solid wireframe is the foundation of your app and the key to better user experience, ease of navigation, and hierarchy. The schematic rendering of the app would show how it will look in the future.",
+          body: "We block out the structure first — what's on each screen, how it's organised, and where it leads — before a single pixel is styled, so navigation and hierarchy are settled early, when they're still cheap to change.",
         },
         {
           title: "Prototype",
-          body: "This clickable miniature version of your product that includes semantics, a variety of settings, and software programming is essential to assess and improve the precision of the product.",
+          body: "The wireframes become a clickable prototype with real interactions and real states, so we can test the flow with actual users before any of it is built.",
         },
         {
           title: "Visual Design",
-          body: "A solid wireframe is the foundation of your app and the key to better user experience, ease of navigation, and hierarchy. The schematic rendering of the app would show how it will look in the future.",
+          body: "Once the structure is proven, we apply the visual system — type, colour, spacing, motion — so the interface looks as considered as it behaves.",
         },
       ],
     },
@@ -376,23 +375,23 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     eyebrow: "Services.",
     title: "Web Development.",
     intro:
-      "From responsive websites to complex web applications, we develop robust digital solutions using modern technologies and best practices.",
+      "We build websites and web applications that hold up under real use — fast to load, straightforward to maintain, and built on technology choices we can defend.",
     hero: {
       src: "/images/services/web-development/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
       alt: "Softly lit purple glass sphere rendered in three dimensions",
     },
-    statement: "Your Business's Premier Website Development Partner",
-    body: "We offer a vast array of web development solutions, namely, website creation, cybersecurity measures, UX/UI design, eCommerce solutions, website architecture, quality assurance testing, maintenance, consulting, and custom CMS development to help you achieve your business objectives.",
+    statement: "Websites Built to Do a Job, Not Just Look Good",
+    body: "From a marketing site to a full web application, we handle the whole build — architecture, UX, front-end and back-end development, QA, and the CMS your team will actually use — so nothing falls into a gap between specialists.",
     capabilities: {
       eyebrow: "Services",
       title: "Powering Businesses Through Web Development",
       intro:
-        "We offer end-to-end web development solutions designed to scale with your business and deliver measurable results.",
+        "Six capabilities, one team — from the first line of code through the metrics that tell you it's working.",
       items: [
         {
           title: "Website Development",
-          body: "Custom websites built for performance, accessibility, and conversion.",
+          body: "Marketing sites and content-driven builds, tuned for load speed and built to convert.",
           variant: "overlay",
           image: {
             src: "/images/services/web-development/capability-website.png",
@@ -401,7 +400,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "Web Application Development",
-          body: "Web apps with modern frameworks and seamless experiences.",
+          body: "Web apps built on frameworks we'd choose again — React, Next.js, and whatever stack actually fits the problem.",
           variant: "icon",
           icon: {
             src: "/images/services/web-development/icon-webapp.png",
@@ -410,7 +409,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "E-commerce Development",
-          body: "Secure, scalable online stores with payment integrations.",
+          body: "Online stores that handle real transaction volume, with payment and inventory integrations wired in from day one.",
           variant: "banner",
           image: {
             src: "/images/services/web-development/capability-ecommerce.png",
@@ -419,7 +418,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "API Integration",
-          body: "Connect third-party services and build custom API solutions.",
+          body: "Custom APIs and third-party integrations that keep your systems talking to each other reliably.",
           variant: "overlay",
           image: {
             src: "/images/services/web-development/capability-api.png",
@@ -428,7 +427,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "Performance Optimisation",
-          body: "Speed improvements, Core Web Vitals optimization, and caching.",
+          body: "Faster load times, healthier Core Web Vitals, and caching strategies that hold up in production.",
           variant: "banner",
           image: {
             src: "/images/services/web-development/capability-performance.png",
@@ -437,7 +436,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "Custom CMS Development",
-          body: "Tailored content management systems for easy content updates.",
+          body: "A CMS built around how your team actually publishes, not a generic admin panel bolted on afterward.",
           variant: "icon",
           icon: {
             src: "/images/services/web-development/icon-cms.png",
@@ -471,12 +470,12 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "How We Work",
       title: "How We Build High-Performance Web Solutions",
       intro:
-        "We follow a structured, transparent, and user-focused process to deliver fast, scalable, and reliable web solutions—optimized for performance at every stage.",
+        "Five stages, the same order every time — so you always know what's next and why.",
       variant: "list",
       steps: [
         {
           title: "Discovery & Planning",
-          body: "Understanding business goals, user needs, and technical requirements.",
+          body: "We start with your goals, your users, and the technical constraints you're already carrying — before any design work begins.",
         },
         { title: "Design & Architecture" },
         { title: "Development" },
@@ -493,19 +492,19 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     eyebrow: "Services.",
     title: "Mobile App Development.",
     intro:
-      "We build intuitive, high-performance mobile apps designed for seamless user experiences across iOS and Android platforms.",
+      "We build mobile apps that feel native to the platform they're on — fast, familiar to use, and built to handle real-world conditions like patchy connectivity and battery constraints.",
     hero: {
       src: "/images/services/mobile-app-development/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
       alt: "Cluster of glossy purple spheres rendered in three dimensions",
     },
-    statement: "We Create Scalable Apps That Make Your Brand Stand Out.",
-    body: "A mobile app can elevate your business prospects. Innovative technologies make apps essential for firms to enhance customer experience and stay competitive. We offer on-demand services, white-label products, and tailored solutions.",
+    statement: "Apps Built to Handle Growth, Not Just Launch Day",
+    body: "We build native, hybrid, and cross-platform apps depending on what the product actually needs, not a default stack applied to every brief. On-demand builds, white-label products, and bespoke apps all get the same scrutiny.",
     platformGrid: {
       eyebrow: "Platforms We Build For",
       title: "Apps That Work Across Every Screen",
       intro:
-        "We create high-quality mobile apps that adapt across devices. Our solutions ensure consistent performance and usability for all users.",
+        "From phones to wearables to the car dashboard, the same app needs to behave correctly everywhere it runs.",
       items: [
         { label: "Wear OS", icon: "Watch" },
         { label: "Android OS", icon: "Smartphone" },
@@ -521,11 +520,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Mobile App Development Services",
       title: "Custom Mobile Apps Designed for Growth",
       intro:
-        "We help businesses create mobile apps that deliver exceptional user experiences and meaningful digital interactions. By combining design, technology, and strategy, we build apps that strengthen brands and fuel growth.",
+        "Four capabilities that cover the full app lifecycle — from the first build to the support that keeps it running.",
       items: [
         {
           title: "App Development",
-          body: "Building bespoke android applications catering to unique requirements using Kotlin, a trusted technology.",
+          body: "Native Android apps built in Kotlin, shaped around what your product specifically needs rather than a generic template.",
           image: {
             src: "/images/services/mobile-app-development/bento-app-development.png",
             alt: "Mobile app home screen on a phone against a purple backdrop",
@@ -533,7 +532,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "Application Testing",
-          body: "Comprehensive application testing to ensure the quality and performance of your app, and its compliance with industry standards.",
+          body: "Functional, performance, and compliance testing before release, so problems surface in QA rather than in a one-star review.",
           image: {
             src: "/images/services/mobile-app-development/bento-application-testing.png",
             alt: "Phone displaying an app under test",
@@ -542,7 +541,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "UX/UI Design",
-          body: "Creates UI/UX design that aligns with your business goals and incorporates the latest design trends and deliver user-first interfaces and mobile experiences.",
+          body: "Interfaces designed around how people actually hold and use a phone, not a desktop layout squeezed onto a smaller screen.",
           image: {
             src: "/images/services/mobile-app-development/bento-ux-ui-design.png",
             alt: "Mobile interface design mockups",
@@ -550,7 +549,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "Maintenance and Support",
-          body: "We provide post-release support and maintenance to ensure the long-term success of the application.",
+          body: "Ongoing support after launch, so the app stays stable through OS updates and device changes it wasn't originally tested against.",
           image: {
             src: "/images/services/mobile-app-development/bento-maintenance.png",
             alt: "Hand holding a phone showing app maintenance",
@@ -561,21 +560,21 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     serviceCards: {
       title: "Our Mobile App Development Services",
       intro:
-        "We deliver end-to-end mobile app solutions—from hybrid and native development to reliable post-launch support—built for scalability and long-term success.",
+        "Native when performance matters most, hybrid when speed-to-market does — we build to the trade-off that fits your product, then support what we ship.",
       items: [
         {
           title: "Maintenance & Support",
-          body: "We provide proactive maintenance and timely issue resolution to ensure your app remains stable.",
+          body: "We monitor for issues after launch and fix them before they compound, rather than waiting for a support ticket.",
           icon: "LifeBuoy",
         },
         {
           title: "Native App Development",
-          body: "Our expert mobile app developers create highly efficient native apps that perform optimally.",
+          body: "Native apps built directly against each platform's own APIs, for the performance a cross-platform layer can't always match.",
           icon: "Code2",
         },
         {
           title: "Hybrid App Development",
-          body: "We design comprehensive hybrid apps that align with your business objectives and security needs.",
+          body: "One codebase across iOS and Android when that trade-off makes sense for your timeline and budget.",
           icon: "Layers",
         },
       ],
@@ -589,33 +588,33 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     eyebrow: "Services.",
     title: "AI & Data Science.",
     intro:
-      "We help businesses turn data into intelligent solutions through advanced machine learning, analytics, and AI-driven strategies—delivering measurable impact and smarter decision-making.",
+      "We build the models and pipelines that turn data your business already has into decisions it can actually act on — not a dashboard nobody opens after the first week.",
     hero: {
       src: "/images/services/ai-data-science/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
       alt: "Ribbon of blue and green light trailing across darkness",
     },
-    statement: "Advance Your Business with Our Data Science Consultants",
-    body: "Our data science experts deliver AI and predictive analytics solutions that transform complex data into actionable insights, driving efficiency, performance optimization, and measurable business outcomes.",
+    statement: "Data Science That Ends in a Decision, Not Just a Report",
+    body: "We work from your actual data — not a hypothetical clean dataset — to build models that hold up in production and predictions your team can trust enough to act on.",
     featureCards: {
       eyebrow: "AI & Data Science Services",
       title: "Transforming Data Into Actionable Intelligence",
       intro:
-        "We help businesses use AI and data science to uncover insights, build models, and deploy solutions—enabling smarter decisions and growth.",
+        "Three capabilities that take a project from an open question to a model running in production.",
       items: [
         {
           title: "Strategy Planning",
-          body: "Data-driven AI strategies aligned with your business objectives.",
+          body: "An AI roadmap grounded in what your data can actually support, not what's trending.",
           icon: "Target",
         },
         {
           title: "Model Development",
-          body: "Custom machine learning models built for accuracy and scalability.",
+          body: "Models built and validated against your real data, not a benchmark dataset that doesn't reflect your problem.",
           icon: "BrainCircuit",
         },
         {
           title: "Infrastructure Setup",
-          body: "Set up secure, scalable infrastructure to support AI models and data workflows.",
+          body: "The infrastructure underneath the model — secure, monitored, and sized for the load it'll actually see.",
           icon: "Server",
         },
       ],
@@ -624,7 +623,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Our AI & Data Science Services",
       title: "Build, Scale, and Optimise Intelligent Systems",
       intro:
-        "We design, build, and deploy AI solutions across the full data lifecycle—supporting projects of any scale, from data engineering to intelligent optimization.",
+        "From the first data pipeline to a tuned model in production — the eight capabilities below cover the full lifecycle, not just the parts that make a good demo.",
       core: {
         src: "/images/services/ai-data-science/orbital-core.png",
         alt: "Iridescent glass knot rendered in three dimensions",
@@ -636,7 +635,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         { label: "AI Software Development", icon: "Code2" },
         { label: "Recommender Systems", icon: "Sparkles" },
         { label: "Optimisation", icon: "Gauge" },
-        { label: "Data Engineering & Architecture", icon: "Database" },
+        { label: "MLOps & Model Deployment", icon: "Workflow" },
         { label: "Data Strategy", icon: "Compass" },
         { label: "Business Intelligence", icon: "BarChart3" },
         { label: "Artificial Intelligence Consulting", icon: "BrainCircuit" },
@@ -646,24 +645,24 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Our Approach",
       title: "A Proven Process to Turn Data Into Impact",
       intro:
-        "We follow a structured, iterative approach to solve complex data and AI challenges—ensuring clarity, validation, scalability, and continuous improvement at every stage.",
+        "Four stages, each ending in a checkpoint — so a project only moves to production once it's actually proven itself.",
       variant: "grid",
       steps: [
         {
           title: "Discovery Session",
-          body: "Reviewing your current capabilities and defining future goals to gain a better understanding and make relevant recommendations for tools, technology, and architecture.",
+          body: "We audit what data and tooling you already have, then scope what's realistic to build against it, before recommending any specific technology.",
         },
         {
           title: "Proof of Concept",
-          body: "Testing a small-scale system, and proving the viability of ML models for your problem.",
+          body: "A small-scale build tests whether a model can actually solve your specific problem, before we commit to building the full system.",
         },
         {
           title: "Improvement",
-          body: "We focus on improving previously built models to continuously raise the quality of insights and stay ahead of the curve in the changing environment.",
+          body: "Once a model is validated, we tune it against real outcomes — accuracy in a demo and accuracy in production are rarely the same number.",
         },
         {
           title: "Production",
-          body: "Reviewing your current capabilities and defining future goals to make recommendations for tools, technology, and architecture.",
+          body: "We deploy the model into your existing systems and set up the monitoring that tells you when it needs retraining.",
         },
       ],
     },
@@ -690,43 +689,43 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     eyebrow: "Services.",
     title: "Product Development.",
     intro:
-      "We build scalable, market-ready MVPs that validate ideas quickly, reduce risk, and accelerate time-to-market through strategic planning, user-focused design, and agile development practices.",
+      "We build the smallest version of your product that can actually prove or disprove the idea — fast enough to matter, solid enough to build on if it works.",
     hero: {
       src: "/images/services/product-development/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
       alt: "Iridescent glass sphere rendered in three dimensions",
     },
-    statement: "MVP Software Development for Winning Digital Products.",
-    body: "Our MVP software development solutions help businesses launch digital products quickly and cost-effectively. Our iterative process focuses on informed guesses, minimal resources, and user feedback for timely deliveries while minimizing risks and optimizing costs through thorough research.",
+    statement: "Built to Test the Idea, Not to Impress a Demo Audience",
+    body: "An MVP earns its name by leaving things out on purpose. We scope down to what actually needs testing, ship it fast, and let real user feedback — not our assumptions — decide what gets built next.",
     principles: {
       eyebrow: "Why Choose Us",
       title: "The Principles Behind Our Successful MVPs",
       intro:
-        "We follow a proven, research-driven approach to MVP development—focusing on speed, clarity, and value. By minimizing waste, anticipating risks early, and prioritizing what truly matters, we deliver efficient, scalable products without unnecessary complexity or cost.",
+        "Four principles shape every MVP we build — the same ones whether it's a weekend prototype or a six-month build.",
       items: [
         {
-          body: 'Our "build-measure-learn" approach makes informed decisions and tests them quickly, reducing turn-around time for fast implementation.',
+          body: "We ship a testable version, measure how people actually use it, and let that evidence — not our first instinct — decide the next iteration.",
           image: {
             src: "/images/services/product-development/principle-1.png",
             alt: "Iridescent glass folder rendered in three dimensions",
           },
         },
         {
-          body: "We take full responsibility for our work and go the extra mile in research and planning to minimize potential losses.",
+          body: "We do the upfront research ourselves rather than asking you to validate our assumptions — the planning risk sits with us, not you.",
           image: {
             src: "/images/services/product-development/principle-2.png",
             alt: "Iridescent glass cursor rendered in three dimensions",
           },
         },
         {
-          body: "Our top-notch products eliminate the need for additional costs or time to manage redundant features.",
+          body: "Every feature has to earn its place in the MVP. If it doesn't test the core hypothesis, it waits for a later version.",
           image: {
             src: "/images/services/product-development/principle-3.png",
             alt: "Iridescent glass building block rendered in three dimensions",
           },
         },
         {
-          body: "We begin our process with a thorough business analysis which will, in turn, helps us to anticipate potential challenges and avoid delays in the development process.",
+          body: "We start with a business analysis grounded in your actual constraints, so the risks that would normally surface mid-build get caught before we start.",
           image: {
             src: "/images/services/product-development/principle-4.png",
             alt: "Iridescent glass rocket rendered in three dimensions",
@@ -738,11 +737,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "MVP Services",
       title: "End-to-End MVP Software Development",
       intro:
-        "We help startups and businesses design, build, and validate MVPs efficiently—turning ideas into market-ready products through strategic design, scalable development, and expert consulting.",
+        "Four ways we help teams get from an idea to something real users can respond to.",
       items: [
         {
           title: "MVP Design",
-          body: "We'll review data from your MVP's launch to create an improvement strategy. We'll enhance the MVP, adapt it to the market, cut costs, set KPIs, and plan for expansion.",
+          body: "We design only what the test requires — the core flow, not a full product — so the MVP validates the idea without the cost of building everything around it.",
           image: {
             src: "/images/services/product-development/mvp-design.png",
             alt: "Neon rocket launching from a rising bar chart",
@@ -752,7 +751,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "MVP Web Application",
-          body: "We will improve the MVP based on initial launch data, refining it for better market fit. This includes optimizing costs, setting KPIs, and planning for product evolution.",
+          body: "A working web build of the MVP, engineered to collect real usage data from day one rather than simulate it in a prototype.",
           image: {
             src: "/images/services/product-development/mvp-web.png",
             alt: "Web application dashboard screens arranged at an angle",
@@ -762,7 +761,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "MVP Mobile Application",
-          body: "Data from your MVP Mobile App launch will help improve its performance and develop a full application quickly.",
+          body: "The same MVP scoped for a native or cross-platform mobile build, when the test needs to happen on a phone rather than in a browser.",
           image: {
             src: "/images/services/product-development/mvp-mobile.png",
             alt: "Hand holding a phone showing a mobile app home screen",
@@ -772,7 +771,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "MVP Consulting",
-          body: "Our experts provide consulting for businesses creating an MVP. We help enterprises understand and develop the right MVP.",
+          body: "For teams that already have the idea and the team — we review the plan and flag what's likely to go wrong before you build it.",
           image: {
             src: "/images/services/product-development/mvp-consulting.png",
             alt: "Metallic puzzle pieces fitting together above a purple disc",
