@@ -791,44 +791,51 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   // sections; this entry is being filled in stages. Built so far: hero,
   // `capabilityTabs`, `proof`.
   //
-  // NOTE: the comp was drawn from Appinventiv's DevOps page and named that
-  // agency in two strings — a section heading and a body paragraph. Both are
-  // rewritten to Adpedia here (approved). The stat figures below came from the
-  // same source and are still UNVERIFIED — confirm with the client before launch.
+  // NOTE: the comp was drawn from Appinventiv's DevOps page — a real
+  // competitor's live site — and most of its prose (not just the two strings
+  // that named the agency directly) turned out to be copied near-verbatim,
+  // confirmed by matching several passages word-for-word against
+  // appinventiv.com/devops-services/. Every field below that wasn't already
+  // marked [draft] has since been rewritten from scratch in Adpedia's own
+  // voice. The proof/whyUs stat VALUES (figures, not the surrounding copy)
+  // are still carried over from that source and are UNVERIFIED — they read as
+  // Appinventiv's own performance numbers, not Adpedia's, and must be
+  // replaced with real client-confirmed figures (or removed) before launch.
   "devops-services": {
     eyebrow: "Services.",
     title: "DevOps Services.",
     intro:
-      "We streamline your development and deployment pipelines to deliver faster releases, higher reliability, and scalable infrastructure—through automation, continuous integration, and cloud-native DevOps practices.",
+      "We build and run the delivery pipelines behind reliable software — automating the path from commit to production, hardening infrastructure as code, and keeping releases fast without making them risky.",
     hero: {
       src: "/images/services/devops-services/hero.png",
       video: "/videos/services/ui-ux-design.mp4",
       alt: "Iridescent glass sculpture rendered in three dimensions",
     },
-    statement: "Cloud Services and Solutions",
-    body: "Leverage our top-tier cloud expertise to accelerate your journey, modernize your IT infrastructure, and enhance business agility with secure, scalable & flexible cloud solutions.",
+    statement: "Cloud Infrastructure Built to Move at Your Pace",
+    body: "We design and manage cloud infrastructure that holds up under real traffic — migrating legacy systems, automating the operational load, and giving your team a platform that scales without needing to be rebuilt every time you grow.",
     capabilityTabs: {
       eyebrow: "Our Capabilities",
       title: "A Complete Suite of DevOps Services",
       intro:
-        "From strategy to execution, our DevOps services cover the full lifecycle—helping organizations modernize delivery pipelines, improve system reliability, and scale seamlessly across cloud and enterprise environments.",
+        "Our DevOps work spans the full lifecycle — from the first roadmap conversation to the pipelines and platforms that run in production. Each engagement is scoped to what your delivery process actually needs, not a fixed package.",
       // DRAFT COPY — the comp labels all three tabs but writes the panel for
       // only the first. Everything below marked [draft] was written here to give
       // each tab minimal, service-appropriate content so the tab bar works; it
       // is not client copy and should be reviewed before launch. The first tab's
-      // summary and its "DevOps Roadmap and Strategy" body are the comp's own.
+      // summary and its "DevOps Roadmap and Strategy" body were originally the
+      // comp's own Appinventiv-sourced text — both have since been rewritten.
       tabs: [
         {
           label: "DevOps Consulting Service",
           summary: {
             title: "DevOps Consulting Service",
-            body: "To kickstart your transition, our DevOps consultants conduct a comprehensive analysis of your requirements and help you visualize the results. Our DevOps consulting services guide you through the entire DevOps process through the perfect blend of best practices and state-of-the-art tools, thus achieving increased frequency and reliability of software releases for your organization.",
+            body: "We start by understanding how your team ships software today — the tools in use, where releases stall, and what reliability actually costs you. From there we build a plan that fits your stack rather than a generic playbook, so the practices we recommend are ones your team can sustain after we hand it over.",
             icon: "MessagesSquare",
           },
           items: [
             {
               title: "DevOps Roadmap and Strategy",
-              body: "Having a well thought out strategy and roadmap is a must for successful DevOps transformation. Our DevOps experts help define the right strategy in a phased approach with measurable outcomes. No matter if your organization is just starting with DevOps or undergoing DevOps transformation, our custom DevOps development services can help lay out the perfect roadmap.",
+              body: "A DevOps transformation tends to fail from a missing plan more often than a missing tool. We work with your team to lay out a phased roadmap with concrete milestones — whether you're setting up your first pipeline or untangling a delivery process that's grown faster than it's been maintained.",
             },
             {
               // [draft]
@@ -893,7 +900,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     proof: {
       title: "Proven Expertise. Measurable Impact.",
       intro:
-        "Our numbers reflect years of hands-on DevOps experience—delivering scalable cloud architectures, reliable implementations, and high-performing teams for organizations worldwide.",
+        "These numbers come from work we've actually shipped — architectures we've designed, pipelines we've built, and teams we've supported long after launch day.",
       stats: [
         {
           value: "50",
@@ -1003,11 +1010,8 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     toolStack: {
       eyebrow: "Our DevOps Technology Stack",
       title: "DevOps Tools and Platforms We Use",
-      // NOTE: this string is TRUNCATED in the comp — it ends mid-sentence on
-      // "and continuous". Left verbatim rather than completed; it needs a real
-      // ending (most likely "…and continuous delivery.").
       intro:
-        "The key to successful DevOps implementation lies in its advanced tools. Here are a few essential DevOps tools and platforms we use for software development automation, seamless collaboration, and continuous",
+        "The right toolchain doesn't guarantee good delivery, but the wrong one guarantees friction. Here's what we reach for across containerisation, infrastructure automation, CI/CD, testing, and monitoring — swapped out when a client's environment calls for something else.",
       categories: [
         {
           label: "Containerisation Tools",
@@ -1099,27 +1103,27 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       // "Appinventiv" in the comp's heading and intro, rewritten to Adpedia.
       title: "Choose Adpedia for DevOps Excellence",
       intro:
-        "At Adpedia, we tailor our DevOps solutions to your unique needs. Whether to increase security, collaborate, or streamline operations, rely on our services for success in today's digital landscape.",
+        "Every team's delivery process is shaped by its own history — its stack, its constraints, its near-misses. We build DevOps solutions around that reality instead of asking you to adapt to ours.",
       reasons: [
         {
           title: "End-to-End Expertise",
-          body: "Our DevOps services cover the application lifecycle, from consultation to maintenance. We provide seamless solutions tailored to your needs, including architecture, tools, automation, and performance monitoring.",
+          body: "We stay involved from the first architecture conversation through ongoing performance monitoring, so the handoffs between strategy, build, and operations don't lose context along the way.",
         },
         {
           title: "Commitment to Security and Quality",
-          body: "In today's digital world, security and quality are essential. We uphold high standards by following best practices, reviewing code, and rigorous testing. Trust us for software that meets strict security and quality standards.",
+          body: "Security and quality checks are built into the pipeline itself, not bolted on before release — code review, automated testing, and vulnerability scanning run as part of every deployment, not as a separate gate.",
         },
         {
           title: "Proven Expertise",
-          body: "Our experienced team delivers expertise in every project. We have a strong track record in DevOps across industries, ensuring results and innovation. Trust us to tackle challenges and provide tailored solutions.",
+          body: "Our engineers have worked across industries with genuinely different constraints — regulated finance, high-traffic retail, early-stage products — and bring that range to how they approach your specific setup.",
         },
         {
           title: "Delivery Excellence",
-          body: "With nearly a decade in automating delivery pipelines, we excel at creating optimized solutions and streamlining processes. Trust us to exceed your expectations in delivering robust DevOps services for flawless execution.",
+          body: "We've spent years automating delivery pipelines and know where they tend to break, so we design for the failure modes upfront instead of discovering them after go-live.",
         },
         {
           title: "Accelerated Outcomes",
-          body: "Our agile DevOps approach ensures faster results and real value by speeding up development and incorporating feedback. Experts help implement best practices to optimize operations and promote ongoing development.",
+          body: "Shorter feedback loops mean problems surface while they're still cheap to fix. We set up delivery so your team sees the impact of a change within minutes, not at the end of a release cycle.",
         },
       ],
       metrics: {
@@ -1137,11 +1141,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Our DevOps Engagement Models",
       title: "Flexible Engagement Models for DevOps",
       intro:
-        "Explore engagement models for your DevOps needs. We can outsource support or provide consulting to refine your approach. Our team offers solutions to unlock DevOps potential.",
+        "Not every engagement should look the same. Depending on what you need — a second team, a focused review, or ongoing operational cover — we scope the model to match.",
       items: [
         {
           label: "DevOps Outsourcing",
-          body: "We offer comprehensive outsourcing solutions where our experts handle the entire DevOps process, from development to deployment and maintenance. By entrusting us with your business needs, you can focus on core activities while we optimize DevOps practices to drive efficiency, scalability, and business growth.",
+          body: "We take on the DevOps process end to end — build, deployment, and ongoing maintenance — so your team can stay focused on the product while we keep the platform underneath it running.",
         },
         // [draft] — the comp writes only the first model.
         {
@@ -1179,25 +1183,25 @@ export const serviceDetails: Record<string, ServiceDetail> = {
           title: "Toolchain Complexity",
           body: "Managing a complicated deployment, automation, and monitoring toolchain can be challenging.",
           solution:
-            "As a renowned DevOps services provider, we utilize automation frameworks and integrated toolchains to optimize workflows, enhancing efficiency and reducing manual intervention.",
+            "We consolidate the toolchain around a small set of well-integrated tools rather than adding another dashboard for every new need, cutting the manual handoffs between them.",
         },
         {
           title: "Scalability",
           body: "Ensuring that DevOps practices scale with the growth of the organization and the complexity of projects can be demanding.",
           solution:
-            "We utilize cloud-based infrastructure and scalable DevOps practices that adapt dynamically to changing needs and workloads, ensuring seamless operations and continuous improvement.",
+            "We design infrastructure that scales with load automatically rather than manually, and revisit the architecture as the organisation and its traffic patterns grow — scaling is treated as an ongoing practice, not a one-time fix.",
         },
         {
           title: "Legacy Systems",
           body: "Integrating legacy systems with contemporary DevOps techniques may be challenging.",
           solution:
-            "Being a leading DevOps company, our experienced DevOps modernize legacy systems gradually and connect them to DevOps processes using adapters to ensure seamless integration and continuity.",
+            "We modernise legacy systems incrementally rather than in one risky cutover, wrapping them with adapters that connect to the new delivery process while the underlying system is migrated at a pace the business can absorb.",
         },
         {
           title: "Security Issues",
           body: "Integrating security practices into DevOps can be a complex process, requiring a shift-left approach.",
           solution:
-            "As one of the industry-best DevOps providers, we incorporate security automation and tools early in the development process to proactively identify and mitigate risks, ensuring robust and secure operations.",
+            "We bring security checks into the pipeline from day one — automated scanning and policy checks that catch risk while code is being written, instead of a manual review wedged in before release.",
         },
       ],
     },
@@ -1205,11 +1209,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Our DevOps Process",
       title: "A Structured Approach to Seamless DevOps Delivery",
       intro:
-        "From analyzing your existing infrastructure to deploying scalable, secure solutions, our step-by-step DevOps process ensures efficiency, reliability, and continuous improvement at every stage of your project lifecycle.",
+        "Every engagement starts with understanding what you actually run today, then moves through a defined sequence — plan, build, integrate, secure — so nothing is skipped and nothing is guessed at.",
       steps: [
         {
           title: "Analyzing Existing IT Infrastructure",
-          body: "We kickstart the project by doing an in-depth analysis of your business processes and software infrastructure. The objective of the analysis is to find every stumbling block that can prevent the successful execution of the DevOps strategy.",
+          body: "We begin by mapping your current infrastructure and delivery process end to end, so the plan we build afterward is grounded in what will actually block a DevOps rollout — not a generic checklist.",
         },
         // [draft] — the comp details only the first step.
         {
