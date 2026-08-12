@@ -19,11 +19,12 @@ export function AiSection() {
         <Subtitle className="max-w-xl">{aiContent.subtitle}</Subtitle>
       </Reveal>
 
-      <Reveal delay={0.1} className="relative my-4 w-full max-w-4xl">
-        {/* Same loop, now served as an MP4 (was a 43MB animated GIF) so the
-            browser streams/decodes it instead of downloading the whole file
-            as a still-image request. Aspect matches the asset (16:9) so it
-            neither letterboxes nor crops. */}
+      <Reveal delay={0.1} className="relative my-4 w-full max-w-[33.75rem]">
+        {/* Same loop, served as an MP4 (was a 43MB animated GIF) so the browser
+            streams/decodes it instead of downloading the whole file as a still-
+            image request. Sized down from the original full-bleed treatment and
+            feathered at the edges so it fades into the section's black ground
+            instead of showing as a hard-edged rectangle. */}
         <div className="relative aspect-[16/9] w-full">
           <ServiceMedia
             image={{
@@ -31,8 +32,8 @@ export function AiSection() {
               alt: "Abstract neural wave animation representing AI-driven systems",
             }}
             video="/videos/ai-section.mp4"
-            sizes="(max-width: 1024px) 100vw, 896px"
-            feather={false}
+            sizes="(max-width: 1024px) 90vw, 540px"
+            feather
             priority={false}
           />
         </div>
