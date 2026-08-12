@@ -379,6 +379,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "From responsive websites to complex web applications, we develop robust digital solutions using modern technologies and best practices.",
     hero: {
       src: "/images/services/web-development/hero.png",
+      video: "/videos/services/ui-ux-design.mp4",
       alt: "Softly lit sphere rendered in three dimensions",
     },
     statement: "Your Business's Premier Website Development Partner",
@@ -495,6 +496,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "We build intuitive, high-performance mobile apps designed for seamless user experiences across iOS and Android platforms.",
     hero: {
       src: "/images/services/mobile-app-development/hero.png",
+      video: "/videos/services/ui-ux-design.mp4",
       alt: "Cluster of glossy purple spheres rendered in three dimensions",
     },
     statement: "We Create Scalable Apps That Make Your Brand Stand Out.",
@@ -590,6 +592,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "We help businesses turn data into intelligent solutions through advanced machine learning, analytics, and AI-driven strategies—delivering measurable impact and smarter decision-making.",
     hero: {
       src: "/images/services/ai-data-science/hero.png",
+      video: "/videos/services/ui-ux-design.mp4",
       alt: "Softly lit sphere rendered in three dimensions",
     },
     statement: "Advance Your Business with Our Data Science Consultants",
@@ -690,6 +693,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "We build scalable, market-ready MVPs that validate ideas quickly, reduce risk, and accelerate time-to-market through strategic planning, user-focused design, and agile development practices.",
     hero: {
       src: "/images/services/product-development/hero.png",
+      video: "/videos/services/ui-ux-design.mp4",
       alt: "Iridescent glass sphere rendered in three dimensions",
     },
     statement: "MVP Software Development for Winning Digital Products.",
@@ -798,6 +802,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "We streamline your development and deployment pipelines to deliver faster releases, higher reliability, and scalable infrastructure—through automation, continuous integration, and cloud-native DevOps practices.",
     hero: {
       src: "/images/services/devops-services/hero.png",
+      video: "/videos/services/ui-ux-design.mp4",
       alt: "Iridescent glass sculpture rendered in three dimensions",
     },
     statement: "Cloud Services and Solutions",
