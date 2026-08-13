@@ -13,10 +13,16 @@ export function Clarity() {
           <span id="clarity-eyebrow" className="eyebrow">
             {clarityContent.eyebrow}
           </span>
-          <ScrollFillText
-            text={clarityContent.lead}
-            className="text-pretty font-sans text-display-sm font-light leading-snug"
-          />
+          <div className="flex flex-col gap-6">
+            <ScrollFillText
+              text={clarityContent.lead}
+              className="text-pretty font-sans text-title-lg font-light leading-snug"
+            />
+            <ScrollFillText
+              text={clarityContent.leadSecondary}
+              className="text-pretty font-sans text-title-lg font-light leading-snug"
+            />
+          </div>
           <div>
             <Button href={clarityContent.cta.href} size="lg">
               {clarityContent.cta.label}

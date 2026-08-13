@@ -78,6 +78,8 @@ export const aiContent = {
 export const clarityContent = {
   eyebrow: "Digital growth starts with clarity, not noise.",
   lead: "Progress doesn't come from chasing the newest tool or trend. It comes from being specific about what's actually holding a brand back, then bringing strategy, design, and engineering to bear on that one problem instead of a generic checklist.",
+  leadSecondary:
+    "That's why every project starts with a real conversation about what's actually broken, not a discovery deck. The work that follows gets scoped around that one answer, not a menu of services we'd like to sell you.",
   cta: { label: "Let's build something meaningful", href: "/contact" },
   // Card order top→bottom. The middle (Technology) is the anchor; Conversion spreads
   // up and Creativity spreads down from it on scroll.
