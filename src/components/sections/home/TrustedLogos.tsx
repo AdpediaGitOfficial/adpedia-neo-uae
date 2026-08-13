@@ -18,7 +18,7 @@ export function TrustedLogos() {
     >
       <Container>
         <Reveal>
-          <h2 id="trusted-heading" className="text-center text-body text-white/60">
+          <h2 id="trusted-heading" className="text-center text-subtitle text-white">
             Trusted by many, and you
           </h2>
         </Reveal>
