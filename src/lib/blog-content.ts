@@ -108,6 +108,70 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "dark-patterns-in-ux-design",
+    title: "Dark Patterns in UX Design: Where Persuasion Turns Manipulative",
+    seoTitle: "Dark Patterns in UX Design Explained",
+    excerpt:
+      "The line between persuasive design and manipulation, the patterns that cross it most often, and why ethical UX is the better business decision.",
+    category: "design",
+    date: "2026-08-12",
+    cover: {
+      src: "/images/blog/dark-patterns-ux.png",
+      alt: "Grid of dark UI tiles with two highlighted in accent purple, standing out from the rest",
+    },
+    author: { name: "Priya Nair", role: "Lead UI/UX Designer" },
+    lead: "Dark patterns aren't a design mistake — they're a design decision. Somewhere in every checkout flow that hides its fees or subscription that resists cancellation, someone chose conversion over honesty. Here's what that choice actually costs, and where the line sits.",
+    body: [
+      { type: "heading", level: 2, text: "What Actually Counts as a Dark Pattern" },
+      {
+        type: "paragraph",
+        text: "Persuasive design and deceptive design get lumped together constantly, and they aren't the same thing. A well-placed testimonial or a genuinely limited launch discount is persuasion — it gives someone a real reason to act. A dark pattern is different: it steers someone toward an outcome they wouldn't choose if they had the full picture, and it usually works by hiding information, adding friction selectively, or borrowing urgency that isn't real. The test we use internally is simple: if the user noticed exactly what the interface just did, would they feel tricked? If yes, it doesn't ship, no matter what it does for the conversion number.",
+      },
+      { type: "heading", level: 2, text: "The Patterns We See Most Often" },
+      {
+        type: "paragraph",
+        text: "A few of these show up in almost every audit we run, across industries that have nothing else in common:",
+      },
+      {
+        type: "list",
+        items: [
+          "Confirmshaming — guilt-tripping the decline option instead of just offering it (\"No thanks, I don't want to save money\")",
+          "Roach motel — a one-click signup paired with a cancellation flow that requires a phone call, a support ticket, or five extra screens",
+          "Drip pricing — the real total only appears on the last step of checkout, after delivery fees, service charges, and taxes get added one at a time",
+          "Forced continuity — a free trial that converts to a paid plan silently, with no reminder email before the first charge",
+          "Pre-checked boxes — marketing consent or add-ons opted in by default, so declining takes active effort instead of being the neutral choice",
+          "Fake urgency — countdown timers that reset on refresh, or \"12 people are viewing this\" counters with no real data behind them",
+        ],
+      },
+      { type: "heading", level: 2, text: "Why They Work Short-Term and Fail Long-Term" },
+      {
+        type: "paragraph",
+        text: "Dark patterns exploit the fact that most interface decisions get made fast and without much thought — that's exactly the moment they're designed for. Judged by a single session's conversion rate, they often work. Judged by anything longer, they don't: churn goes up once the trick is noticed, support tickets and refund disputes climb, and the brand takes the kind of reputational hit that's expensive to undo. It's not just a reputational risk anymore either — the FTC's 2022 enforcement report specifically targeted dark patterns in subscription cancellation flows, and the EU's Digital Services Act now prohibits manipulative interface design outright. What used to be a UX ethics debate is increasingly a compliance question with real penalties attached.",
+      },
+      { type: "heading", level: 2, text: "How We Draw the Line on Our Own Projects" },
+      {
+        type: "paragraph",
+        text: "A cancellation flow should never take more steps than the signup flow that created the account — if signing up is one click, cancelling doesn't get to be four. A trial that's about to convert to paid gets an email before the charge, not after. Required fields look required; nothing is disguised as decorative to sneak past attention. None of this is about being nice for its own sake — it's that support tickets, chargebacks, and churn cost more than the extra conversion points a dark pattern buys, and we'd rather build something a client isn't quietly worried will get them a regulator's letter.",
+      },
+      { type: "heading", level: 2, text: "A Practical Checklist Before You Ship" },
+      {
+        type: "list",
+        items: [
+          "Can the user complete the \"no\" path in exactly as many steps as the \"yes\" path?",
+          "Is every fee visible before the final step, not revealed there?",
+          "Does cancelling take the same number of steps as signing up?",
+          "Would the copy still make sense with the urgency or guilt language removed?",
+          "Are opt-ins actually opt-in, rather than a pre-checked default?",
+        ],
+      },
+      { type: "heading", level: 2, text: "The Short Version" },
+      {
+        type: "paragraph",
+        text: "Ethical UX isn't a constraint on good design — it's a bet that trust compounds and deception doesn't. The interfaces that hold up over years are the ones that were honest on day one, not the ones that squeezed out an extra half-point of conversion by hiding what they were actually asking for.",
+      },
+    ],
+  },
   // "the-rise-of-edge-computing" — title, excerpt, and date came from the index
   // comp, but the article itself was never written (body: []). Publishing an
   // indexed, sitemap-listed page with no body is a thin-content SEO risk, so
