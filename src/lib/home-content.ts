@@ -227,10 +227,10 @@ export const featuredTestimonial = {
 
 export const testimonials = [
   {
-    quote: "From concept to execution, the process was smooth and collaborative. The final outcome exceeded our expectations.",
-    name: "David Kim",
-    role: "Founder & CEO",
-    avatar: "/images/testimonials/joey.png",
+    quote: "Working with Shinelal and the Adpedia team was a great experience. They clearly understood our requirements and made a genuine effort to implement them effectively. The team was supportive, responsive, and professional throughout the process. We're happy to move forward together.",
+    name: "Gopidas Nair",
+    role: "Founder & CEO, Eduplan UAE",
+    avatar: "/images/testimonials/gopidas-nair.jpg",
   },
   {
     quote: "They didn't just design a website—they created an experience that aligned perfectly with our brand and business goals.",
