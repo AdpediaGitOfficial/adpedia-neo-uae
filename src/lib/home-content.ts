@@ -192,10 +192,10 @@ export const industriesSection = {
 
 export const industries = [
   { name: "EdTech", body: "Intuitive learning platforms designed to engage users and enhance digital education experiences." },
-  { name: "IoT", body: "Connected digital ecosystems that enable real-time data, control, and seamless integration." },
+  { name: "Fintech", body: "Compliance-heavy products where a single broken flow costs real trust, not just a bad review." },
   { name: "Fashion", body: "Fast-moving storefronts and lookbooks that keep pace with a season's release schedule without a redesign each time." },
-  { name: "Artificial Intelligence", body: "Intelligent solutions that unlock insights, automate processes, and drive smarter decisions." },
-  { name: "Enterprise Technology", body: "Systems built for complex internal workflows, with the security and auditability enterprise procurement expects." },
+  { name: "Logistics", body: "Tracking and fulfillment systems that stay accurate when order volume spikes without warning." },
+  { name: "Hospitality", body: "Booking and guest experiences that hold up across every device, language, and time zone." },
   { name: "Real Estate", body: "Clean, UI-friendly platforms for each market—consistent tone, premium feel, and easy to scan." },
   {
     name: "Healthcare",
