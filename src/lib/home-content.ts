@@ -3,7 +3,7 @@
 import { projects } from "@/lib/projects";
 
 export const heroContent = {
-  title: ["We design brands that", "demand attention"],
+  title: ["Engineering the backbone", "of the digital age"],
   subtitle:
     "From strategy to stunning visuals, we craft digital experiences that connect, convert, and leave a lasting impact.",
   cta: { label: "Explore our work", href: "/portfolio" },
