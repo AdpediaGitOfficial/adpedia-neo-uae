@@ -235,6 +235,64 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "conversational-ai-how-chatbots-understand-language",
+    title: "Conversational AI: How Chatbots and Virtual Assistants Understand Language",
+    seoTitle: "How Chatbots Understand Language",
+    excerpt:
+      "How tokenization, embeddings, and attention actually let a chatbot follow a conversation, and where that process still breaks down.",
+    category: "development",
+    date: "2026-08-18",
+    cover: {
+      src: "/images/blog/conversational-ai.png",
+      alt: "Rows of variable-width bars resembling tokenized text, several highlighted in accent purple",
+    },
+    author: { name: "Divya Krishnan", role: "AI & Data Science Engineer" },
+    lead: "\"Understand\" is doing a lot of work in that sentence. A chatbot doesn't read your message the way a person does — it breaks it into pieces, converts those pieces into numbers, and predicts what should come next based on patterns learned from an enormous amount of text. That process is genuinely clever. It is not comprehension, and the difference matters for what you should trust it to do.",
+    body: [
+      { type: "heading", level: 2, text: "It Starts by Breaking Your Sentence Apart" },
+      {
+        type: "paragraph",
+        text: "Before a model can do anything with \"what's my order status,\" it splits that sentence into tokens — not always whole words, often word fragments, so \"status\" might become two or three pieces the model has seen thousands of times across its training data. Every token gets mapped to a vector: a long list of numbers that encodes how that piece of text tends to relate to others. Words that show up in similar contexts end up with similar vectors, which is why a model can treat \"cancel\" and \"refund\" as related concepts without ever being told they're related — it picked that up from how often those words appeared near each other across everything it read.",
+      },
+      { type: "heading", level: 2, text: "Attention Is Why It Remembers What You Said Three Messages Ago" },
+      {
+        type: "paragraph",
+        text: "The mechanism that actually makes modern chatbots feel coherent across a conversation is attention — at each step, the model weighs every earlier token to decide which ones matter most for predicting the next one. That's how a reply can correctly reference something you mentioned several turns back: the model isn't \"remembering\" in the way a person does, it's re-weighing the entire visible conversation every single time it generates a new token. That also explains the limits: once a conversation runs past the model's context window, the earliest parts genuinely fall out of view, and it will confidently continue as though they were never said.",
+      },
+      { type: "heading", level: 2, text: "Two Different Tools Get Called \"Chatbots\"" },
+      {
+        type: "paragraph",
+        text: "It's worth separating two approaches that get lumped under the same word, because the right choice depends entirely on the task:",
+      },
+      {
+        type: "list",
+        items: [
+          "Intent classification — the message gets matched against a fixed set of known intents (\"check order status,\" \"reset password\"), each routed to a specific, predictable action. Narrow, boring, and reliable — the right tool for a structured, high-volume support flow.",
+          "Generative response — the model produces open-ended text token by token, which handles genuinely novel questions well but is harder to constrain, because there's no fixed list of \"allowed\" answers to fall back on.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Most systems worth building are a mix: intent classification for the handful of tasks that happen constantly and need to be exact, a generative layer for everything that doesn't fit a known pattern.",
+      },
+      { type: "heading", level: 2, text: "Where the Illusion of Understanding Breaks" },
+      {
+        type: "paragraph",
+        text: "Fluency and accuracy are separate properties, and a model that's confidently wrong reads exactly the same as one that's confidently right — that's the core of the hallucination problem. Ambiguous or very short input (\"cancel it\" with no earlier context) forces the model to guess at what \"it\" refers to, and it will guess smoothly rather than ask for clarification unless it's specifically built to. And because the model has no persistent memory outside its context window, a long conversation can drift: it isn't tracking state the way a form or a database would, it's re-deriving its best guess from whatever text is currently in view.",
+      },
+      { type: "heading", level: 2, text: "What We Actually Build Around That" },
+      {
+        type: "paragraph",
+        text: "We ground answers in real data instead of trusting the model's training knowledge alone — retrieving the actual order record or policy document and having the model summarize that, not recall it from memory. High-stakes actions (refunds, account changes) go through explicit confirmation steps or a rules layer, not a generative reply alone. And every conversation gets logged in a way a human can review, because the failure mode that matters isn't the assistant sounding robotic — it's the assistant sounding confident while being wrong, unnoticed.",
+      },
+      { type: "heading", level: 2, text: "The Short Version" },
+      {
+        type: "paragraph",
+        text: "A chatbot is a very capable pattern-matcher operating at enormous scale, not a system that comprehends what you're asking. Built with that distinction in mind — grounded in real data, scoped to what it can actually get right, reviewed rather than trusted blindly — it's a genuinely useful tool. Built on the assumption that it \"understands,\" it's a liability wearing a friendly interface.",
+      },
+    ],
+  },
   // "the-rise-of-edge-computing" — title, excerpt, and date came from the index
   // comp, but the article itself was never written (body: []). Publishing an
   // indexed, sitemap-listed page with no body is a thin-content SEO risk, so
