@@ -339,8 +339,8 @@ export const projects: Project[] = [
     summary:
       "A learning app for ages 3–7, designed for a child navigating alone — streaks, a progress ring, and a mascot doing the explaining a paragraph of copy would otherwise have to do.",
     thumb: {
-      src: "/images/projects/etern-learning-hero.jpg",
-      alt: "The Etern Learning home dashboard showing a streak tracker, progress ring, and a shelf of story and activity tiles",
+      src: "/images/projects/etern-mock.jpg",
+      alt: "The Etern Learning home dashboard on a tablet, showing a streak tracker, progress ring, and a shelf of story and activity tiles",
     },
     narrative: [
       {
@@ -366,8 +366,8 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        src: "/images/projects/etern-learning-hero.jpg",
-        alt: "Two phones showing the Etern Learning onboarding screen and the main dashboard with streaks and a content shelf",
+        src: "/images/projects/etern-mock.jpg",
+        alt: "A tablet held by two hands, showing the Etern Learning home dashboard with a streak tracker, progress ring, and a content shelf",
         caption: "The home dashboard leads with streaks, today's progress, and one \"continue learning\" card — not a menu.",
         span: "full",
       },
