@@ -5,7 +5,7 @@ import { projects } from "@/lib/projects";
 export const heroContent = {
   title: ["Engineering the backbone", "of the digital age"],
   subtitle:
-    "From strategy to stunning visuals, we craft digital experiences that connect, convert, and leave a lasting impact.",
+    "Transforming manual processes into intelligent systems — through custom software, automation, AI, and DevOps excellence.",
   cta: { label: "Explore our work", href: "/portfolio" },
 };
 
