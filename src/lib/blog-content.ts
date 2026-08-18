@@ -172,6 +172,69 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "ai-agents-transforming-healthcare",
+    title: "How AI Agents Are Transforming Healthcare and Improving Patient Outcomes",
+    seoTitle: "AI Agents in Healthcare: Patient Outcomes",
+    excerpt:
+      "How AI agents actually change clinical workflows, where they genuinely help patient outcomes, and where human judgment still has to stay in the loop.",
+    category: "strategy",
+    date: "2026-08-17",
+    cover: {
+      src: "/images/blog/ai-agents-healthcare.png",
+      alt: "A network of connected nodes on black, five highlighted in accent purple, representing coordinated AI agents",
+    },
+    author: { name: "Anand Menon", role: "AI & Data Science Lead" },
+    lead: "Most \"AI in healthcare\" coverage still means a chatbot answering symptom questions. Agents are a different thing: software that takes a multi-step action across real systems — pulling a chart, cross-checking a drug list, drafting a note — instead of just answering one question and stopping. That distinction is where the actual patient-outcome case lives.",
+    body: [
+      { type: "heading", level: 2, text: "What \"Agent\" Actually Means in a Clinical Setting" },
+      {
+        type: "paragraph",
+        text: "A chatbot answers a question. An agent completes a task that spans several steps and several systems on its own — checking a patient's history, cross-referencing it against a new prescription, flagging a conflict, and drafting the note that explains why, all before a clinician looks at it. The difference matters because the failure modes are different too: a chatbot that gets a fact wrong gives a bad answer, but an agent that acts on a wrong assumption can carry that error through several downstream steps before anyone notices. That's the real reason healthcare has been slower to adopt agentic AI than, say, retail or logistics — not caution for its own sake, but a correctly higher bar for what \"good enough\" means when the output touches a chart.",
+      },
+      { type: "heading", level: 2, text: "Where Agents Are Already Producing Real Outcomes" },
+      {
+        type: "paragraph",
+        text: "The deployments that are actually working share a common shape: narrow scope, a clear point where a clinician reviews the output, and a task that was genuinely eating clinical time before automation touched it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Ambient documentation — an agent listens to a visit and drafts the clinical note, so the clinician edits and signs instead of typing from scratch after hours",
+          "Intake and triage — symptom and history intake structured and prioritized before a clinician sees the patient, so the most urgent cases surface first",
+          "Prior authorization and claims — the paperwork that used to take a staff member 20 minutes per request, filled and submitted correctly the first time",
+          "Medication cross-checks — a full interaction check against a patient's actual current prescriptions, not just the one being written",
+          "Remote monitoring — an agent watching a continuous stream of vitals or wearable data that only escalates when a pattern is genuinely abnormal, instead of alarm-fatiguing a nurse with every blip",
+        ],
+      },
+      { type: "heading", level: 2, text: "The Outcome Case, Not Just the Efficiency Case" },
+      {
+        type: "paragraph",
+        text: "It's easy to justify this purely on hours saved, but the outcome case is the stronger one. A clinician who isn't spending forty minutes a day on notes has more attention left for the patient in front of them. A triage system that surfaces the urgent case first means intervention happens sooner, not after a queue. A medication check that catches an interaction a busy shift might have missed prevents an adverse event, not just a delay. None of that shows up as a productivity metric — it shows up as fewer things going wrong.",
+      },
+      { type: "heading", level: 2, text: "Where Human Judgment Still Has to Stay in the Loop" },
+      {
+        type: "paragraph",
+        text: "Every deployment worth trusting has a clinician reviewing the agent's output before it reaches a patient or becomes part of the permanent record — the agent drafts and flags, it doesn't decide. That's not overcaution; a model that's right 98% of the time is still wrong often enough to matter when the output is a diagnosis note or a medication change. There's a regulatory dimension too: anything that functions as clinical decision support usually needs to be built and documented with an actual approval pathway in mind (FDA clearance in the US, equivalent frameworks elsewhere), and patient data has to move through the same access controls and audit requirements as the rest of the clinical record — not a separate, looser pipeline because it's \"just the AI system.\"",
+      },
+      { type: "heading", level: 2, text: "What We Check Before Building One" },
+      {
+        type: "list",
+        items: [
+          "Is there a licensed clinician who reviews every output before it reaches a patient or a chart?",
+          "Does the system log a complete, reviewable audit trail of what the agent did and why?",
+          "Is patient data handled under the same access controls as the rest of the clinical record?",
+          "Can the agent explain the reason it flagged something, not just that it flagged it?",
+          "Does the task the agent is automating actually eat real clinical time today, or is this AI for its own sake?",
+        ],
+      },
+      { type: "heading", level: 2, text: "The Short Version" },
+      {
+        type: "paragraph",
+        text: "AI agents earn a place in healthcare by removing the repetitive burden that pulls attention away from patients, and by catching the pattern a busy shift can miss — not by replacing clinical judgment. The systems worth building are the ones a clinician would actually trust enough to leave turned on.",
+      },
+    ],
+  },
   // "the-rise-of-edge-computing" — title, excerpt, and date came from the index
   // comp, but the article itself was never written (body: []). Publishing an
   // indexed, sitemap-listed page with no body is a thin-content SEO risk, so
