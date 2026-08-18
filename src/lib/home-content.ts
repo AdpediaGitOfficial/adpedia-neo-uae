@@ -11,14 +11,14 @@ export const heroContent = {
 
 /** Marquee of showcase mockups beneath the hero. */
 export const heroShowcase = [
-  { src: "/images/hero/shape-elegant.png", alt: "Elegant fashion brand website concept" },
-  { src: "/images/hero/lumio-tablets.png", alt: "Lumio product design shown on tablets" },
-  { src: "/images/hero/billie-phones.png", alt: "Billie Duvalle mobile app screens" },
-  { src: "/images/hero/digital-presence.png", alt: "Digital presence brand website" },
-  { src: "/images/hero/billie-desktop.png", alt: "Billie Duvalle desktop showcase" },
-  { src: "/images/hero/flex-laptop.png", alt: "Orange Flex website on a laptop" },
-  { src: "/images/hero/pricing-green.png", alt: "Pricing plans product page" },
-  { src: "/images/hero/lumio-tablets-2.png", alt: "Lumio dashboard mockups" },
+  { src: "/images/projects/avis-chauffeur-hero.jpg", alt: "The AVIS chauffeur app home screen, lit against dark volcanic sand" },
+  { src: "/images/projects/etern-mock.jpg", alt: "The Etern Learning home dashboard on a tablet" },
+  { src: "/images/projects/sifat-lms-hero.jpg", alt: "The SIFAT app home screen on an orange desk background" },
+  { src: "/images/projects/bedia-prive-hero.jpg", alt: "The Bedia Privé homepage on a laptop, cinematic pottery photography" },
+  { src: "/images/projects/prime-promenade-hero.jpg", alt: "The Prime Promenade homepage on a laptop at dusk" },
+  { src: "/images/projects/avis-chauffeur-vehicle.jpg", alt: "The AVIS vehicle selection screen for a Rolls-Royce Phantom" },
+  { src: "/images/projects/etern-learning-buddy.jpg", alt: "The Etern Learning buddy-selection screen" },
+  { src: "/images/projects/prime-promenade-amenities.jpg", alt: "One of the Prime Promenade amenity landing pages" },
 ];
 
 export const trustedLogos = [
@@ -32,7 +32,7 @@ export const trustedLogos = [
 ];
 
 export const statsIntro = {
-  title: "Where Digital Experiences Perform",
+  title: "We architect, automate, and build the systems of tomorrow.",
   body: "Since 2012, we've built websites, apps, and platforms for clients who needed more than a vendor — strategy and execution from the same team, so nothing gets lost in a handoff.",
   cta: { label: "About us", href: "/about" },
 };
