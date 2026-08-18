@@ -436,6 +436,60 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "bedia-prive",
+    name: "Bedia Privé",
+    type: "Website Design",
+    category: "web-development",
+    location: "Dubai, UAE",
+    tags: ["Web Development", "UI/UX Design", "Booking Engine", "+more"],
+    summary:
+      "An invitation-only pottery-and-dining concept in Dubai, built with a custom booking engine that never breaks character between the first cinematic frame and \"Confirm & Pay.\"",
+    thumb: {
+      src: "/images/projects/bedia-prive-hero.jpg",
+      alt: "The Bedia Privé homepage on a laptop, showing pottery photography and a VIP-access-only invitation",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Bedia Privé sells an experience that only works if it feels genuinely exclusive — a pottery-and-fine-dining concept positioned as invitation-only. That positioning has to survive contact with the least glamorous part of any hospitality site: the booking form. Most luxury sites keep two visual languages, an editorial homepage and then a generic third-party widget bolted on at checkout that looks like it belongs to a different company.",
+          "We built the booking engine as a continuation of the brand rather than a payment form attached to it — same serif type, same near-black palette, same restraint — so choosing a package and paying for it never breaks the mood the opening photography sets.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "Real-time reservations need real functionality — a date picker, time slots, a guest count, three package tiers, a price that updates as those choices change — and that functionality tends to force default form fields and dropdowns into a page, exactly the kind of visual noise the rest of the site had been built to avoid. The brief was to keep the invitation-only feeling intact through the one screen where a guest is making a real financial decision, not just admiring photography.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "The homepage establishes exclusivity before a single word of body copy loads — a \"VIP Access Only\" eyebrow, the wordmark set in the same restrained serif italic throughout the site, and a framed \"limited availability, invitation-only\" note sitting over cinematic pottery-throwing photography instead of the stock table shots most hospitality sites default to.",
+          "Package tiers repeat the same visual pattern everywhere they appear — a photograph, a name, a starting price, a short inclusions list — first on the Curated Packages page, then again inside the reservation flow, so a guest recognizes \"Signature\" as the same product rather than re-learning a new interface mid-booking. The reservation screen itself carries the identical typography and palette as the marketing pages around it, and the total price recalculates live as guests and package change, so the cost is visible before a guest ever reaches \"Confirm & Pay\" — no separate step where the number changes on them.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/bedia-prive-hero.jpg",
+        alt: "The Bedia Privé homepage showing cinematic pottery photography and a VIP-access-only invitation",
+        caption: "VIP-only positioning starts on the first screen — eyebrow, wordmark, and a \"limited availability\" note before any navigation.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/bedia-prive-packages.jpg",
+        alt: "The Curated Packages page showing three package tiers with photography, pricing, and inclusions",
+        caption: "Package tiers repeat the same pattern — photo, name, starting price, inclusions — so guests recognize them again inside the booking flow.",
+      },
+      {
+        src: "/images/projects/bedia-prive-booking.jpg",
+        alt: "The Reserve Your Experience booking engine showing date, time, guest count, package selection, and a live total price",
+        caption: "The booking engine carries the same serif type and near-black palette as the rest of the site, with the total updating live as guests and package change.",
+      },
+    ],
+  },
 ];
 
 /** Cards per page on /portfolio — the Figma grid is 2 columns x 4 rows. */
