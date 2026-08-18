@@ -227,13 +227,13 @@ export const featuredTestimonial = {
 
 export const testimonials = [
   {
-    quote: "Working with Shinelal and the Adpedia team was a great experience. They clearly understood our requirements and made a genuine effort to implement them effectively. The team was supportive, responsive, and professional throughout the process. We're happy to move forward together.",
+    quote: "Shinelal and the team at Adpedia got what we needed right away, and didn't stop until it actually worked the way we wanted — not just the way it looked on paper. Every time we reached out, someone got back to us fast. We're looking forward to doing more with them.",
     name: "Gopidas Nair",
     role: "Founder & CEO, Eduplan UAE",
     avatar: "/images/testimonials/gopidas-nair.jpg",
   },
   {
-    quote: "Working with Adpedia on our corporate website was a really good experience. They took the time to understand what we wanted and were always there whenever we needed help. The whole process felt smooth and easy, and the final website looks professional and truly represents our company. We're very happy with their work and support, and would definitely recommend Adpedia.",
+    quote: "Adpedia built our corporate website, and it was a genuinely easy process from start to finish. They listened to what we actually wanted instead of pushing their own template, and were always around when we needed help. The site looks sharp and feels like it really represents Afrizon. Happy to recommend them to anyone.",
     name: "Tabi Samuel Olickal",
     role: "Director, Afrizon Pte Ltd",
     avatar: "/images/testimonials/tabi-samuel-olickal.jpg",
