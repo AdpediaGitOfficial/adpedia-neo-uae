@@ -293,6 +293,69 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "myths-about-developing-your-startups-mvp",
+    title: "Myths About Developing Your Startup's MVP",
+    seoTitle: "MVP Myths Every Startup Believes",
+    excerpt:
+      "Why 'cheaper,' 'rougher,' and 'build it all so we're ready to scale' are the three ideas about MVPs that waste the most founder runway.",
+    category: "strategy",
+    date: "2026-08-18",
+    cover: {
+      src: "/images/blog/mvp-myths.png",
+      alt: "A pyramid of stacked outlined rectangles narrowing to one solid filled block at the top, representing a small validated core beneath a larger hollow scope",
+    },
+    author: { name: "Karthik Iyer", role: "Product Strategy Lead" },
+    lead: "Most founders who tell us their MVP \"failed\" didn't actually test anything — they built a smaller, buggier version of their full product and were surprised when a small, buggy product didn't convert. An MVP isn't a discount version of the real thing. It's a specific question, built just far enough to get a real answer. Here's what gets that confused most often.",
+    body: [
+      { type: "heading", level: 2, text: "Myth: MVP Means \"Fewer Features, Same Product\"" },
+      {
+        type: "paragraph",
+        text: "The most common failure mode is treating the MVP as the full product with items removed from a checklist — same number of user flows, same ambition, just thinner. That isn't minimal, it's incomplete, and users can tell the difference. A real MVP starts from the other direction: pick the one assumption your business actually depends on — that people will pay for this, that this workflow saves real time, that this audience wants it at all — and build only enough to test that assumption honestly. Everything else, including features you're confident about, waits. The scope question isn't \"what can we cut,\" it's \"what's the smallest thing that would prove or kill this idea.\"",
+      },
+      { type: "heading", level: 2, text: "Myth: It's Supposed to Look Rough" },
+      {
+        type: "paragraph",
+        text: "\"Minimal\" gets read as permission to skip design and usability, and that reasoning backfires specifically because of what an MVP is for. You're not asking people to tolerate a rough interface out of goodwill — you're trying to measure whether they'd actually use and pay for this, and a confusing flow or a broken-feeling interaction contaminates that measurement. A user who bounces because the checkout looked untrustworthy isn't telling you your idea is wrong; they're telling you your prototype looked unfinished, which is a different and much less useful signal. Minimal scope and careless execution are not the same decision — you can and should ship a narrow MVP that still feels considered.",
+      },
+      { type: "heading", level: 2, text: "Myth: Build for Scale Now So You Don't Have to Rebuild Later" },
+      {
+        type: "paragraph",
+        text: "We get asked to architect for a million users before there's a validated reason to expect a thousand. That instinct is understandable and almost always wrong at MVP stage — infrastructure sized for hypothetical scale is budget and calendar time spent on a problem you don't have yet, taken directly from the budget and time you need to find out if you have a product at all. The teams that scale smoothly aren't the ones who over-built early; they're the ones who kept the early system simple enough to move fast, then rebuilt the specific piece that actually hit a real limit, with real usage data telling them exactly what to fix.",
+      },
+      { type: "heading", level: 2, text: "Myth: More Features Give You a Better Read on the Market" },
+      {
+        type: "paragraph",
+        text: "It feels safer to ship five features than to bet everything on one, but a five-feature MVP doesn't give you five times the signal — it gives you a blurred average. When usage is mixed, you can't tell whether people came for feature two and tolerated the rest, or whether nothing landed and the numbers are just noise. A narrow MVP produces a sharp result: people either did the one thing you built it for, or they didn't. That's a founder decision you can actually act on, which a spread-thin dashboard usually isn't.",
+      },
+      { type: "heading", level: 2, text: "Myth: You Ship the MVP Once, Then Move on to \"the Real Product\"" },
+      {
+        type: "paragraph",
+        text: "An MVP isn't a milestone you pass through on the way to the actual build — it's the first iteration of a loop you should stay in. Ship the narrow version, watch what real users actually do with it (not what they said they'd do in a discovery call), and let that behavior decide what gets built next. Teams that treat the MVP as a one-time gate tend to disband the fast, cheap testing process right when it would matter most — for the second and third features, which need exactly the same validation the first one did.",
+      },
+      { type: "heading", level: 2, text: "Myth: Skipping Discovery Gets You to Market Faster" },
+      {
+        type: "paragraph",
+        text: "Cutting research to save a week or two at the start is the most expensive shortcut on this list, because it doesn't remove the work — it moves it later and adds interest. A week of talking to prospective users and mapping the actual workflow you're replacing usually changes what gets built. Skip it, and that same correction happens after launch, as a rebuild, informed by users who already formed a first impression and churned before you got the chance to fix it.",
+      },
+      { type: "heading", level: 2, text: "What We Check Before Scoping an MVP" },
+      {
+        type: "list",
+        items: [
+          "Is there one specific assumption this version is meant to test — not a general sense that \"we'll learn a lot\"?",
+          "Would a clear no from real users actually change what we build next, or are we planning to ship it regardless?",
+          "Does the scope fit inside weeks, not a quarter — if not, it's not minimal yet?",
+          "Is the core flow polished enough that a bad result reflects the idea, not a broken interaction?",
+          "Have we talked to the people we're building for before writing any code, not just after?",
+        ],
+      },
+      { type: "heading", level: 2, text: "The Short Version" },
+      {
+        type: "paragraph",
+        text: "An MVP is a test, not a smaller product — built to answer one real question as cheaply and honestly as possible, then iterated based on what actual users do with it. Treat it like a stripped-down version of your final vision and you'll spend your runway building the wrong thing more slowly. Treat it like an experiment and you'll spend that same runway finding out what's actually worth building.",
+      },
+    ],
+  },
   // "the-rise-of-edge-computing" — title, excerpt, and date came from the index
   // comp, but the article itself was never written (body: []). Publishing an
   // indexed, sitemap-listed page with no body is a thin-content SEO risk, so
