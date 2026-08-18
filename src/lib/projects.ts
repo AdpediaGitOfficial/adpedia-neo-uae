@@ -383,6 +383,59 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "sifat-lms-app",
+    name: "SIFAT",
+    type: "Mobile App Design",
+    category: "ui-ux-design",
+    tags: ["UI/UX Design", "Mobile App", "EdTech", "+more"],
+    summary:
+      "An exam-prep LMS built around one habit: open the app, see exactly where you left off, and get back into it in one tap.",
+    thumb: {
+      src: "/images/projects/sifat-lms-hero.jpg",
+      alt: "The SIFAT app home screen showing learning overview stats and four learning tool tiles",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "SIFAT is exam prep, and exam prep is a lot of material — subjects, textbooks, syllabi, practice sets, solved papers, question banks, all of it needing to be reachable without turning the app into a file browser. The habit that actually matters for a product like this isn't a single clever feature, it's whether a student opens the app again tomorrow.",
+          "We built the home screen around three concrete numbers instead of a dashboard of charts — progress percentage, lessons completed, days on streak — and put resuming the last lesson one tap away, before any browsing is required at all.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "Every subject carries the same five-plus resource types — textbook, syllabus, practice, questions, question bank — and a student is usually working across several subjects at once. List every resource for every subject on one screen and the app stops feeling like a study companion and starts feeling like a directory. The interface had to scale to a full curriculum without dumping the full curriculum on screen at once.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "Subjects collapse to one line by default — name, resource count, a progress bar — and only expand into their full row of resource icons on tap. A student scanning for what to study next sees every subject at a glance; a student who already knows what they're doing gets straight to the specific tool without extra navigation in between.",
+          "The four modes a student actually alternates between during a session — Study, Solved Papers, Prediction, Translator — sit as large tiles directly on the home screen rather than behind a menu, because these are moves made constantly through a study session, not settings configured once and forgotten. Everything else, including sign-in, stays in a plain, unhurried form so the app reads as a serious study tool from the first screen, not a game with a study mode attached.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/sifat-lms-hero.jpg",
+        alt: "The SIFAT app home screen on an orange desk background, showing progress, lessons, and streak stats",
+        caption: "Three concrete numbers instead of a dashboard — progress, lessons completed, streak.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/sifat-lms-auth.jpg",
+        alt: "The SIFAT sign-in screen next to the home screen, showing the learning overview and four tool tiles",
+        caption: "A plain, unhurried sign-in flow — the app reads as a study tool first.",
+      },
+      {
+        src: "/images/projects/sifat-lms-study.jpg",
+        alt: "The SIFAT study screen showing a continue card and a list of subjects with expandable resource icons",
+        caption: "Subjects collapse to one line by default, expanding into resource icons only on tap.",
+      },
+    ],
+  },
 ];
 
 /** Cards per page on /portfolio — the Figma grid is 2 columns x 4 rows. */
