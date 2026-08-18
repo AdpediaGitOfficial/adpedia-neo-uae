@@ -38,7 +38,7 @@ export function Footer() {
                 alt="Adpedia Neo"
                 width={144}
                 height={43}
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
               <Text className="mt-6">
                 We are a creative digital studio crafting impactful brand experiences through strategy,
