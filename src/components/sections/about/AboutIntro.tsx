@@ -12,7 +12,7 @@ export function AboutIntro() {
       <StatsMarquee />
 
       {/* Rendered immediately (no Reveal) since it's the LCP image. */}
-      <div className="relative mt-6 aspect-[1720/900] w-full overflow-hidden bg-ink-800">
+      <div className="relative mt-6 aspect-[1743/902] w-full overflow-hidden bg-ink-800">
         <Image
           src={aboutIntro.photo.src}
           alt={aboutIntro.photo.alt}

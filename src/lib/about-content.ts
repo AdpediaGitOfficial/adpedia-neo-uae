@@ -15,8 +15,8 @@ export const aboutIntro = {
   statement: "Art and Technology Converge for Stunning Designs.",
   body: "Adpedia started in 2012 as a small design studio and grew into a full digital partner — branding, UI/UX, web and app development, and the AI work our clients are asking for now. The services list has grown; what hasn't changed is working directly with the people building the product, not through layers of account management.",
   photo: {
-    src: "/images/about/team.png",
-    alt: "The Adpedia team together in the studio",
+    src: "/images/about/about-team.png",
+    alt: "The Adpedia team together in the studio, in black and white",
   },
 };
 
