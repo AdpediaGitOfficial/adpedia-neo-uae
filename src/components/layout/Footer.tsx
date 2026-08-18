@@ -34,10 +34,10 @@ export function Footer() {
             {/* Brand */}
             <div className="max-w-xs sm:col-span-2 lg:col-span-1">
               <Image
-                src="/images/brand/logo-white.png"
+                src="/images/logos/logo-white.svg"
                 alt="Adpedia Neo"
-                width={172}
-                height={50}
+                width={144}
+                height={43}
                 className="h-8 w-auto"
               />
               <Text className="mt-6">

@@ -100,10 +100,10 @@ export function Header() {
           onMouseEnter={closeNow}
         >
           <Image
-            src="/images/brand/logo-white.png"
+            src="/images/logos/logo-white.svg"
             alt="Adpedia Neo"
-            width={172}
-            height={50}
+            width={144}
+            height={43}
             priority
             className="h-7 w-auto md:h-8"
           />
