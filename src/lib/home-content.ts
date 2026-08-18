@@ -233,10 +233,10 @@ export const testimonials = [
     avatar: "/images/testimonials/gopidas-nair.jpg",
   },
   {
-    quote: "They didn't just design a website—they created an experience that aligned perfectly with our brand and business goals.",
-    name: "Sarah Whitfield",
-    role: "Brand Strategist",
-    avatar: "/images/testimonials/rachel.png",
+    quote: "Working with Adpedia on our corporate website was a really good experience. They took the time to understand what we wanted and were always there whenever we needed help. The whole process felt smooth and easy, and the final website looks professional and truly represents our company. We're very happy with their work and support, and would definitely recommend Adpedia.",
+    name: "Tabi Samuel Olickal",
+    role: "Director, Afrizon Pte Ltd",
+    avatar: "/images/testimonials/tabi-samuel-olickal.jpg",
   },
   {
     quote: "Clear communication, strong creative thinking, and reliable delivery. A partner we'd gladly work with again.",

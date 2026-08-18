@@ -8,7 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { IconButton } from "@/components/ui/IconButton";
-import { Eyebrow, Heading, Subtitle } from "@/components/ui/typography";
+import { Eyebrow, Heading, Subtitle, Text } from "@/components/ui/typography";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   testimonialsSection,
@@ -93,18 +93,26 @@ export function Testimonials() {
             {testimonials.map((t) => (
               <StaggerItem key={t.name} className="h-full">
                 <Card as="figure" padding="md" className="flex h-full flex-col">
-                  <Image
-                    src={t.avatar}
-                    alt={`Portrait of ${t.name}`}
-                    width={48}
-                    height={48}
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src={t.avatar}
+                      alt={`Portrait of ${t.name}`}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 shrink-0 rounded-full object-cover"
+                    />
+                    <Text as="span" size="body-sm" tone="primary">
+                      {t.name}
+                    </Text>
+                  </div>
                   <blockquote className="mt-6 flex-1 text-body-sm leading-relaxed text-white/60">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <figcaption className="mt-6">
-                    <Attribution name={t.name.toUpperCase()} role={t.role.toUpperCase()} tone="dark" />
+                    <p className="mono-label flex items-center gap-2 text-white/60">
+                      <Asterisk className="h-3.5 w-3.5 text-accent-400" aria-hidden />
+                      <span className="text-white/45">{t.role.toUpperCase()}</span>
+                    </p>
                   </figcaption>
                 </Card>
               </StaggerItem>
