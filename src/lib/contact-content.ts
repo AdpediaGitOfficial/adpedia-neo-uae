@@ -27,5 +27,5 @@ export const serviceOptions = [
   "AI & Data Science",
   "Product Development",
   "DevOps Services",
-  "Something else",
+  "General Inquiry",
 ];
