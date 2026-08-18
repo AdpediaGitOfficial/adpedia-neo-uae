@@ -490,6 +490,59 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "prime-promenade",
+    name: "Prime Promenade",
+    type: "Website & Booking Platform",
+    category: "web-development",
+    tags: ["Web Development", "UI/UX Design", "Booking Platform", "+more"],
+    summary:
+      "A mixed-use lifestyle destination — retail, business, and eight bookable amenities — presented as one address instead of a directory of separate offerings.",
+    thumb: {
+      src: "/images/projects/prime-promenade-hero.jpg",
+      alt: "The Prime Promenade homepage showing visitors walking toward a glass-fronted lifestyle destination at dusk",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Prime Promenade is genuinely several products sharing one address — a retail promenade, a commercial destination for business tenants, and eight separately bookable amenities including a pool and fitness facilities. The easy failure mode for a project like this is a stitched-together directory: one page per amenity, none of them feeling like they belong to the same place.",
+          "We designed it as one destination with several rooms instead of several products sharing a logo. Every amenity landing moment carries the same photographic treatment and typographic system as the retail homepage, so a visitor exploring one experience recognizes the others as part of the same place rather than a separate microsite.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A mixed-use development like this has two audiences reading at completely different speeds: a visitor scanning quickly for what's on-site and how to book it, and a prospective tenant or business partner reading slowly for credibility — architecture, positioning, the kind of language that signals a serious commercial address rather than a shopping mall. Design purely for one and the other reads as an afterthought.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "The homepage opens at the pace of the first audience — full-bleed lifestyle photography and two clearly separated actions, \"Explore Amenities\" for a visitor and \"Partner With Us\" for a business audience, so neither has to wade through the other's content to find their own path in. The About section deliberately slows down for the second audience: architecture-forward photography, a repositioned voice around modern commercial living, and none of the walk-in urgency of the page above it.",
+          "Each of the eight amenities gets its own full-bleed landing moment — its own hero photograph and headline, like the underwater shot behind the pool's \"Dive into Luxury\" — but every one of them books through the same consistent flow, so learning to reserve one amenity means already knowing how to reserve the rest.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/prime-promenade-hero.jpg",
+        alt: "The Prime Promenade homepage on a laptop, showing visitors walking toward the destination at dusk",
+        caption: "Two clearly separated calls to action — one for a visitor, one for a business audience — from the very first screen.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/prime-promenade-about.jpg",
+        alt: "The Prime Promenade About section on a large display, reading \"Prime destination. Multiple experiences.\"",
+        caption: "The About section slows down on purpose: architecture-forward photography and positioning language for a tenant or partner reading for credibility.",
+      },
+      {
+        src: "/images/projects/prime-promenade-amenities.jpg",
+        alt: "A laptop showing one of the eight amenity landing pages, an underwater swimming pool shot behind \"Dive into Luxury\"",
+        caption: "Each of the eight amenities gets its own full-bleed landing moment, all booking through the same consistent flow.",
+      },
+    ],
+  },
 ];
 
 /** Cards per page on /portfolio — the Figma grid is 2 columns x 4 rows. */
