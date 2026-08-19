@@ -12,12 +12,10 @@ export const heroContent = {
 /** Marquee of showcase mockups beneath the hero. */
 export const heroShowcase = [
   { src: "/images/projects/avis-chauffeur-hero.jpg", alt: "The AVIS chauffeur app home screen, lit against dark volcanic sand" },
-  { src: "/images/projects/etern-mock.jpg", alt: "The Etern Learning home dashboard on a tablet" },
   { src: "/images/projects/sifat-lms-hero.jpg", alt: "The SIFAT app home screen, held against a purple sky" },
   { src: "/images/projects/bedia-prive-hero.jpg", alt: "The Bedia Privé homepage on a laptop, cinematic pottery photography" },
   { src: "/images/projects/prime-promenade-hero.jpg", alt: "The Prime Promenade homepage on a laptop at dusk" },
   { src: "/images/projects/avis-chauffeur-vehicle.jpg", alt: "The AVIS vehicle selection screen for a Rolls-Royce Phantom" },
-  { src: "/images/projects/etern-learning-buddy.jpg", alt: "The Etern Learning buddy-selection screen" },
   { src: "/images/projects/prime-promenade-amenities.jpg", alt: "One of the Prime Promenade amenity landing pages" },
 ];
 
