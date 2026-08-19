@@ -3,29 +3,28 @@
  * frame (935:1725 → "Frame 558").
  *
  * These are deliberately NOT the service list in `serviceItems`. The two
- * taxonomies overlap but are not the same: Brand Strategy and Digital Marketing
- * have no service entry, and Product Development / DevOps Services are services
- * but not portfolio categories. Keep them separate.
+ * taxonomies overlap but are not the same: Product Development / DevOps
+ * Services are services but not portfolio categories. Keep them separate.
+ *
+ * Brand Strategy and Digital Marketing were dropped from this list at the
+ * client's request — no project used either, so removing them just trims the
+ * filter row instead of leaving two tabs that always returned nothing.
  */
 
 export type CategoryId =
   | "ui-ux-design"
-  | "brand-strategy"
   | "brand-design"
   | "web-development"
   | "app-development"
-  | "digital-marketing"
   | "ai-data-solutions";
 
 export type Category = { id: CategoryId; label: string };
 
 export const categories: Category[] = [
   { id: "ui-ux-design", label: "UI/UX Design" },
-  { id: "brand-strategy", label: "Brand Strategy" },
   { id: "brand-design", label: "Brand Design" },
   { id: "web-development", label: "Web Development" },
   { id: "app-development", label: "App Development" },
-  { id: "digital-marketing", label: "Digital Marketing" },
   { id: "ai-data-solutions", label: "AI & Data Solutions" },
 ];
 

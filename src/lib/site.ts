@@ -1,7 +1,7 @@
 /** Global site configuration: metadata, navigation, footer, contact. */
 
 import { categories, categoryLabel } from "@/lib/taxonomy";
-import { featuredProjects, projectHref, projects } from "@/lib/projects";
+import { featuredProjects, projectCategories, projectHref, projects } from "@/lib/projects";
 import { serviceFooterColumns, serviceHref, services } from "@/lib/services";
 import { formatPostDate, postCategories, postHref, posts } from "@/lib/blog-content";
 
@@ -58,7 +58,7 @@ export const blogLinks = [
 export const portfolioLinks = [
   { label: "All Projects", href: "/portfolio" },
   ...categories
-    .filter((category) => projects.some((project) => project.category === category.id))
+    .filter((category) => projects.some((project) => projectCategories(project).includes(category.id)))
     .map((category) => ({ label: category.label, href: `/portfolio?filter=${category.id}` })),
 ];
 

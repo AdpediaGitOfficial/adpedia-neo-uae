@@ -19,8 +19,14 @@ export type Project = {
   name: string;
   /** Card sub-line — the kind of work (e.g. "MVP Development"). */
   type: string;
-  /** Drives the /portfolio filter row. */
+  /** Drives the /portfolio filter row, the case-study meta strip, and "same category" related work. */
   category: CategoryId;
+  /**
+   * Extra filter-tab categories this project should also appear under, beyond
+   * `category` — e.g. a mobile app that's UI/UX-designed but is real
+   * development work too, so it should surface under App Development as well.
+   */
+  filterCategories?: CategoryId[];
   /** Optional until the real project data lands — the card hides them when unset. */
   year?: number;
   location?: string;
@@ -69,6 +75,7 @@ export const projects: Project[] = [
     name: "AVIS Chauffeur",
     type: "Mobile App Design",
     category: "ui-ux-design",
+    filterCategories: ["app-development"],
     tags: ["UI/UX Design", "Mobile App", "Booking Flow", "+more"],
     summary:
       "A chauffeur-booking app built to feel like the cars it reserves — one unhurried screen instead of a five-step form.",
@@ -291,6 +298,57 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "prime-promenade-brand-identity",
+    name: "Prime Promenade",
+    type: "Logo Design & Brand Identity",
+    category: "brand-design",
+    tags: ["Brand Design", "Logo Design", "Environmental Branding", "+more"],
+    summary:
+      "A colorful, faceted mark built to hold up everywhere the destination shows up — a corridor of digital screens, an indoor display, an illuminated sign after dark.",
+    thumb: {
+      src: "/images/projects/prime-promenade-brand-screen.jpg",
+      alt: "A wide illuminated corridor leading to a large digital screen showing three women shopping, the Prime Promenade logo top left",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Prime Promenade needed a mark that could do more than sit well on a business card — it had to survive filling a corridor-length digital screen, sit inside a smaller indoor display, and still read cleanly on an illuminated sign after dark. We designed the identity — mark, wordmark, and a single-line tagline — as a system built for that range of formats from the start, not a logo adapted to it afterward.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A retail-and-lifestyle destination lives across dramatically different surfaces: a sequence of hallway screens seen up close while walking through, a smaller framed display inside one of its venues, and static signage that has to hold its own at night with no motion to carry it. A mark that only worked in one of those contexts — sharp at scale but muddy reduced down, or vivid lit up but flat in static form — would have undercut the destination everywhere else it appeared.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "The faceted, multi-color mark stays legible reduced onto a static sign or filling an entire corridor screen, because the geometry and color separation were built to hold at both extremes rather than optimized for one. The same lockup — mark, wordmark, tagline — repeats identically across the corridor screens, the indoor display, and the illuminated signage, so the brand reads as one consistent presence rather than a different logo treatment for every surface it happens to land on.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/prime-promenade-brand-screen.jpg",
+        alt: "A wide illuminated corridor leading to a large digital screen showing three women shopping, the Prime Promenade logo top left",
+        caption: "The mark filling a corridor-length screen, alive with movement rather than a static board.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/prime-promenade-brand-gym.jpg",
+        alt: "A framed indoor display showing the Prime Promenade logo above a woman resting during a workout",
+        caption: "The same lockup, scaled down for a smaller indoor display — legible without the corridor screen's size to lean on.",
+      },
+      {
+        src: "/images/projects/prime-promenade-brand-signage.jpg",
+        alt: "An illuminated Prime Promenade sign mounted on a building corner at night, lit from below",
+        caption: "And on static signage after dark — the identity has to hold up with no motion or screen sequence to carry it.",
+      },
+    ],
+  },
+  {
     slug: "eduplan-ecommerce-migration",
     name: "Eduplan",
     type: "E-commerce Migration",
@@ -355,6 +413,7 @@ export const projects: Project[] = [
     name: "SIFAT",
     type: "Mobile App Design",
     category: "ui-ux-design",
+    filterCategories: ["app-development"],
     tags: ["UI/UX Design", "Mobile App", "EdTech", "+more"],
     summary:
       "A course marketplace built around an AI Mentor that proposes a learning path before a student ever has to browse for one.",
@@ -408,6 +467,11 @@ export const projects: Project[] = [
 export const PROJECTS_PER_PAGE = 8;
 
 export const featuredProjects = projects.filter((p) => p.featured);
+
+/** All categories a project should surface under in the /portfolio filter — `category` plus any `filterCategories`. */
+export function projectCategories(project: Project): CategoryId[] {
+  return [project.category, ...(project.filterCategories ?? [])];
+}
 
 export function projectHref(slug: string): string {
   return `/portfolio/${slug}`;

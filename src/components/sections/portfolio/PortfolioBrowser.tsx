@@ -6,7 +6,7 @@ import { TagButton } from "@/components/ui/Tag";
 import { Text } from "@/components/ui/typography";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { ProjectCard } from "./ProjectCard";
-import { PROJECTS_PER_PAGE, projects } from "@/lib/projects";
+import { PROJECTS_PER_PAGE, projectCategories, projects } from "@/lib/projects";
 import { categories, isCategoryId } from "@/lib/taxonomy";
 import { portfolioLabels } from "@/lib/portfolio-content";
 import type { CategoryId } from "@/lib/taxonomy";
@@ -57,7 +57,7 @@ export function PortfolioBrowser() {
     syncUrl(filter, next);
   };
 
-  const visible = filter ? projects.filter((p) => p.category === filter) : projects;
+  const visible = filter ? projects.filter((p) => projectCategories(p).includes(filter)) : projects;
   const pageCount = Math.max(1, Math.ceil(visible.length / PROJECTS_PER_PAGE));
   const current = Math.min(page, pageCount);
   const start = (current - 1) * PROJECTS_PER_PAGE;
