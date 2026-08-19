@@ -245,10 +245,10 @@ export const testimonials = [
     avatar: "/images/testimonials/tabi-samuel-olickal.jpg",
   },
   {
-    quote: "Clear communication, strong creative thinking, and reliable delivery. A partner we'd gladly work with again.",
-    name: "James Okafor",
-    role: "Operations Head",
-    avatar: "/images/testimonials/chandler.png",
+    quote: "They delivered exactly what was promised, on schedule, with none of the usual project back-and-forth.",
+    name: "Barry Aspi",
+    role: "Founders & CEO, Ahura International Co., Ltd",
+    avatar: "/images/testimonials/barry-aspi.png",
   },
   {
     quote: "The attention to detail and user experience truly stood out. Every interaction feels thoughtful and well-crafted.",
