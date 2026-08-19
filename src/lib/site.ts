@@ -16,9 +16,9 @@ export const siteConfig = {
   phone: "+91 9447768570",
   phoneHref: "tel:+919447768570",
   social: {
-    facebook: "https://facebook.com/adpedia",
+    facebook: "https://www.facebook.com/adpediaindia",
     instagram: "https://instagram.com/adpedia",
-    linkedin: "https://linkedin.com/company/adpedia",
+    linkedin: "https://www.linkedin.com/company/adpedia-digital/",
   },
 } as const;
 
