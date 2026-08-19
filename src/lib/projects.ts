@@ -348,6 +348,60 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "eduplan-ecommerce-migration",
+    name: "Eduplan",
+    type: "E-commerce Migration",
+    category: "web-development",
+    location: "UAE",
+    tags: ["Web Development", "E-commerce", "Platform Migration", "+more"],
+    summary:
+      "A 100,000-line-item, multi-vendor school-supplies marketplace, migrated off legacy PHP onto Shopify with zero downtime.",
+    thumb: {
+      src: "/images/projects/eduplan-hero.jpg",
+      alt: "The Eduplan homepage on a laptop, showing the Classroom Resources banner and a Shop By Brand row",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Eduplan supplies schools across the UAE, the UK, and the wider Middle East with everything from classroom furniture to coding kits — a multi-vendor catalogue running past 100,000 line items across dozens of brands. The site exists to do one job well: let a school's procurement team find and order the right SKU, at institutional pricing, without wading through a directory built for a fraction of that scale.",
+          "Adpedia migrated Eduplan's entire storefront off a legacy PHP e-commerce platform onto Shopify, rebuilding the storefront and vendor-management layer around what Shopify actually does well rather than porting the old site's structure across unchanged.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A migration at this scale carries a risk most redesigns don't: 100,000-plus SKUs across a multi-vendor catalogue, live institutional accounts placing recurring orders, and a business that couldn't afford to go dark — or even slow down — while the switch happened. The brief wasn't just moving the data across; it was doing it without a single day of downtime or a delayed order in transit.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "We treated the migration itself as the deliverable, not a footnote before a redesign. Every vendor, product, price tier, and institutional account was mapped and moved onto Shopify's multi-vendor infrastructure in a sequence built to keep the storefront live and orders flowing throughout — no maintenance-mode window, no gap where a school couldn't check out.",
+          "The rebuilt storefront leans on what that infrastructure is actually good at: faceted brand and price filtering that holds up across a six-figure catalogue, a \"Shop By Brand\" and \"Shop By Collections\" structure schools can browse instead of search blindly through, and institutional pricing surfaced right on the homepage instead of buried behind an account login.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/eduplan-hero.jpg",
+        alt: "The Eduplan homepage on a laptop, showing the Classroom Resources banner and a Shop By Brand row",
+        caption: "Shop By Brand and Shop By Collections replace a flat category list — how a six-figure catalogue stays browsable.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/eduplan-catalogue.jpg",
+        alt: "A monitor showing the Eduplan Featured Products carousel and a row of vendor catalogue brand tiles",
+        caption: "Institutional pricing and delivery windows sit directly on the product card, not behind a login.",
+      },
+      {
+        src: "/images/projects/eduplan-filters.jpg",
+        alt: "The Eduplan Coding Accessories category page on a laptop, showing brand and price filters over a large catalogue",
+        caption: "Faceted brand and price filtering holds up at scale, whether a category has twenty products or two thousand.",
+      },
+    ],
+  },
 ];
 
 /** Cards per page on /portfolio — the Figma grid is 2 columns x 4 rows. */
