@@ -128,61 +128,57 @@ export const projects: Project[] = [
       },
     ],
   },
-  // "etern-learning-app" — temporarily hidden from the portfolio at the
-  // client's request. All copy and imagery are unchanged and still in the
-  // repo (public/images/projects/etern-*.jpg); re-add the entry here (see
-  // git history for the exact block) to bring the page, thumbnail, and mega
-  // menu listing back — everything that lists projects reads this array
-  // directly, so restoring the entry is enough.
   {
-    slug: "sifat-lms-app",
-    name: "SIFAT",
-    type: "Mobile App Design",
-    category: "ui-ux-design",
-    tags: ["UI/UX Design", "Mobile App", "EdTech", "+more"],
+    slug: "aibo-voice-ai-banking",
+    name: "Aibo",
+    type: "AI Voice Platform",
+    category: "ai-data-solutions",
+    tags: ["AI & Data Science", "Voice AI", "FinTech", "+more"],
     summary:
-      "A course marketplace built around an AI Mentor that proposes a learning path before a student ever has to browse for one.",
+      "A voice-first banking assistant, built as an MVP for a financial institution — ask for a balance or a statement the way you'd ask a person, and get an answer instead of a menu.",
     thumb: {
-      src: "/images/projects/sifat-lms-hero.jpg",
-      alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
+      src: "/images/projects/aibo-voice-banking-hero.jpg",
+      alt: "A man in a dark suit holding a phone showing a voice-call style account balance screen against a glass office building",
     },
+    featured: true,
     narrative: [
       {
         title: "Overview",
         body: [
-          "SIFAT is a course marketplace built around one idea: the home screen should already know what a student is trying to learn, not wait for them to search for it. An AI Mentor prompt — \"Build a personalised learning path in seconds\" — sits above the fold before any course list, alongside a Continue Learning shelf and an AI-recommended row, so opening the app resumes a specific thread instead of dropping a student back into a generic catalogue.",
+          "Aibo is a voice-first banking assistant we built as an MVP for a financial institution — checking a balance, reviewing a transaction summary, downloading a statement, or confirming a deposit detail, all handled through a natural spoken or typed request instead of a multi-screen menu.",
+          "It's built on natural language processing, speech recognition, and conversational AI, not a voice command layer bolted onto the existing app — the goal was something a customer could genuinely talk to, the way they'd talk to a human banking assistant.",
         ],
       },
       {
         title: "The Challenge",
         body: [
-          "A marketplace spanning categories like Coding, Business, Design, and Finance has the same problem every large catalogue has: browsing scales badly. Left purely as a directory, the home screen becomes a wall of categories a student has to dig through every session, with nothing remembering what they were actually partway through last time.",
+          "Traditional mobile banking apps ask a lot of someone who just wants one number or one document — several screens, deep navigation, menus organized around how the bank structures its own products rather than what a customer is actually trying to do in the moment. The brief was to make routine banking genuinely hands-free and quick to access, not add a voice button on top of the same navigation underneath.",
         ],
       },
       {
         title: "Our Approach",
         body: [
-          "The AI Mentor sits at the very top of the home screen, ahead of categories or search, and does the one thing a static catalogue can't — ask what a student is trying to learn and propose a path, rather than handing over a full course list to filter through. Below it, Continue Learning resumes exactly where a student left off, whether that's a course partway through or a lesson mid-playback.",
-          "Course discovery still works the traditional way when a student wants it — Browse Categories, and a full catalogue view per category with difficulty tabs (Beginner, Intermediate, Advanced) and per-course pricing and certificate details — but it sits below the personalised layer, not instead of it, so the AI Mentor and Continue Learning let a student skip browsing most of the time rather than replacing it entirely.",
+          "Aibo opens by greeting the customer by name and listening, not with a menu, and it understands the request itself rather than a fixed list of commands — \"What's my current balance?\", \"Send my February statement,\" and \"Check my fixed deposit maturity date\" are all handled as natural language, not phrases the customer has to memorize.",
+          "Every request resolves the same way: an instant spoken or on-screen summary, plus a secure link when there's a document to hand over, so voice never becomes a dead end that still sends the customer back into the full app to finish the task. Authentication runs through Face ID before any account detail is spoken aloud, so a hands-free interface doesn't become a hands-free security gap.",
         ],
       },
     ],
     gallery: [
       {
-        src: "/images/projects/sifat-lms-hero.jpg",
-        alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
-        caption: "The AI Mentor sits above the fold, ahead of any course list — the home screen opens with a question, not a catalogue.",
+        src: "/images/projects/aibo-voice-banking-hero.jpg",
+        alt: "A man holding a phone showing a voice-call style account balance screen, ₹2,23,952.35, against a glass office building",
+        caption: "The balance resolves like a call, not a dashboard — the number a customer actually asked for, front and center.",
         span: "full",
       },
       {
-        src: "/images/projects/sifat-lms-home.jpg",
-        alt: "A hand holding a phone showing the SIFAT home screen, with Continue Learning and AI Recommended course rows",
-        caption: "Continue Learning resumes exactly where a student left off, not at the course's landing page.",
+        src: "/images/projects/aibo-voice-banking-faceid.jpg",
+        alt: "A phone showing a Face ID authentication screen with a red \"Authenticate Using Face ID\" button",
+        caption: "Face ID gates every session before any account detail is spoken aloud.",
       },
       {
-        src: "/images/projects/sifat-lms-screens.jpg",
-        alt: "Several SIFAT screens arranged together, showing a course catalogue with difficulty tabs, a video lesson in progress, and upcoming quizzes",
-        caption: "Course discovery still works the traditional way when a student wants it — categories, difficulty tabs, pricing — just positioned below the personalised layer.",
+        src: "/images/projects/aibo-voice-banking-greeting.jpg",
+        alt: "A phone showing a personalized \"Hello Harshika!\" greeting with a voice-input microphone button",
+        caption: "Aibo opens by greeting the customer by name and listening — not with a menu.",
       },
     ],
   },
@@ -295,60 +291,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "aibo-voice-ai-banking",
-    name: "Aibo",
-    type: "AI Voice Platform",
-    category: "ai-data-solutions",
-    tags: ["AI & Data Science", "Voice AI", "FinTech", "+more"],
-    summary:
-      "A voice-first banking assistant, built as an MVP for a financial institution — ask for a balance or a statement the way you'd ask a person, and get an answer instead of a menu.",
-    thumb: {
-      src: "/images/projects/aibo-voice-banking-hero.jpg",
-      alt: "A man in a dark suit holding a phone showing a voice-call style account balance screen against a glass office building",
-    },
-    featured: true,
-    narrative: [
-      {
-        title: "Overview",
-        body: [
-          "Aibo is a voice-first banking assistant we built as an MVP for a financial institution — checking a balance, reviewing a transaction summary, downloading a statement, or confirming a deposit detail, all handled through a natural spoken or typed request instead of a multi-screen menu.",
-          "It's built on natural language processing, speech recognition, and conversational AI, not a voice command layer bolted onto the existing app — the goal was something a customer could genuinely talk to, the way they'd talk to a human banking assistant.",
-        ],
-      },
-      {
-        title: "The Challenge",
-        body: [
-          "Traditional mobile banking apps ask a lot of someone who just wants one number or one document — several screens, deep navigation, menus organized around how the bank structures its own products rather than what a customer is actually trying to do in the moment. The brief was to make routine banking genuinely hands-free and quick to access, not add a voice button on top of the same navigation underneath.",
-        ],
-      },
-      {
-        title: "Our Approach",
-        body: [
-          "Aibo opens by greeting the customer by name and listening, not with a menu, and it understands the request itself rather than a fixed list of commands — \"What's my current balance?\", \"Send my February statement,\" and \"Check my fixed deposit maturity date\" are all handled as natural language, not phrases the customer has to memorize.",
-          "Every request resolves the same way: an instant spoken or on-screen summary, plus a secure link when there's a document to hand over, so voice never becomes a dead end that still sends the customer back into the full app to finish the task. Authentication runs through Face ID before any account detail is spoken aloud, so a hands-free interface doesn't become a hands-free security gap.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/images/projects/aibo-voice-banking-hero.jpg",
-        alt: "A man holding a phone showing a voice-call style account balance screen, ₹2,23,952.35, against a glass office building",
-        caption: "The balance resolves like a call, not a dashboard — the number a customer actually asked for, front and center.",
-        span: "full",
-      },
-      {
-        src: "/images/projects/aibo-voice-banking-faceid.jpg",
-        alt: "A phone showing a Face ID authentication screen with a red \"Authenticate Using Face ID\" button",
-        caption: "Face ID gates every session before any account detail is spoken aloud.",
-      },
-      {
-        src: "/images/projects/aibo-voice-banking-greeting.jpg",
-        alt: "A phone showing a personalized \"Hello Harshika!\" greeting with a voice-input microphone button",
-        caption: "Aibo opens by greeting the customer by name and listening — not with a menu.",
-      },
-    ],
-  },
-  {
     slug: "eduplan-ecommerce-migration",
     name: "Eduplan",
     type: "E-commerce Migration",
@@ -399,6 +341,64 @@ export const projects: Project[] = [
         src: "/images/projects/eduplan-filters.jpg",
         alt: "The Eduplan Coding Accessories category page on a laptop, showing brand and price filters over a large catalogue",
         caption: "Faceted brand and price filtering holds up at scale, whether a category has twenty products or two thousand.",
+      },
+    ],
+  },
+  // "etern-learning-app" — temporarily hidden from the portfolio at the
+  // client's request. All copy and imagery are unchanged and still in the
+  // repo (public/images/projects/etern-*.jpg); re-add the entry here (see
+  // git history for the exact block) to bring the page, thumbnail, and mega
+  // menu listing back — everything that lists projects reads this array
+  // directly, so restoring the entry is enough.
+  {
+    slug: "sifat-lms-app",
+    name: "SIFAT",
+    type: "Mobile App Design",
+    category: "ui-ux-design",
+    tags: ["UI/UX Design", "Mobile App", "EdTech", "+more"],
+    summary:
+      "A course marketplace built around an AI Mentor that proposes a learning path before a student ever has to browse for one.",
+    thumb: {
+      src: "/images/projects/sifat-lms-hero.jpg",
+      alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "SIFAT is a course marketplace built around one idea: the home screen should already know what a student is trying to learn, not wait for them to search for it. An AI Mentor prompt — \"Build a personalised learning path in seconds\" — sits above the fold before any course list, alongside a Continue Learning shelf and an AI-recommended row, so opening the app resumes a specific thread instead of dropping a student back into a generic catalogue.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A marketplace spanning categories like Coding, Business, Design, and Finance has the same problem every large catalogue has: browsing scales badly. Left purely as a directory, the home screen becomes a wall of categories a student has to dig through every session, with nothing remembering what they were actually partway through last time.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "The AI Mentor sits at the very top of the home screen, ahead of categories or search, and does the one thing a static catalogue can't — ask what a student is trying to learn and propose a path, rather than handing over a full course list to filter through. Below it, Continue Learning resumes exactly where a student left off, whether that's a course partway through or a lesson mid-playback.",
+          "Course discovery still works the traditional way when a student wants it — Browse Categories, and a full catalogue view per category with difficulty tabs (Beginner, Intermediate, Advanced) and per-course pricing and certificate details — but it sits below the personalised layer, not instead of it, so the AI Mentor and Continue Learning let a student skip browsing most of the time rather than replacing it entirely.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/sifat-lms-hero.jpg",
+        alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
+        caption: "The AI Mentor sits above the fold, ahead of any course list — the home screen opens with a question, not a catalogue.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/sifat-lms-home.jpg",
+        alt: "A hand holding a phone showing the SIFAT home screen, with Continue Learning and AI Recommended course rows",
+        caption: "Continue Learning resumes exactly where a student left off, not at the course's landing page.",
+      },
+      {
+        src: "/images/projects/sifat-lms-screens.jpg",
+        alt: "Several SIFAT screens arranged together, showing a course catalogue with difficulty tabs, a video lesson in progress, and upcoming quizzes",
+        caption: "Course discovery still works the traditional way when a student wants it — categories, difficulty tabs, pricing — just positioned below the personalised layer.",
       },
     ],
   },
