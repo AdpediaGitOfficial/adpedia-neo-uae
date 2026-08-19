@@ -11,7 +11,7 @@ export const siteConfig = {
   domain: "https://adpedia.in",
   tagline: "We design brands that demand attention",
   description:
-    "Adpedia Neo is a creative digital studio crafting impactful brand experiences through strategy, design, and technology — from branding and UI/UX to web, apps, and AI.",
+    "Adpedia engineers custom software that powers modern business — web development, mobile apps, AI solutions, automation & DevOps. Build your digital backbone with us.",
   email: "info@adpedia.in",
   phone: "+91 9447768570",
   phoneHref: "tel:+919447768570",

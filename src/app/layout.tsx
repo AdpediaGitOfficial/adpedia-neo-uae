@@ -11,7 +11,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.name} — Creative Digital Studio`,
+    default: "Adpedia | Custom Software, AI & DevOps Development",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.domain,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: "Adpedia | Custom Software, AI & DevOps Development",
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: "Adpedia | Custom Software, AI & DevOps Development",
     description: siteConfig.description,
   },
   robots: {
