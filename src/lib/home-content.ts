@@ -241,7 +241,7 @@ export const testimonials = [
   {
     quote: "They delivered exactly what was promised, on schedule, with none of the usual project back-and-forth.",
     name: "Barry Aspi",
-    role: "Founders & CEO, Ahura International Co., Ltd",
+    role: "CEO, Ahura International Co. Ltd",
     avatar: "/images/testimonials/barry-aspi.png",
   },
   {
