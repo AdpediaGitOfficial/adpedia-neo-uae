@@ -34,22 +34,36 @@ export function Testimonials() {
         </Reveal>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {/* Featured testimonial */}
+          {/* Featured testimonial.
+              Below `sm` the quote is long enough (many wrapped lines at
+              phone width) that overlaying it on the portrait — the
+              treatment that works well from `sm` up, where there's room to
+              wrap into just a few lines — would climb up over the subject's
+              face. So on phones the photo and the quote split into two
+              stacked panels instead: a full, unobscured portrait, then the
+              quote on its own panel below in the same bg-ink-800 surface
+              the other four testimonial cards use, so it still reads as
+              part of the same family rather than a one-off treatment. */}
           <Reveal>
-            <figure className="relative h-full min-h-[420px] overflow-hidden">
-              <Image
-                src={featuredTestimonial.image}
-                alt={`Portrait of ${featuredTestimonial.name}`}
-                fill
-                sizes="(max-width: 1024px) 100vw, 640px"
-                className="object-cover"
-              />
-              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
+            <figure className="relative flex h-full flex-col overflow-hidden sm:min-h-[420px]">
+              <div className="relative aspect-[4/5] w-full sm:absolute sm:inset-0 sm:aspect-auto sm:h-full">
+                <Image
+                  src={featuredTestimonial.image}
+                  alt={`Portrait of ${featuredTestimonial.name}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 640px"
+                  className="object-cover"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 hidden bg-gradient-to-t from-black/85 via-black/25 to-black/10 sm:block"
+                />
+              </div>
 
-              <figcaption className="absolute inset-x-0 bottom-0 p-7 sm:p-8">
+              <figcaption className="border border-t-0 border-white/10 bg-ink-800 p-7 sm:absolute sm:inset-x-0 sm:bottom-0 sm:border-0 sm:bg-transparent sm:p-8">
                 <blockquote
                   dir={featuredTestimonial.quoteDir}
-                  className="whitespace-pre-line text-pretty text-lg font-light leading-snug text-white"
+                  className="whitespace-pre-line text-pretty text-base leading-relaxed text-white sm:text-lg sm:font-light sm:leading-snug"
                 >
                   &ldquo;{featuredTestimonial.quote}&rdquo;
                 </blockquote>
