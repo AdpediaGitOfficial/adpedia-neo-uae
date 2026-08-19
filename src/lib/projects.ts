@@ -128,60 +128,12 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: "etern-learning-app",
-    name: "Etern Learning",
-    type: "Mobile App Design",
-    category: "ui-ux-design",
-    tags: ["UI/UX Design", "Mobile App", "Kids Edtech", "+more"],
-    summary:
-      "A learning app for ages 3–7, designed for a child navigating alone — streaks, a progress ring, and a mascot doing the explaining a paragraph of copy would otherwise have to do.",
-    thumb: {
-      src: "/images/projects/etern-mock.jpg",
-      alt: "The Etern Learning home dashboard on a tablet, showing a streak tracker, progress ring, and a shelf of story and activity tiles",
-    },
-    featured: true,
-    narrative: [
-      {
-        title: "Overview",
-        body: [
-          "Etern Learning needed an app two completely different people would use minutes apart from each other — a parent filling in a signup form, then handing the phone to a child who can't fully read yet. Most edtech apps pick one audience and make the other tolerate it.",
-          "We designed two distinct interaction languages inside one product: a calm, form-based flow for the parent — clear labels, a visible privacy note, nothing playful competing for attention while they're entering real information — and an icon-led, mascot-driven world for the child once the account exists, where a tiger named Tiggy does the explaining a paragraph of copy would otherwise have to do.",
-        ],
-      },
-      {
-        title: "The Challenge",
-        body: [
-          "A three-to-seven-year-old can't read a settings menu, and won't stay on a screen that doesn't reward them within a few taps of opening it. Every daily-use decision had to work for a child navigating alone: no destination more than one tap from the home screen, feedback that reads instantly — a filled star, a checkmark, a percentage ring — rather than as text, and a sense of progress visible before a single lesson is finished.",
-        ],
-      },
-      {
-        title: "Our Approach",
-        body: [
-          "The home screen leads with what changed since yesterday, not a menu — the streak, the day's progress ring, and one \"continue learning\" card picking up exactly where the last session stopped, so opening the app has an immediate, visible payoff. Below it, a content shelf mixes categories like Stories and Self Help into a single browsable row instead of separate tabs a child would have to understand first, and locking content behind a level number turns a limitation into an incentive instead of a wall.",
-          "Onboarding runs in the opposite register on purpose: a linear form with real labels and a stated privacy commitment, then a lighter profile step — choosing an avatar, picking a learning buddy from a small set of characters — that eases a first-time child user into the app's tone before the gamified home screen arrives. The same tiger mascot appears throughout both modes, so the handoff from \"parent finishing setup\" to \"child starting to play\" never feels like switching apps.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/images/projects/etern-mock.jpg",
-        alt: "A tablet held by two hands, showing the Etern Learning home dashboard with a streak tracker, progress ring, and a content shelf",
-        caption: "The home dashboard leads with streaks, today's progress, and one \"continue learning\" card — not a menu.",
-        span: "full",
-      },
-      {
-        src: "/images/projects/etern-learning-onboarding.jpg",
-        alt: "Two phones showing profile selection and the child-information form during onboarding",
-        caption: "Onboarding runs in a calmer register: a real form for the parent, then a lighter profile step for the child.",
-      },
-      {
-        src: "/images/projects/etern-learning-buddy.jpg",
-        alt: "A phone showing the learning buddy selection screen with several animal mascot characters",
-        caption: "Picking a learning buddy turns the last onboarding step into the first moment of play.",
-      },
-    ],
-  },
+  // "etern-learning-app" — temporarily hidden from the portfolio at the
+  // client's request. All copy and imagery are unchanged and still in the
+  // repo (public/images/projects/etern-*.jpg); re-add the entry here (see
+  // git history for the exact block) to bring the page, thumbnail, and mega
+  // menu listing back — everything that lists projects reads this array
+  // directly, so restoring the entry is enough.
   {
     slug: "sifat-lms-app",
     name: "SIFAT",
@@ -340,6 +292,60 @@ export const projects: Project[] = [
         src: "/images/projects/prime-promenade-amenities.jpg",
         alt: "A laptop showing one of the eight amenity landing pages, an underwater swimming pool shot behind \"Dive into Luxury\"",
         caption: "Each of the eight amenities gets its own full-bleed landing moment, all booking through the same consistent flow.",
+      },
+    ],
+  },
+  {
+    slug: "aibo-voice-ai-banking",
+    name: "Aibo",
+    type: "AI Voice Platform",
+    category: "ai-data-solutions",
+    tags: ["AI & Data Science", "Voice AI", "FinTech", "+more"],
+    summary:
+      "A voice-first banking assistant, built as an MVP for a financial institution — ask for a balance or a statement the way you'd ask a person, and get an answer instead of a menu.",
+    thumb: {
+      src: "/images/projects/aibo-voice-banking-hero.jpg",
+      alt: "A man in a dark suit holding a phone showing a voice-call style account balance screen against a glass office building",
+    },
+    featured: true,
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Aibo is a voice-first banking assistant we built as an MVP for a financial institution — checking a balance, reviewing a transaction summary, downloading a statement, or confirming a deposit detail, all handled through a natural spoken or typed request instead of a multi-screen menu.",
+          "It's built on natural language processing, speech recognition, and conversational AI, not a voice command layer bolted onto the existing app — the goal was something a customer could genuinely talk to, the way they'd talk to a human banking assistant.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "Traditional mobile banking apps ask a lot of someone who just wants one number or one document — several screens, deep navigation, menus organized around how the bank structures its own products rather than what a customer is actually trying to do in the moment. The brief was to make routine banking genuinely hands-free and quick to access, not add a voice button on top of the same navigation underneath.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "Aibo opens by greeting the customer by name and listening, not with a menu, and it understands the request itself rather than a fixed list of commands — \"What's my current balance?\", \"Send my February statement,\" and \"Check my fixed deposit maturity date\" are all handled as natural language, not phrases the customer has to memorize.",
+          "Every request resolves the same way: an instant spoken or on-screen summary, plus a secure link when there's a document to hand over, so voice never becomes a dead end that still sends the customer back into the full app to finish the task. Authentication runs through Face ID before any account detail is spoken aloud, so a hands-free interface doesn't become a hands-free security gap.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/aibo-voice-banking-hero.jpg",
+        alt: "A man holding a phone showing a voice-call style account balance screen, ₹2,23,952.35, against a glass office building",
+        caption: "The balance resolves like a call, not a dashboard — the number a customer actually asked for, front and center.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/aibo-voice-banking-faceid.jpg",
+        alt: "A phone showing a Face ID authentication screen with a red \"Authenticate Using Face ID\" button",
+        caption: "Face ID gates every session before any account detail is spoken aloud.",
+      },
+      {
+        src: "/images/projects/aibo-voice-banking-greeting.jpg",
+        alt: "A phone showing a personalized \"Hello Harshika!\" greeting with a voice-input microphone button",
+        caption: "Aibo opens by greeting the customer by name and listening — not with a menu.",
       },
     ],
   },
