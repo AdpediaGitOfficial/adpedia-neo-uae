@@ -9,11 +9,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { IconButton } from "@/components/ui/IconButton";
 import { mainNav } from "@/lib/site";
+import { useContactModal } from "@/components/providers/ContactModalProvider";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { openContactModal } = useContactModal();
 
   // Portal target (document.body) is only available on the client.
   useEffect(() => setMounted(true), []);
@@ -113,7 +115,14 @@ export function MobileMenu() {
                       ))}
                     </ul>
 
-                    <Button href="/contact" size="lg" className="mt-8 w-full">
+                    <Button
+                      size="lg"
+                      className="mt-8 w-full"
+                      onClick={() => {
+                        setOpen(false);
+                        openContactModal();
+                      }}
+                    >
                       Book a call
                     </Button>
                   </nav>

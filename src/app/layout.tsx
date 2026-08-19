@@ -5,6 +5,7 @@ import { siteConfig, offices } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { ContactModalProvider } from "@/components/providers/ContactModalProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -89,11 +90,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to content
         </a>
-        <SmoothScroll>
-          <Header />
-          <main id="main">{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <ContactModalProvider>
+          <SmoothScroll>
+            <Header />
+            <main id="main">{children}</main>
+            <Footer />
+          </SmoothScroll>
+        </ContactModalProvider>
         <Script
           id="org-jsonld"
           type="application/ld+json"

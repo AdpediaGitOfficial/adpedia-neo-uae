@@ -1,7 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { siteConfig } from "@/lib/site";
-import { validateContact, type ContactValues } from "@/lib/contact-schema";
+import {
+  validateContact,
+  validateQuickContact,
+  type ContactValues,
+  type QuickContactValues,
+} from "@/lib/contact-schema";
+
+type Body = Partial<ContactValues> & Partial<QuickContactValues>;
 
 /** Needs the Node runtime (and per-instance state) rather than edge. */
 export const runtime = "nodejs";
@@ -63,23 +70,28 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Too many submissions. Please try again later." }, { status: 429 });
   }
 
-  let body: Partial<ContactValues>;
+  let body: Body;
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const errors = validateContact(body);
+  // The quick-contact modal sends `phone` and no `company`; the full contact
+  // page sends `company` and no `phone`. Each gets its own required fields.
+  const isQuickContact = typeof body.phone === "string";
+  const errors = isQuickContact ? validateQuickContact(body) : validateContact(body);
   if (Object.keys(errors).length > 0) {
     return NextResponse.json({ error: "Validation failed.", errors }, { status: 400 });
   }
 
   const name = body.name!.trim();
   const email = body.email!.trim();
-  const company = body.company!.trim();
+  const company = body.company?.trim() ?? "";
+  const phone = body.phone?.trim() ?? "";
   const service = (body.service ?? "").trim() || "Not specified";
   const message = body.message!.trim();
+  const identifier = company || phone;
 
   try {
     const resend = new Resend(apiKey);
@@ -87,11 +99,11 @@ export async function POST(request: Request) {
       from,
       to: [to],
       replyTo: email,
-      subject: `New enquiry — ${name}${company ? ` (${company})` : ""}`,
+      subject: `New enquiry — ${name}${identifier ? ` (${identifier})` : ""}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
-        `Company: ${company}`,
+        company ? `Company: ${company}` : `Phone: ${phone}`,
         `Service: ${service}`,
         "",
         message,
@@ -99,7 +111,7 @@ export async function POST(request: Request) {
       html: `
         <h2>New enquiry from ${escapeHtml(name)}</h2>
         <p><strong>Email:</strong> ${escapeHtml(email)}<br/>
-           <strong>Company:</strong> ${escapeHtml(company)}<br/>
+           <strong>${company ? "Company" : "Phone"}:</strong> ${escapeHtml(company || phone)}<br/>
            <strong>Service:</strong> ${escapeHtml(service)}</p>
         <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
       `,

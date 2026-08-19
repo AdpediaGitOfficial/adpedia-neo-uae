@@ -15,6 +15,7 @@ import {
 } from "@/components/layout/MegaMenuPanels";
 import { mainNav, type MegaKey } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { useContactModal } from "@/components/providers/ContactModalProvider";
 
 const CLOSE_DELAY = 140; // ms — grace period so moving cursor into the panel never flickers
 
@@ -30,6 +31,7 @@ export function Header() {
   const [menuPrimed, setMenuPrimed] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
+  const { openContactModal } = useContactModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -176,7 +178,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3" onMouseEnter={closeNow}>
-          <Button href="/contact" className="hidden sm:inline-flex">
+          <Button onClick={openContactModal} className="hidden sm:inline-flex">
             Book a call
           </Button>
           <MobileMenu />
