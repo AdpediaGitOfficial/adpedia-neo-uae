@@ -39,31 +39,54 @@ export function Testimonials() {
               phone width) that overlaying it on the portrait — the
               treatment that works well from `sm` up, where there's room to
               wrap into just a few lines — would climb up over the subject's
-              face. So on phones the photo and the quote split into two
-              stacked panels instead: a full, unobscured portrait, then the
-              quote on its own panel below in the same bg-ink-800 surface
-              the other four testimonial cards use, so it still reads as
-              part of the same family rather than a one-off treatment. */}
+              face. So on phones it uses the same plain card design as the
+              other four testimonials below (avatar + name, quote, role)
+              instead of a one-off treatment; `sm` and up switch to the
+              cinematic photo-with-overlay version. */}
           <Reveal>
-            <figure className="relative flex h-full flex-col overflow-hidden sm:min-h-[420px]">
-              <div className="relative aspect-[4/5] w-full sm:absolute sm:inset-0 sm:aspect-auto sm:h-full">
+            {/* Mobile: matches the other four testimonial cards exactly. */}
+            <Card as="figure" padding="md" className="flex h-full flex-col sm:hidden">
+              <div className="flex items-center gap-3">
                 <Image
                   src={featuredTestimonial.image}
                   alt={`Portrait of ${featuredTestimonial.name}`}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 640px"
-                  className="object-cover"
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 shrink-0 rounded-full object-cover"
                 />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 hidden bg-gradient-to-t from-black/85 via-black/25 to-black/10 sm:block"
-                />
+                <Text as="span" size="body-sm" tone="primary">
+                  {featuredTestimonial.name}
+                </Text>
               </div>
+              <blockquote
+                dir={featuredTestimonial.quoteDir}
+                className="mt-6 whitespace-pre-line text-pretty text-body-sm leading-relaxed text-white/60"
+              >
+                &ldquo;{featuredTestimonial.quote}&rdquo;
+              </blockquote>
+              <figcaption className="mt-6">
+                <p className="mono-label flex items-center gap-2 text-white/60">
+                  <Asterisk className="h-3.5 w-3.5 text-accent-400" aria-hidden />
+                  <span className="text-white/45">{featuredTestimonial.role.toUpperCase()}</span>
+                </p>
+              </figcaption>
+            </Card>
 
-              <figcaption className="border border-t-0 border-white/10 bg-ink-800 p-7 sm:absolute sm:inset-x-0 sm:bottom-0 sm:border-0 sm:bg-transparent sm:p-8">
+            {/* sm and up: cinematic photo with the quote overlaid. */}
+            <figure className="relative hidden h-full min-h-[420px] overflow-hidden sm:block">
+              <Image
+                src={featuredTestimonial.image}
+                alt={`Portrait of ${featuredTestimonial.name}`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 640px"
+                className="object-cover"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
+
+              <figcaption className="absolute inset-x-0 bottom-0 p-7 sm:p-8">
                 <blockquote
                   dir={featuredTestimonial.quoteDir}
-                  className="whitespace-pre-line text-pretty text-base leading-relaxed text-white sm:text-lg sm:font-light sm:leading-snug"
+                  className="whitespace-pre-line text-pretty text-lg font-light leading-snug text-white"
                 >
                   &ldquo;{featuredTestimonial.quote}&rdquo;
                 </blockquote>
