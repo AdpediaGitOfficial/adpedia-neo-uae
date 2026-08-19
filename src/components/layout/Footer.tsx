@@ -104,21 +104,10 @@ export function Footer() {
           </div>
 
           {/* Bottom bar — inside the card, matching Figma */}
-          <div className="relative mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-body-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
+          <div className="relative mt-14 border-t border-white/10 pt-6 text-body-sm text-white/45">
             <p>
               {siteConfig.shortName} © {year} All rights reserved
             </p>
-            <div className="flex items-center gap-3">
-              <Link href="/privacy-policy" className="transition-colors hover:text-white">
-                Privacy Policy
-              </Link>
-              <span aria-hidden className="text-white/25">
-                |
-              </span>
-              <Link href="/terms" className="transition-colors hover:text-white">
-                Terms &amp; Conditions
-              </Link>
-            </div>
           </div>
         </Card>
       </Container>
