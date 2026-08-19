@@ -408,59 +408,12 @@ export const projects: Project[] = [
   // git history for the exact block) to bring the page, thumbnail, and mega
   // menu listing back — everything that lists projects reads this array
   // directly, so restoring the entry is enough.
-  {
-    slug: "sifat-lms-app",
-    name: "SIFAT",
-    type: "Mobile App Design",
-    category: "ui-ux-design",
-    filterCategories: ["app-development"],
-    tags: ["UI/UX Design", "Mobile App", "EdTech", "+more"],
-    summary:
-      "A course marketplace built around an AI Mentor that proposes a learning path before a student ever has to browse for one.",
-    thumb: {
-      src: "/images/projects/sifat-lms-hero.jpg",
-      alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
-    },
-    narrative: [
-      {
-        title: "Overview",
-        body: [
-          "SIFAT is a course marketplace built around one idea: the home screen should already know what a student is trying to learn, not wait for them to search for it. An AI Mentor prompt — \"Build a personalised learning path in seconds\" — sits above the fold before any course list, alongside a Continue Learning shelf and an AI-recommended row, so opening the app resumes a specific thread instead of dropping a student back into a generic catalogue.",
-        ],
-      },
-      {
-        title: "The Challenge",
-        body: [
-          "A marketplace spanning categories like Coding, Business, Design, and Finance has the same problem every large catalogue has: browsing scales badly. Left purely as a directory, the home screen becomes a wall of categories a student has to dig through every session, with nothing remembering what they were actually partway through last time.",
-        ],
-      },
-      {
-        title: "Our Approach",
-        body: [
-          "The AI Mentor sits at the very top of the home screen, ahead of categories or search, and does the one thing a static catalogue can't — ask what a student is trying to learn and propose a path, rather than handing over a full course list to filter through. Below it, Continue Learning resumes exactly where a student left off, whether that's a course partway through or a lesson mid-playback.",
-          "Course discovery still works the traditional way when a student wants it — Browse Categories, and a full catalogue view per category with difficulty tabs (Beginner, Intermediate, Advanced) and per-course pricing and certificate details — but it sits below the personalised layer, not instead of it, so the AI Mentor and Continue Learning let a student skip browsing most of the time rather than replacing it entirely.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/images/projects/sifat-lms-hero.jpg",
-        alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
-        caption: "The AI Mentor sits above the fold, ahead of any course list — the home screen opens with a question, not a catalogue.",
-        span: "full",
-      },
-      {
-        src: "/images/projects/sifat-lms-home.jpg",
-        alt: "A hand holding a phone showing the SIFAT home screen, with Continue Learning and AI Recommended course rows",
-        caption: "Continue Learning resumes exactly where a student left off, not at the course's landing page.",
-      },
-      {
-        src: "/images/projects/sifat-lms-screens.jpg",
-        alt: "Several SIFAT screens arranged together, showing a course catalogue with difficulty tabs, a video lesson in progress, and upcoming quizzes",
-        caption: "Course discovery still works the traditional way when a student wants it — categories, difficulty tabs, pricing — just positioned below the personalised layer.",
-      },
-    ],
-  },
+  //
+  // "sifat-lms-app" — temporarily hidden from the portfolio at the client's
+  // request. All copy and imagery are unchanged and still in the repo
+  // (public/images/projects/sifat-lms-*.jpg); re-add the entry here (see git
+  // history for the exact block, e.g. the commit before this one) to bring
+  // the page, thumbnail, and mega menu listing back.
 ];
 
 /** Cards per page on /portfolio — the Figma grid is 2 columns x 4 rows. */
