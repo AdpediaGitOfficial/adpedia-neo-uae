@@ -251,10 +251,10 @@ export const testimonials = [
     avatar: "/images/testimonials/barry-aspi.png",
   },
   {
-    quote: "The attention to detail and user experience truly stood out. Every interaction feels thoughtful and well-crafted.",
-    name: "Elena Rossi",
-    role: "Marketing Manager",
-    avatar: "/images/testimonials/monica.png",
+    quote: "Every detail was handled with care, and the final result exceeded what we expected going in.",
+    name: "Praveen Panakkal",
+    role: "Director, Formosa International",
+    avatar: "/images/testimonials/praveen-panakkal.jpg",
   },
 ];
 
