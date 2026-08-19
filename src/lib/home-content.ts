@@ -218,7 +218,14 @@ export const testimonialsSection = {
 
 export const featuredTestimonial = {
   quote:
-    "Adpedia built my website and the whole experience was smooth and professional from the start. Their team responds fast, actually understands what we ask for, and comes back with solutions instead of delays — I recommend them to anyone who wants it done right.",
+    `هذه الشركة تقدم افضل لتطوير المواقع الإلكترونية!💥
+
+أنا سعيد جدًا بتطوير موقعي الإلكتروني الذي قدمته لي شركة *أدبيديا*.
+فريقهم سريع الاستجابة و موثوق، و يستوعب بدقة دائمًا جميع طلباتنا.
+ يفهمون احتياجاتنا جيدًا ويقدمون حلولًا فورية دون تأخير.
+كانت تجربتي معهم سلسة واحترافية للغاية.
+شخصيا انا أوصي بشدة بشركة *أدبيديا* لكل من يبحث عن خدمات تطوير مواقع إلكترونية ودعم فني موثوق و نتيجة مرضية.`,
+  quoteDir: "rtl" as const,
   name: "Mansour Aljundi",
   role: "Product Strategy Director",
   image: "/images/testimonials/mansour-aljundi.jpg",

@@ -47,7 +47,10 @@ export function Testimonials() {
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
 
               <figcaption className="absolute inset-x-0 bottom-0 p-7 sm:p-8">
-                <blockquote className="text-pretty text-lg font-light leading-snug text-white">
+                <blockquote
+                  dir={featuredTestimonial.quoteDir}
+                  className="whitespace-pre-line text-pretty text-lg font-light leading-snug text-white"
+                >
                   &ldquo;{featuredTestimonial.quote}&rdquo;
                 </blockquote>
                 <div className="mt-5">
