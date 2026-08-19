@@ -141,49 +141,48 @@ export const projects: Project[] = [
     category: "ui-ux-design",
     tags: ["UI/UX Design", "Mobile App", "EdTech", "+more"],
     summary:
-      "An exam-prep LMS built around one habit: open the app, see exactly where you left off, and get back into it in one tap.",
+      "A course marketplace built around an AI Mentor that proposes a learning path before a student ever has to browse for one.",
     thumb: {
       src: "/images/projects/sifat-lms-hero.jpg",
-      alt: "The SIFAT app home screen showing learning overview stats and four learning tool tiles",
+      alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
     },
     narrative: [
       {
         title: "Overview",
         body: [
-          "SIFAT is exam prep, and exam prep is a lot of material — subjects, textbooks, syllabi, practice sets, solved papers, question banks, all of it needing to be reachable without turning the app into a file browser. The habit that actually matters for a product like this isn't a single clever feature, it's whether a student opens the app again tomorrow.",
-          "We built the home screen around three concrete numbers instead of a dashboard of charts — progress percentage, lessons completed, days on streak — and put resuming the last lesson one tap away, before any browsing is required at all.",
+          "SIFAT is a course marketplace built around one idea: the home screen should already know what a student is trying to learn, not wait for them to search for it. An AI Mentor prompt — \"Build a personalised learning path in seconds\" — sits above the fold before any course list, alongside a Continue Learning shelf and an AI-recommended row, so opening the app resumes a specific thread instead of dropping a student back into a generic catalogue.",
         ],
       },
       {
         title: "The Challenge",
         body: [
-          "Every subject carries the same five-plus resource types — textbook, syllabus, practice, questions, question bank — and a student is usually working across several subjects at once. List every resource for every subject on one screen and the app stops feeling like a study companion and starts feeling like a directory. The interface had to scale to a full curriculum without dumping the full curriculum on screen at once.",
+          "A marketplace spanning categories like Coding, Business, Design, and Finance has the same problem every large catalogue has: browsing scales badly. Left purely as a directory, the home screen becomes a wall of categories a student has to dig through every session, with nothing remembering what they were actually partway through last time.",
         ],
       },
       {
         title: "Our Approach",
         body: [
-          "Subjects collapse to one line by default — name, resource count, a progress bar — and only expand into their full row of resource icons on tap. A student scanning for what to study next sees every subject at a glance; a student who already knows what they're doing gets straight to the specific tool without extra navigation in between.",
-          "The four modes a student actually alternates between during a session — Study, Solved Papers, Prediction, Translator — sit as large tiles directly on the home screen rather than behind a menu, because these are moves made constantly through a study session, not settings configured once and forgotten. Everything else, including sign-in, stays in a plain, unhurried form so the app reads as a serious study tool from the first screen, not a game with a study mode attached.",
+          "The AI Mentor sits at the very top of the home screen, ahead of categories or search, and does the one thing a static catalogue can't — ask what a student is trying to learn and propose a path, rather than handing over a full course list to filter through. Below it, Continue Learning resumes exactly where a student left off, whether that's a course partway through or a lesson mid-playback.",
+          "Course discovery still works the traditional way when a student wants it — Browse Categories, and a full catalogue view per category with difficulty tabs (Beginner, Intermediate, Advanced) and per-course pricing and certificate details — but it sits below the personalised layer, not instead of it, so the AI Mentor and Continue Learning let a student skip browsing most of the time rather than replacing it entirely.",
         ],
       },
     ],
     gallery: [
       {
         src: "/images/projects/sifat-lms-hero.jpg",
-        alt: "The SIFAT app home screen on an orange desk background, showing progress, lessons, and streak stats",
-        caption: "Three concrete numbers instead of a dashboard — progress, lessons completed, streak.",
+        alt: "A phone held against a purple sky, showing the SIFAT home screen with an AI Mentor prompt above course categories",
+        caption: "The AI Mentor sits above the fold, ahead of any course list — the home screen opens with a question, not a catalogue.",
         span: "full",
       },
       {
-        src: "/images/projects/sifat-lms-auth.jpg",
-        alt: "The SIFAT sign-in screen next to the home screen, showing the learning overview and four tool tiles",
-        caption: "A plain, unhurried sign-in flow — the app reads as a study tool first.",
+        src: "/images/projects/sifat-lms-home.jpg",
+        alt: "A hand holding a phone showing the SIFAT home screen, with Continue Learning and AI Recommended course rows",
+        caption: "Continue Learning resumes exactly where a student left off, not at the course's landing page.",
       },
       {
-        src: "/images/projects/sifat-lms-study.jpg",
-        alt: "The SIFAT study screen showing a continue card and a list of subjects with expandable resource icons",
-        caption: "Subjects collapse to one line by default, expanding into resource icons only on tap.",
+        src: "/images/projects/sifat-lms-screens.jpg",
+        alt: "Several SIFAT screens arranged together, showing a course catalogue with difficulty tabs, a video lesson in progress, and upcoming quizzes",
+        caption: "Course discovery still works the traditional way when a student wants it — categories, difficulty tabs, pricing — just positioned below the personalised layer.",
       },
     ],
   },
