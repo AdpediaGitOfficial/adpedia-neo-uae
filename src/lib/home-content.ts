@@ -218,11 +218,10 @@ export const testimonialsSection = {
 
 export const featuredTestimonial = {
   quote:
-    "Working with this team was effortless. They understood our vision clearly and delivered a design that felt modern, intuitive, and purpose-driven.",
-  name: "Meera Anand",
-  role: "Marketing Manager",
-  image: "/images/testimonials/featured-polly.png",
-  videoLabel: "Play video testimonial from Meera Anand",
+    "Adpedia built my website and the whole experience was smooth and professional from the start. Their team responds fast, actually understands what we ask for, and comes back with solutions instead of delays — I recommend them to anyone who wants it done right.",
+  name: "Mansour Aljundi",
+  role: "Product Strategy Director",
+  image: "/images/testimonials/mansour-aljundi.jpg",
 };
 
 export const testimonials = [
