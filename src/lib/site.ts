@@ -1,7 +1,7 @@
 /** Global site configuration: metadata, navigation, footer, contact. */
 
 import { categories, categoryLabel } from "@/lib/taxonomy";
-import { featuredProjects, projectHref, projects } from "@/lib/projects";
+import { featuredProjects, projectCategories, projectHref, projects } from "@/lib/projects";
 import { serviceFooterColumns, serviceHref, services } from "@/lib/services";
 import { formatPostDate, postCategories, postHref, posts } from "@/lib/blog-content";
 
@@ -11,14 +11,14 @@ export const siteConfig = {
   domain: "https://adpedia.in",
   tagline: "We design brands that demand attention",
   description:
-    "Adpedia Neo is a creative digital studio crafting impactful brand experiences through strategy, design, and technology — from branding and UI/UX to web, apps, and AI.",
+    "Adpedia engineers custom software that powers modern business — web development, mobile apps, AI solutions, automation & DevOps. Build your digital backbone with us.",
   email: "info@adpedia.in",
   phone: "+91 9447768570",
   phoneHref: "tel:+919447768570",
   social: {
-    facebook: "https://facebook.com/adpedia",
+    facebook: "https://www.facebook.com/adpediaindia",
     instagram: "https://instagram.com/adpedia",
-    linkedin: "https://linkedin.com/company/adpedia",
+    linkedin: "https://www.linkedin.com/company/adpedia-digital/",
   },
 } as const;
 
@@ -58,7 +58,7 @@ export const blogLinks = [
 export const portfolioLinks = [
   { label: "All Projects", href: "/portfolio" },
   ...categories
-    .filter((category) => projects.some((project) => project.category === category.id))
+    .filter((category) => projects.some((project) => projectCategories(project).includes(category.id)))
     .map((category) => ({ label: category.label, href: `/portfolio?filter=${category.id}` })),
 ];
 
@@ -166,11 +166,11 @@ export const offices = [
     phoneHref: "tel:+919447768570",
   },
   {
-    country: "New Zealand",
-    address: ["G06/430 Queen Street,", "Auckland CBD Auckland 1010-", "New Zealand"],
+    country: "UAE",
+    address: ["Alsuaidi Building", "Al Mararr, Deira,", "Dubai, UAE"],
     email: "info@adpedia.in",
-    phone: "+64 210 285 6948",
-    phoneHref: "tel:+642102856948",
+    phone: "+971 54 407 4982",
+    phoneHref: "tel:+971544074982",
   },
   {
     country: "Singapore",

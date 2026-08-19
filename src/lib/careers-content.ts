@@ -13,7 +13,7 @@ export const careersHero = {
 
 export const careersIntro = {
   title: "We'd Love to Have You on Our Team!",
-  body: "Since 2012, we've been all about the tech scene, helping our clients design, develop, and digitize their businesses. In no time, we've built a great network by providing cool services like branding, UI/UX design, and creative content that our clients totally dig.",
+  body: "We're a team of designers, developers, and strategists working out of Kochi — building brands, products, and the occasional AI system, for clients who'd rather work with people who show up in the details.",
 };
 
 export type JobCategoryId = "design" | "development" | "management";

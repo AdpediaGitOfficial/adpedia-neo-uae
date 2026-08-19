@@ -25,19 +25,18 @@ export function ServicesHero() {
         </Text>
       </div>
 
-      {/* Inset rather than full-bleed, matching the comp. */}
-      <Reveal className="mt-14">
-        <div className="relative mx-auto aspect-[1086/585] w-full max-w-[68rem] overflow-hidden bg-ink-800">
-          <Image
-            src={servicesHero.photo.src}
-            alt={servicesHero.photo.alt}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 1086px"
-            className="object-cover"
-          />
-        </div>
-      </Reveal>
+      {/* Inset rather than full-bleed, matching the comp. Rendered immediately
+          (no Reveal) since it's the LCP image — fading it in would delay paint. */}
+      <div className="relative mx-auto mt-14 aspect-[1086/585] w-full max-w-[68rem] overflow-hidden bg-ink-800">
+        <Image
+          src={servicesHero.photo.src}
+          alt={servicesHero.photo.alt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 1086px"
+          className="object-cover"
+        />
+      </div>
 
       <div className="mt-20 flex flex-col items-center gap-8 text-center sm:mt-28">
         <Reveal>

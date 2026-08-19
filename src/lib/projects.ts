@@ -19,8 +19,14 @@ export type Project = {
   name: string;
   /** Card sub-line — the kind of work (e.g. "MVP Development"). */
   type: string;
-  /** Drives the /portfolio filter row. */
+  /** Drives the /portfolio filter row, the case-study meta strip, and "same category" related work. */
   category: CategoryId;
+  /**
+   * Extra filter-tab categories this project should also appear under, beyond
+   * `category` — e.g. a mobile app that's UI/UX-designed but is real
+   * development work too, so it should surface under App Development as well.
+   */
+  filterCategories?: CategoryId[];
   /** Optional until the real project data lands — the card hides them when unset. */
   year?: number;
   location?: string;
@@ -65,214 +71,360 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "orange-flex",
-    name: "Flex",
+    slug: "avis-chauffeur-app",
+    name: "AVIS Chauffeur",
+    type: "Mobile App Design",
+    category: "ui-ux-design",
+    filterCategories: ["app-development"],
+    tags: ["UI/UX Design", "Mobile App", "Booking Flow", "+more"],
+    summary:
+      "A chauffeur-booking app built to feel like the cars it reserves — one unhurried screen instead of a five-step form.",
+    thumb: {
+      src: "/images/projects/avis-chauffeur-hero.jpg",
+      alt: "The AVIS chauffeur app home screen, lit against dark volcanic sand",
+    },
+    featured: true,
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "AVIS came to us wanting a chauffeur-hire app that didn't read like ride-hailing. Someone booking a car by the hour isn't comparing ETAs against three competing drivers — they're expecting the same restraint they'd get from a concierge desk, just delivered from a phone instead of a phone call.",
+          "We designed the booking flow around that expectation. One screen holds the entire reservation — trip type, pickup, drop-off, date and time — so a returning client gets from open to booked without a single screen change, and the interface around it carries the weight of the brand rather than a generic booking template.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A dark, editorial interface photographs beautifully and reads poorly the moment real fields have to sit inside it. The brief needed the same near-black surface and the same car photography that makes AVIS's marketing work, but applied to a form people fill in under time pressure — at a gate, from a lobby, usually one-handed. Anything that made the booking fields harder to scan would have undone the reason for the dark treatment in the first place.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "We split the screen into two jobs and let each one do only that job. The top third carries the brand — full-bleed car photography, the AVIS mark, a greeting that makes the app feel like it recognizes the person opening it. Everything below is pure function: a segmented control for trip type, a pickup field that resolves itself from GPS by default, one swap icon between pickup and drop-off instead of two fields to re-key by hand, and date and time pickers that sit at the same visual weight as the rest of the form rather than interrupting it as a modal.",
+          "Red is reserved for exactly one job — the primary action. Every other control stays within tones of the same near-black surface, so \"Search Chauffeur\" is the only thing competing for attention once the details are filled in. The vehicle-selection and preference screens that follow — chauffeur language, gender preference, child seat — carry the same restraint: one legible choice at a time, never a page of options presented at once.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/avis-chauffeur-hero.jpg",
+        alt: "The AVIS chauffeur app home screen tilted against dark volcanic sand, hero car photography lit in red",
+        caption: "The brand carries the top third of the screen; the booking form carries the rest.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/avis-chauffeur-booking-1.jpg",
+        alt: "A hand holding the AVIS app open to the booking flow, showing trip type, pickup, and drop-off fields",
+        caption: "One screen holds the whole reservation — no multi-step flow to lose people partway through.",
+      },
+      {
+        src: "/images/projects/avis-chauffeur-booking-2.jpg",
+        alt: "Two hands holding a phone showing the same AVIS booking flow, pickup location detected via GPS",
+        caption: "Pickup resolves from GPS by default; a single swap icon replaces re-keying both fields.",
+      },
+      {
+        src: "/images/projects/avis-chauffeur-home.jpg",
+        alt: "The AVIS app home screen showing a destination search, brand carousel, and service shortcuts",
+        caption: "Brand and vehicle browsing sit above the fold, service shortcuts below it.",
+      },
+      {
+        src: "/images/projects/avis-chauffeur-vehicle.jpg",
+        alt: "The AVIS vehicle selection screen for a Rolls-Royce Phantom with chauffeur preference toggles",
+        caption: "Vehicle detail and chauffeur preferences — language, gender, child seat — kept to one decision at a time.",
+      },
+    ],
+  },
+  {
+    slug: "aibo-voice-ai-banking",
+    name: "Aibo",
+    type: "AI Voice Platform",
+    category: "ai-data-solutions",
+    tags: ["AI & Data Science", "Voice AI", "FinTech", "+more"],
+    summary:
+      "A voice-first banking assistant, built as an MVP for a financial institution — ask for a balance or a statement the way you'd ask a person, and get an answer instead of a menu.",
+    thumb: {
+      src: "/images/projects/aibo-voice-banking-hero.jpg",
+      alt: "A man in a dark suit holding a phone showing a voice-call style account balance screen against a glass office building",
+    },
+    featured: true,
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Aibo is a voice-first banking assistant we built as an MVP for a financial institution — checking a balance, reviewing a transaction summary, downloading a statement, or confirming a deposit detail, all handled through a natural spoken or typed request instead of a multi-screen menu.",
+          "It's built on natural language processing, speech recognition, and conversational AI, not a voice command layer bolted onto the existing app — the goal was something a customer could genuinely talk to, the way they'd talk to a human banking assistant.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "Traditional mobile banking apps ask a lot of someone who just wants one number or one document — several screens, deep navigation, menus organized around how the bank structures its own products rather than what a customer is actually trying to do in the moment. The brief was to make routine banking genuinely hands-free and quick to access, not add a voice button on top of the same navigation underneath.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "Aibo opens by greeting the customer by name and listening, not with a menu, and it understands the request itself rather than a fixed list of commands — \"What's my current balance?\", \"Send my February statement,\" and \"Check my fixed deposit maturity date\" are all handled as natural language, not phrases the customer has to memorize.",
+          "Every request resolves the same way: an instant spoken or on-screen summary, plus a secure link when there's a document to hand over, so voice never becomes a dead end that still sends the customer back into the full app to finish the task. Authentication runs through Face ID before any account detail is spoken aloud, so a hands-free interface doesn't become a hands-free security gap.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/aibo-voice-banking-hero.jpg",
+        alt: "A man holding a phone showing a voice-call style account balance screen, ₹2,23,952.35, against a glass office building",
+        caption: "The balance resolves like a call, not a dashboard — the number a customer actually asked for, front and center.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/aibo-voice-banking-faceid.jpg",
+        alt: "A phone showing a Face ID authentication screen with a red \"Authenticate Using Face ID\" button",
+        caption: "Face ID gates every session before any account detail is spoken aloud.",
+      },
+      {
+        src: "/images/projects/aibo-voice-banking-greeting.jpg",
+        alt: "A phone showing a personalized \"Hello Harshika!\" greeting with a voice-input microphone button",
+        caption: "Aibo opens by greeting the customer by name and listening — not with a menu.",
+      },
+    ],
+  },
+  {
+    slug: "bedia-prive",
+    name: "Bedia Privé",
     type: "Website Design",
     category: "web-development",
-    tags: ["UI Design", "UX Design", "Responsive Layout", "+more"],
+    location: "Dubai, UAE",
+    tags: ["Web Development", "UI/UX Design", "Booking Engine", "+more"],
     summary:
-      "We design modern, user-focused websites that blend aesthetics with usability to drive engagement and conversions.",
-    thumb: { src: "/images/projects/website-design.png", alt: "Orange Flex website on a laptop" },
+      "An invitation-only pottery-and-dining concept in Dubai, built with a custom booking engine that never breaks character between the first cinematic frame and \"Confirm & Pay.\"",
+    thumb: {
+      src: "/images/projects/bedia-prive-hero.jpg",
+      alt: "The Bedia Privé homepage on a laptop, showing pottery photography and a VIP-access-only invitation",
+    },
     featured: true,
     narrative: [
       {
         title: "Overview",
         body: [
-          "Flex arrived with a product people already liked and a website that undersold it. The brand had outgrown its original identity, and the site had gained pages faster than it had gained structure — visitors turned up with clear intent and left without an obvious next step.",
-          "We rebuilt the site around what people were actually trying to do. Every page now opens with a single legible proposition and resolves to one clear action, with the supporting detail arranged beneath it rather than competing for the same attention.",
+          "Bedia Privé sells an experience that only works if it feels genuinely exclusive — a pottery-and-fine-dining concept positioned as invitation-only. That positioning has to survive contact with the least glamorous part of any hospitality site: the booking form. Most luxury sites keep two visual languages, an editorial homepage and then a generic third-party widget bolted on at checkout that looks like it belongs to a different company.",
+          "We built the booking engine as a continuation of the brand rather than a payment form attached to it — same serif type, same near-black palette, same restraint — so choosing a package and paying for it never breaks the mood the opening photography sets.",
         ],
       },
       {
         title: "The Challenge",
         body: [
-          "The old site treated every section as equally important, so nothing read as important. Navigation had grown to accommodate internal teams rather than the people using it, and the mobile experience was a compressed desktop layout rather than a considered one.",
+          "Real-time reservations need real functionality — a date picker, time slots, a guest count, three package tiers, a price that updates as those choices change — and that functionality tends to force default form fields and dropdowns into a page, exactly the kind of visual noise the rest of the site had been built to avoid. The brief was to keep the invitation-only feeling intact through the one screen where a guest is making a real financial decision, not just admiring photography.",
         ],
       },
       {
         title: "Our Approach",
         body: [
-          "We started with the content rather than the layout — auditing every page, cutting what repeated, and grouping what remained into a structure that matched how customers describe the product themselves. Only then did we design, working from the smallest screen up so that constraints set the priorities.",
-          "A tighter typographic system carries the long-form pages without extra decoration, which keeps the site quick to load and, more importantly, quick to read.",
+          "The homepage establishes exclusivity before a single word of body copy loads — a \"VIP Access Only\" eyebrow, the wordmark set in the same restrained serif italic throughout the site, and a framed \"limited availability, invitation-only\" note sitting over cinematic pottery-throwing photography instead of the stock table shots most hospitality sites default to.",
+          "Package tiers repeat the same visual pattern everywhere they appear — a photograph, a name, a starting price, a short inclusions list — first on the Curated Packages page, then again inside the reservation flow, so a guest recognizes \"Signature\" as the same product rather than re-learning a new interface mid-booking. The reservation screen itself carries the identical typography and palette as the marketing pages around it, and the total price recalculates live as guests and package change, so the cost is visible before a guest ever reaches \"Confirm & Pay\" — no separate step where the number changes on them.",
         ],
       },
     ],
     gallery: [
       {
-        src: "/images/hero/flex-laptop.png",
-        alt: "The Flex homepage open on a laptop",
-        caption: "The homepage leads with one proposition and one action.",
+        src: "/images/projects/bedia-prive-hero.jpg",
+        alt: "The Bedia Privé homepage showing cinematic pottery photography and a VIP-access-only invitation",
+        caption: "VIP-only positioning starts on the first screen — eyebrow, wordmark, and a \"limited availability\" note before any navigation.",
         span: "full",
       },
       {
-        src: "/images/services/brand-flex.png",
-        alt: "Flex brand and interface elements",
-        caption: "Type and colour applied consistently across the system.",
+        src: "/images/projects/bedia-prive-packages.jpg",
+        alt: "The Curated Packages page showing three package tiers with photography, pricing, and inclusions",
+        caption: "Package tiers repeat the same pattern — photo, name, starting price, inclusions — so guests recognize them again inside the booking flow.",
       },
       {
-        src: "/images/projects/website-design.png",
-        alt: "Flex responsive layouts across screen sizes",
-        caption: "Layouts designed from the smallest breakpoint up.",
+        src: "/images/projects/bedia-prive-booking.jpg",
+        alt: "The Reserve Your Experience booking engine showing date, time, guest count, package selection, and a live total price",
+        caption: "The booking engine carries the same serif type and near-black palette as the rest of the site, with the total updating live as guests and package change.",
       },
     ],
   },
   {
-    slug: "dotarion-app",
-    name: "Dotarion",
-    type: "Mobile App Design",
-    category: "app-development",
-    tags: ["iOS", "Android", "UI/UX", "Responsive Layout", "+more"],
-    summary:
-      "We create intuitive mobile app experiences focused on clarity, usability, and seamless interaction across platforms.",
-    thumb: { src: "/images/projects/mobile-app.png", alt: "Dotarion mobile app screens" },
-    featured: true,
-    narrative: [
-      {
-        title: "Overview",
-        body: [
-          "Dotarion needed an app that felt calm to use. The feature set was already decided; the problem was that everything competed for the same moment of attention, and people were abandoning tasks partway through rather than finishing them.",
-          "We reduced each screen to the one decision it was asking for. Secondary actions moved out of the primary path, and the flows that mattered most were shortened until they could be completed in a single sitting.",
-        ],
-      },
-      {
-        title: "The Challenge",
-        body: [
-          "Designing across iOS and Android without producing two unrelated products. The interface had to respect each platform's conventions — navigation, gestures, typography — while keeping a single recognisable character throughout.",
-        ],
-      },
-      {
-        title: "Our Approach",
-        body: [
-          "We built the interface from a small set of components with generous touch targets and predictable spacing, then let platform conventions vary only where users would notice their absence. Motion is used sparingly and only to explain a transition, never for decoration.",
-          "The outcome is an app that feels quiet in the hand: fewer steps to complete the common tasks, and a consistent rhythm that makes the uncommon ones easier to find.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/images/hero/billie-phones.png",
-        alt: "Dotarion app screens shown across several phones",
-        caption: "Each screen asks for one decision at a time.",
-        span: "full",
-      },
-      {
-        src: "/images/hero/billie-desktop.png",
-        alt: "The companion desktop view",
-        caption: "The companion web view mirrors the app's structure.",
-      },
-      {
-        src: "/images/projects/mobile-app.png",
-        alt: "Detail of the Dotarion interface components",
-        caption: "A small component set, reused throughout.",
-      },
-    ],
-  },
-  {
-    slug: "browno-studio",
-    name: "Browno",
-    type: "Brand Experience",
-    category: "brand-design",
-    tags: ["Brand Design", "Art Direction", "Web", "+more"],
-    summary:
-      "We shape elegant, cohesive brand experiences that translate strategy into memorable digital products people love.",
-    thumb: { src: "/images/projects/brand-elegant.png", alt: "Browno brand website concept" },
-    featured: true,
-    narrative: [
-      {
-        title: "Overview",
-        body: [
-          "Browno had a strong point of view and no consistent way of expressing it. Each touchpoint had been designed in isolation, so the studio looked like several different companies depending on where you met it.",
-          "We built one system instead of another set of assets: a typographic scale, a restrained palette, and a small library of layouts that hold together whether they are applied to a landing page, a proposal, or a social post.",
-        ],
-      },
-      {
-        title: "The Challenge",
-        body: [
-          "Elegance is easy to describe and hard to specify. The brand needed to read as considered without becoming fragile — the rules had to survive being applied by people who were not in the room when they were written.",
-        ],
-      },
-      {
-        title: "Our Approach",
-        body: [
-          "We designed the constraints first. Type sizes, spacing, and contrast were fixed to a scale narrow enough to stay coherent and wide enough to handle real content, then we tested it against the messiest pages the studio actually produces rather than the tidiest.",
-          "What ships is a system with fewer decisions left open. The identity holds its shape as the studio grows, and new material starts from a defensible default rather than a blank canvas.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/images/hero/shape-elegant.png",
-        alt: "The Browno site showing the brand's typographic treatment",
-        caption: "One typographic scale carries every page.",
-        span: "full",
-      },
-      {
-        src: "/images/services/brand-cybersabra.png",
-        alt: "Brand applications across formats",
-        caption: "The same rules applied across formats.",
-      },
-      {
-        src: "/images/projects/brand-elegant.png",
-        alt: "Browno layout and art direction detail",
-        caption: "Art direction tested against real content, not ideal content.",
-      },
-    ],
-  },
-  {
-    slug: "nova-commerce",
-    name: "Nova",
-    type: "E-commerce Platform",
+    slug: "prime-promenade",
+    name: "Prime Promenade",
+    type: "Website & Booking Platform",
     category: "web-development",
-    tags: ["E-commerce", "Web Development", "CRO", "+more"],
+    tags: ["Web Development", "UI/UX Design", "Booking Platform", "+more"],
     summary:
-      "We build high-performing commerce experiences with seamless navigation, optimized conversions, and scalable foundations.",
-    thumb: { src: "/images/projects/ecommerce-vr.png", alt: "Immersive e-commerce concept" },
+      "A mixed-use lifestyle destination — retail, business, and eight bookable amenities — presented as one address instead of a directory of separate offerings.",
+    thumb: {
+      src: "/images/projects/prime-promenade-hero.jpg",
+      alt: "The Prime Promenade homepage showing visitors walking toward a glass-fronted lifestyle destination at dusk",
+    },
     narrative: [
       {
         title: "Overview",
         body: [
-          "Nova was selling well in spite of its storefront rather than because of it. Traffic was healthy and the catalogue was strong, but the path from landing to checkout asked for too much too early and lost people at predictable points.",
-          "We rebuilt the journey around momentum. Product pages answer the obvious objections in the order shoppers raise them, and checkout collects the minimum needed at each step instead of presenting one long form.",
+          "Prime Promenade is genuinely several products sharing one address — a retail promenade, a commercial destination for business tenants, and eight separately bookable amenities including a pool and fitness facilities. The easy failure mode for a project like this is a stitched-together directory: one page per amenity, none of them feeling like they belong to the same place.",
+          "We designed it as one destination with several rooms instead of several products sharing a logo. Every amenity landing moment carries the same photographic treatment and typographic system as the retail homepage, so a visitor exploring one experience recognizes the others as part of the same place rather than a separate microsite.",
         ],
       },
       {
         title: "The Challenge",
         body: [
-          "A catalogue that keeps growing. The design had to hold up whether a category contained six products or six hundred, and had to stay fast on the mid-range phones most of the traffic actually arrives on.",
+          "A mixed-use development like this has two audiences reading at completely different speeds: a visitor scanning quickly for what's on-site and how to book it, and a prospective tenant or business partner reading slowly for credibility — architecture, positioning, the kind of language that signals a serious commercial address rather than a shopping mall. Design purely for one and the other reads as an afterthought.",
         ],
       },
       {
         title: "Our Approach",
         body: [
-          "Filtering and sorting were treated as primary navigation rather than an afterthought, so large categories stay browsable. Imagery is sized per breakpoint and loaded lazily, keeping the first view light without softening the product photography the brand depends on.",
-          "The foundation is deliberately unglamorous: predictable templates, a shared component set, and room for the catalogue to double without a redesign.",
+          "The homepage opens at the pace of the first audience — full-bleed lifestyle photography and two clearly separated actions, \"Explore Amenities\" for a visitor and \"Partner With Us\" for a business audience, so neither has to wade through the other's content to find their own path in. The About section deliberately slows down for the second audience: architecture-forward photography, a repositioned voice around modern commercial living, and none of the walk-in urgency of the page above it.",
+          "Each of the eight amenities gets its own full-bleed landing moment — its own hero photograph and headline, like the underwater shot behind the pool's \"Dive into Luxury\" — but every one of them books through the same consistent flow, so learning to reserve one amenity means already knowing how to reserve the rest.",
         ],
       },
     ],
     gallery: [
       {
-        src: "/images/hero/lumio-tablets.png",
-        alt: "Nova storefront shown across tablet screens",
-        caption: "Category pages built to stay browsable as the catalogue grows.",
+        src: "/images/projects/prime-promenade-hero.jpg",
+        alt: "The Prime Promenade homepage on a laptop, showing visitors walking toward the destination at dusk",
+        caption: "Two clearly separated calls to action — one for a visitor, one for a business audience — from the very first screen.",
         span: "full",
       },
       {
-        src: "/images/hero/pricing-green.png",
-        alt: "Nova pricing and checkout step",
-        caption: "Checkout asks for the minimum at each step.",
+        src: "/images/projects/prime-promenade-about.jpg",
+        alt: "The Prime Promenade About section on a large display, reading \"Prime destination. Multiple experiences.\"",
+        caption: "The About section slows down on purpose: architecture-forward photography and positioning language for a tenant or partner reading for credibility.",
       },
       {
-        src: "/images/hero/digital-presence.png",
-        alt: "Nova campaign and content pages",
-        caption: "Editorial pages reuse the same component set.",
+        src: "/images/projects/prime-promenade-amenities.jpg",
+        alt: "A laptop showing one of the eight amenity landing pages, an underwater swimming pool shot behind \"Dive into Luxury\"",
+        caption: "Each of the eight amenities gets its own full-bleed landing moment, all booking through the same consistent flow.",
       },
     ],
   },
+  {
+    slug: "prime-promenade-brand-identity",
+    name: "Prime Promenade",
+    type: "Logo Design & Brand Identity",
+    category: "brand-design",
+    tags: ["Brand Design", "Logo Design", "Environmental Branding", "+more"],
+    summary:
+      "A colorful, faceted mark built to hold up everywhere the destination shows up — a corridor of digital screens, an indoor display, an illuminated sign after dark.",
+    thumb: {
+      src: "/images/projects/prime-promenade-brand-screen.jpg",
+      alt: "A wide illuminated corridor leading to a large digital screen showing three women shopping, the Prime Promenade logo top left",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Prime Promenade needed a mark that could do more than sit well on a business card — it had to survive filling a corridor-length digital screen, sit inside a smaller indoor display, and still read cleanly on an illuminated sign after dark. We designed the identity — mark, wordmark, and a single-line tagline — as a system built for that range of formats from the start, not a logo adapted to it afterward.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A retail-and-lifestyle destination lives across dramatically different surfaces: a sequence of hallway screens seen up close while walking through, a smaller framed display inside one of its venues, and static signage that has to hold its own at night with no motion to carry it. A mark that only worked in one of those contexts — sharp at scale but muddy reduced down, or vivid lit up but flat in static form — would have undercut the destination everywhere else it appeared.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "The faceted, multi-color mark stays legible reduced onto a static sign or filling an entire corridor screen, because the geometry and color separation were built to hold at both extremes rather than optimized for one. The same lockup — mark, wordmark, tagline — repeats identically across the corridor screens, the indoor display, and the illuminated signage, so the brand reads as one consistent presence rather than a different logo treatment for every surface it happens to land on.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/prime-promenade-brand-screen.jpg",
+        alt: "A wide illuminated corridor leading to a large digital screen showing three women shopping, the Prime Promenade logo top left",
+        caption: "The mark filling a corridor-length screen, alive with movement rather than a static board.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/prime-promenade-brand-gym.jpg",
+        alt: "A framed indoor display showing the Prime Promenade logo above a woman resting during a workout",
+        caption: "The same lockup, scaled down for a smaller indoor display — legible without the corridor screen's size to lean on.",
+      },
+      {
+        src: "/images/projects/prime-promenade-brand-signage.jpg",
+        alt: "An illuminated Prime Promenade sign mounted on a building corner at night, lit from below",
+        caption: "And on static signage after dark — the identity has to hold up with no motion or screen sequence to carry it.",
+      },
+    ],
+  },
+  {
+    slug: "eduplan-ecommerce-migration",
+    name: "Eduplan",
+    type: "E-commerce Migration",
+    category: "web-development",
+    location: "UAE",
+    tags: ["Web Development", "E-commerce", "Platform Migration", "+more"],
+    summary:
+      "A 100,000-line-item, multi-vendor school-supplies marketplace, migrated off legacy PHP onto Shopify with zero downtime.",
+    thumb: {
+      src: "/images/projects/eduplan-hero.jpg",
+      alt: "The Eduplan homepage on a laptop, showing the Classroom Resources banner and a Shop By Brand row",
+    },
+    narrative: [
+      {
+        title: "Overview",
+        body: [
+          "Eduplan supplies schools across the UAE, the UK, and the wider Middle East with everything from classroom furniture to coding kits — a multi-vendor catalogue running past 100,000 line items across dozens of brands. The site exists to do one job well: let a school's procurement team find and order the right SKU, at institutional pricing, without wading through a directory built for a fraction of that scale.",
+          "Adpedia migrated Eduplan's entire storefront off a legacy PHP e-commerce platform onto Shopify, rebuilding the storefront and vendor-management layer around what Shopify actually does well rather than porting the old site's structure across unchanged.",
+        ],
+      },
+      {
+        title: "The Challenge",
+        body: [
+          "A migration at this scale carries a risk most redesigns don't: 100,000-plus SKUs across a multi-vendor catalogue, live institutional accounts placing recurring orders, and a business that couldn't afford to go dark — or even slow down — while the switch happened. The brief wasn't just moving the data across; it was doing it without a single day of downtime or a delayed order in transit.",
+        ],
+      },
+      {
+        title: "Our Approach",
+        body: [
+          "We treated the migration itself as the deliverable, not a footnote before a redesign. Every vendor, product, price tier, and institutional account was mapped and moved onto Shopify's multi-vendor infrastructure in a sequence built to keep the storefront live and orders flowing throughout — no maintenance-mode window, no gap where a school couldn't check out.",
+          "The rebuilt storefront leans on what that infrastructure is actually good at: faceted brand and price filtering that holds up across a six-figure catalogue, a \"Shop By Brand\" and \"Shop By Collections\" structure schools can browse instead of search blindly through, and institutional pricing surfaced right on the homepage instead of buried behind an account login.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/projects/eduplan-hero.jpg",
+        alt: "The Eduplan homepage on a laptop, showing the Classroom Resources banner and a Shop By Brand row",
+        caption: "Shop By Brand and Shop By Collections replace a flat category list — how a six-figure catalogue stays browsable.",
+        span: "full",
+      },
+      {
+        src: "/images/projects/eduplan-catalogue.jpg",
+        alt: "A monitor showing the Eduplan Featured Products carousel and a row of vendor catalogue brand tiles",
+        caption: "Institutional pricing and delivery windows sit directly on the product card, not behind a login.",
+      },
+      {
+        src: "/images/projects/eduplan-filters.jpg",
+        alt: "The Eduplan Coding Accessories category page on a laptop, showing brand and price filters over a large catalogue",
+        caption: "Faceted brand and price filtering holds up at scale, whether a category has twenty products or two thousand.",
+      },
+    ],
+  },
+  // "etern-learning-app" — temporarily hidden from the portfolio at the
+  // client's request. All copy and imagery are unchanged and still in the
+  // repo (public/images/projects/etern-*.jpg); re-add the entry here (see
+  // git history for the exact block) to bring the page, thumbnail, and mega
+  // menu listing back — everything that lists projects reads this array
+  // directly, so restoring the entry is enough.
+  //
+  // "sifat-lms-app" — temporarily hidden from the portfolio at the client's
+  // request. All copy and imagery are unchanged and still in the repo
+  // (public/images/projects/sifat-lms-*.jpg); re-add the entry here (see git
+  // history for the exact block, e.g. the commit before this one) to bring
+  // the page, thumbnail, and mega menu listing back.
 ];
 
 /** Cards per page on /portfolio — the Figma grid is 2 columns x 4 rows. */
 export const PROJECTS_PER_PAGE = 8;
 
 export const featuredProjects = projects.filter((p) => p.featured);
+
+/** All categories a project should surface under in the /portfolio filter — `category` plus any `filterCategories`. */
+export function projectCategories(project: Project): CategoryId[] {
+  return [project.category, ...(project.filterCategories ?? [])];
+}
 
 export function projectHref(slug: string): string {
   return `/portfolio/${slug}`;

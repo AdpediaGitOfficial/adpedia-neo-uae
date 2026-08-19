@@ -4,11 +4,14 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { PortfolioHero } from "@/components/sections/portfolio/PortfolioHero";
 import { PortfolioBrowser } from "@/components/sections/portfolio/PortfolioBrowser";
 
+const description =
+  "Selected work from Adpedia Neo — websites, mobile apps, brand experiences, and commerce platforms designed to solve problems and elevate brands.";
+
 export const metadata: Metadata = {
   title: "Portfolio",
-  description:
-    "Selected work from Adpedia Neo — websites, mobile apps, brand experiences, and commerce platforms designed to solve problems and elevate brands.",
+  description,
   alternates: { canonical: "/portfolio" },
+  openGraph: { type: "website", title: "Portfolio", description },
 };
 
 export default function PortfolioPage() {

@@ -1,16 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { fontVariables } from "@/lib/fonts";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, offices } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { ContactModalProvider } from "@/components/providers/ContactModalProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.name} — Creative Digital Studio`,
+    default: "Adpedia | Custom Software, AI & DevOps Development",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -31,12 +32,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.domain,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: "Adpedia | Custom Software, AI & DevOps Development",
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: "Adpedia | Custom Software, AI & DevOps Development",
     description: siteConfig.description,
   },
   robots: {
@@ -56,10 +57,23 @@ const jsonLd = {
   "@type": "Organization",
   name: siteConfig.name,
   url: siteConfig.domain,
+  logo: `${siteConfig.domain}/images/brand/logo-white.png`,
   email: siteConfig.email,
   telephone: siteConfig.phone,
   description: siteConfig.description,
   sameAs: Object.values(siteConfig.social),
+  address: offices.map((office) => ({
+    "@type": "PostalAddress",
+    streetAddress: office.address.join(", "),
+    addressCountry: office.country,
+  })),
+  contactPoint: offices.map((office) => ({
+    "@type": "ContactPoint",
+    telephone: office.phone,
+    email: office.email,
+    contactType: "customer service",
+    areaServed: office.country,
+  })),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -76,11 +90,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to content
         </a>
-        <SmoothScroll>
-          <Header />
-          <main id="main">{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <ContactModalProvider>
+          <SmoothScroll>
+            <Header />
+            <main id="main">{children}</main>
+            <Footer />
+          </SmoothScroll>
+        </ContactModalProvider>
         <Script
           id="org-jsonld"
           type="application/ld+json"

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Blog",
   description: blogHero.lead,
   alternates: { canonical: "/blog" },
+  openGraph: { type: "website", title: "Blog", description: blogHero.lead },
 };
 
 export default function BlogPage() {

@@ -11,18 +11,17 @@ export function AboutIntro() {
     <Section padded={false} innerClassName="pb-section" aria-labelledby="about-intro-heading">
       <StatsMarquee />
 
-      <Reveal className="mt-6">
-        <div className="relative aspect-[1720/900] w-full overflow-hidden bg-ink-800">
-          <Image
-            src={aboutIntro.photo.src}
-            alt={aboutIntro.photo.alt}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 1720px"
-            className="object-cover"
-          />
-        </div>
-      </Reveal>
+      {/* Rendered immediately (no Reveal) since it's the LCP image. */}
+      <div className="relative mt-6 aspect-[1743/902] w-full overflow-hidden bg-ink-800">
+        <Image
+          src={aboutIntro.photo.src}
+          alt={aboutIntro.photo.alt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 1720px"
+          className="object-cover"
+        />
+      </div>
 
       <div className="mt-20 flex flex-col items-center gap-8 text-center sm:mt-28">
         <Reveal>

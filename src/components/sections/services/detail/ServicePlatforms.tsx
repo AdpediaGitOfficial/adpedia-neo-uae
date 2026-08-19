@@ -49,7 +49,12 @@ export function ServicePlatforms({ detail }: { detail: ServiceDetail }) {
                     className="object-contain"
                   />
                 </div>
-                <Title as="h3" size="md" weight="normal" className="text-center">
+                <Title
+                  as="h3"
+                  size="md"
+                  weight="normal"
+                  className="flex min-h-[3.6rem] items-center justify-center text-center"
+                >
                   {platform.label}
                 </Title>
               </div>

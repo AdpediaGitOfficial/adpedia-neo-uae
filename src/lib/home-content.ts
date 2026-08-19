@@ -3,22 +3,19 @@
 import { projects } from "@/lib/projects";
 
 export const heroContent = {
-  title: ["We design brands that", "demand attention"],
+  title: ["Engineering the backbone", "of the digital age"],
   subtitle:
-    "From strategy to stunning visuals, we craft digital experiences that connect, convert, and leave a lasting impact.",
+    "Transforming manual processes into intelligent systems — through custom software, automation, AI, and DevOps excellence.",
   cta: { label: "Explore our work", href: "/portfolio" },
 };
 
 /** Marquee of showcase mockups beneath the hero. */
 export const heroShowcase = [
-  { src: "/images/hero/shape-elegant.png", alt: "Elegant fashion brand website concept" },
-  { src: "/images/hero/lumio-tablets.png", alt: "Lumio product design shown on tablets" },
-  { src: "/images/hero/billie-phones.png", alt: "Billie Duvalle mobile app screens" },
-  { src: "/images/hero/digital-presence.png", alt: "Digital presence brand website" },
-  { src: "/images/hero/billie-desktop.png", alt: "Billie Duvalle desktop showcase" },
-  { src: "/images/hero/flex-laptop.png", alt: "Orange Flex website on a laptop" },
-  { src: "/images/hero/pricing-green.png", alt: "Pricing plans product page" },
-  { src: "/images/hero/lumio-tablets-2.png", alt: "Lumio dashboard mockups" },
+  { src: "/images/projects/avis-chauffeur-hero.jpg", alt: "The AVIS chauffeur app home screen, lit against dark volcanic sand" },
+  { src: "/images/projects/bedia-prive-hero.jpg", alt: "The Bedia Privé homepage on a laptop, cinematic pottery photography" },
+  { src: "/images/projects/prime-promenade-hero.jpg", alt: "The Prime Promenade homepage on a laptop at dusk" },
+  { src: "/images/projects/avis-chauffeur-vehicle.jpg", alt: "The AVIS vehicle selection screen for a Rolls-Royce Phantom" },
+  { src: "/images/projects/prime-promenade-amenities.jpg", alt: "One of the Prime Promenade amenity landing pages" },
 ];
 
 export const trustedLogos = [
@@ -32,8 +29,8 @@ export const trustedLogos = [
 ];
 
 export const statsIntro = {
-  title: "Where Digital Experiences Perform",
-  body: "Since 2012, we've been shaping meaningful digital solutions through strategy, design, and technology. From websites and mobile apps to enterprise platforms, we help brands grow with clarity, creativity, and purpose. Our approach blends smart thinking with strong execution to deliver experiences that drive real results.",
+  title: "We architect, automate, and build the systems of tomorrow.",
+  body: "Since 2012, we've built websites, apps, and platforms for clients who needed more than a vendor — strategy and execution from the same team, so nothing gets lost in a handoff.",
   cta: { label: "About us", href: "/about" },
 };
 
@@ -43,28 +40,28 @@ export const stats = [
     suffix: "+",
     unit: "Years",
     title: "Industry Experience",
-    body: "Over a decade of proven expertise delivering scalable, reliable, and performance-driven digital solutions across multiple industries, helping brands grow through strategy, creativity, and technology.",
+    body: "Twelve years in, across industries with genuinely different constraints — what a fintech launch needs looks nothing like what a retail brand does.",
   },
   {
     value: "200",
     suffix: "+",
     unit: "Projects",
     title: "Delivered Successfully",
-    body: "Hundreds of projects completed with precision and consistency, meeting business goals through thoughtful design, strong execution, and reliable delivery across diverse digital platforms.",
+    body: "200+ projects shipped, from single-page brand sites to multi-year platform builds — each one held to the same bar regardless of size.",
   },
   {
     value: "50",
     suffix: "+",
     unit: "Brands",
     title: "Trusted Worldwide",
-    body: "Partnered with brands and businesses across regions, earning trust through consistent quality, transparent collaboration, and results-driven digital solutions delivered to global standards.",
+    body: "Clients across India, the UAE, Singapore, and beyond — most come back for a second project once the first one ships.",
   },
   {
     value: "100",
     suffix: "%",
     unit: "Focus",
     title: "On Quality & Performance",
-    body: "A relentless focus on quality and performance ensures every solution is crafted with precision, optimized for speed, scalability, and long-term impact across all digital touchpoints.",
+    body: "Every build gets the same scrutiny on load speed and code quality — not just the ones the client happens to be watching closely.",
   },
 ];
 
@@ -77,7 +74,9 @@ export const aiContent = {
 
 export const clarityContent = {
   eyebrow: "Digital growth starts with clarity, not noise.",
-  lead: "Real progress doesn't come from chasing tools or trends. It begins with understanding what's holding your brand back, what truly drives it forward, and where meaningful growth lives. We bring strategy, creativity, and technology together to create digital solutions that feel intuitive, purposeful, and built to move your brand with confidence and impact.",
+  lead: "Progress doesn't come from chasing the newest tool or trend. It comes from being specific about what's actually holding a brand back, then bringing strategy, design, and engineering to bear on that one problem instead of a generic checklist.",
+  leadSecondary:
+    "That's why every project starts with a real conversation about what's actually broken, not a discovery deck. The work that follows gets scoped around that one answer, not a menu of services we'd like to sell you.",
   cta: { label: "Let's build something meaningful", href: "/contact" },
   // Card order top→bottom. The middle (Technology) is the anchor; Conversion spreads
   // up and Creativity spreads down from it on scroll.
@@ -104,7 +103,7 @@ export const servicesSection = {
   eyebrow: "Service",
   title: "What We Do Best",
   subtitle:
-    "From strategy to execution, we offer end-to-end digital services designed to create impact, drive growth, and deliver measurable results.",
+    "Seven services, one team — so a project doesn't lose momentum moving from strategy to design to build.",
   cta: { label: "Schedule a call", href: "/contact" },
 };
 
@@ -185,24 +184,24 @@ export const industriesSection = {
   eyebrow: "Industries",
   title: "Impact Across Industries",
   subtitle:
-    "Our expertise extends across multiple sectors, creating digital solutions that are relevant, scalable, and results-driven.",
+    "Different sectors bring different constraints. Here's where we've built enough of a track record to know what actually matters in each.",
 };
 
 export const industries = [
   { name: "EdTech", body: "Intuitive learning platforms designed to engage users and enhance digital education experiences." },
-  { name: "IoT", body: "Connected digital ecosystems that enable real-time data, control, and seamless integration." },
-  { name: "Fashion", body: "Scalable, secure digital systems built to support complex workflows and long-term growth." },
-  { name: "Artificial Intelligence", body: "Intelligent solutions that unlock insights, automate processes, and drive smarter decisions." },
-  { name: "Enterprise Technology", body: "Scalable, secure digital systems built to support complex workflows and long-term growth." },
+  { name: "Fintech", body: "Compliance-heavy products where a single broken flow costs real trust, not just a bad review." },
+  { name: "Fashion", body: "Fast-moving storefronts and lookbooks that keep pace with a season's release schedule without a redesign each time." },
+  { name: "Logistics", body: "Tracking and fulfillment systems that stay accurate when order volume spikes without warning." },
+  { name: "Hospitality", body: "Booking and guest experiences that hold up across every device, language, and time zone." },
   { name: "Real Estate", body: "Clean, UI-friendly platforms for each market—consistent tone, premium feel, and easy to scan." },
   {
     name: "Healthcare",
-    body: "User-centered digital platforms designed to improve accessibility, enhance patient engagement, and ensure secure, compliant interactions across healthcare services and systems.",
+    body: "Patient-facing platforms built with accessibility and data compliance as requirements from day one, not an afterthought.",
     wide: true,
   },
   {
     name: "E-commerce",
-    body: "High-performing digital commerce experiences focused on seamless navigation, optimized conversions, and scalable solutions that support growth across products, platforms, and markets.",
+    body: "Storefronts built to convert under real traffic — fast checkout, clean navigation, and infrastructure that holds during a sale.",
     wide: true,
   },
 ];
@@ -216,37 +215,39 @@ export const testimonialsSection = {
 
 export const featuredTestimonial = {
   quote:
-    "Working with this team was effortless. They understood our vision clearly and delivered a design that felt modern, intuitive, and purpose-driven.",
-  name: "Polly Gray",
-  role: "Marketing Manager",
-  image: "/images/testimonials/featured-polly.png",
-  videoLabel: "Play video testimonial from Polly Gray",
+    `هذه الشركة تقدم افضل لتطوير المواقع الإلكترونية!💥
+
+أنا سعيد جدًا بتطوير موقعي الإلكتروني الذي قدمته لي شركة *أدبيديا*. فريقهم سريع الاستجابة و موثوق، و يستوعب بدقة دائمًا جميع طلباتنا. يفهمون احتياجاتنا جيدًا ويقدمون حلولًا فورية دون تأخير. كانت تجربتي معهم سلسة واحترافية للغاية. شخصيا انا أوصي بشدة بشركة *أدبيديا* لكل من يبحث عن خدمات تطوير مواقع إلكترونية ودعم فني موثوق و نتيجة مرضية.`,
+  quoteDir: "rtl" as const,
+  name: "Mansour Aljundi",
+  role: "Product Strategy Director",
+  image: "/images/testimonials/mansour-aljundi.jpg",
 };
 
 export const testimonials = [
   {
-    quote: "From concept to execution, the process was smooth and collaborative. The final outcome exceeded our expectations.",
-    name: "Joey Tribbiani",
-    role: "Founder & CEO",
-    avatar: "/images/testimonials/joey.png",
+    quote: "Shinelal and the team at Adpedia got what we needed right away, and didn't stop until it actually worked the way we wanted — not just the way it looked on paper. Every time we reached out, someone got back to us fast. We're looking forward to doing more with them.",
+    name: "Gopidas Nair",
+    role: "Founder & CEO, Eduplan UAE",
+    avatar: "/images/testimonials/gopidas-nair.jpg",
   },
   {
-    quote: "They didn't just design a website—they created an experience that aligned perfectly with our brand and business goals.",
-    name: "Rachel Green",
-    role: "Brand Strategist",
-    avatar: "/images/testimonials/rachel.png",
+    quote: "Adpedia built our corporate website, and it was a genuinely easy process from start to finish. They listened to what we actually wanted instead of pushing their own template, and were always around when we needed help. The site looks sharp and feels like it really represents Afrizon. Happy to recommend them to anyone.",
+    name: "Tabi Samuel Olickal",
+    role: "Director, Afrizon Pte Ltd",
+    avatar: "/images/testimonials/tabi-samuel-olickal.jpg",
   },
   {
-    quote: "Clear communication, strong creative thinking, and reliable delivery. A partner we'd gladly work with again.",
-    name: "Chandler Bing",
-    role: "Operations Head",
-    avatar: "/images/testimonials/chandler.png",
+    quote: "They delivered exactly what was promised, on schedule, with none of the usual project back-and-forth.",
+    name: "Barry Aspi",
+    role: "CEO, Ahura International Co. Ltd",
+    avatar: "/images/testimonials/barry-aspi.png",
   },
   {
-    quote: "The attention to detail and user experience truly stood out. Every interaction feels thoughtful and well-crafted.",
-    name: "Monica Geller",
-    role: "Marketing Manager",
-    avatar: "/images/testimonials/monica.png",
+    quote: "Every detail was handled with care, and the final result exceeded what we expected going in.",
+    name: "Praveen Panakkal",
+    role: "Director, Formosa International",
+    avatar: "/images/testimonials/praveen-panakkal.jpg",
   },
 ];
 

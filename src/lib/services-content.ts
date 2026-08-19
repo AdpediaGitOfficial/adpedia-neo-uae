@@ -3,39 +3,48 @@
 export const servicesHero = {
   title: "Services.",
   intro:
-    "We simplify complex challenges into user-friendly, scalable, and trustworthy solutions that drive measurable business growth.",
+    "Branding, UI/UX, web and app development, AI, and DevOps — the services we've built a genuine track record in, not a menu assembled to look complete.",
   photo: { src: "/images/services/hero.png", alt: "Adpedia work in progress" },
 };
 
 export const servicesStatement = {
   headline:
     "We Design and Build Solutions That Are Easy to Use, Technically Sound, and Ready to Scale—Backed by a Process Our Clients Rely On.",
-  body: "We welcome the opportunities of digitization for your organization's digital transformation to reach business goals. We create your brand by integrating digital and physical activities across channels in all possible formats.",
+  body: "The goal isn't digitization for its own sake — it's making sure your brand shows up consistently whether someone meets it online, in an app, or in person.",
 };
 
 /** The three-step process band. Each step has its own artwork in the comp. */
 export const buildBrands = {
   title: "We Build Brands That Perform",
   intro:
-    "From strategy and design to development and digital transformation, we create scalable solutions that help brands grow with confidence.",
+    "Three steps, always in the same order — the design has to be right before we build, and the build has to be solid before it goes live everywhere at once.",
   steps: [
     {
       id: "designing",
       label: "Designing",
-      image: { src: "/images/services/step-designing.png", alt: "" },
-      body: "We craft your brand story with influential designs that engage your audience. Our talented designers create a radiant profile for your company online, helping you stand out with superior user experience and website design. We reflect your brand values in every detail.",
+      image: {
+        src: "/images/services/step-designing.png",
+        alt: "Tablet showing a dark fintech website interface with trading and liquidity dashboards",
+      },
+      body: "We start with what your brand actually stands for, then design the visual identity and interfaces that carry it — not a template with your colours swapped in.",
     },
     {
       id: "develop",
       label: "Develop",
-      image: { src: "/images/services/step-develop.png", alt: "" },
-      body: "Our expert developers create impactful digital solutions for web, mobile, e-commerce, and enterprise applications. We employ best practices to develop cutting-edge technology solutions. Contact us for dedicated developers and top-notch services.",
+      image: {
+        src: "/images/services/step-develop.png",
+        alt: "Magnifying glass zoomed in on colorful lines of code on a screen",
+      },
+      body: "The design becomes a working product — web, mobile, e-commerce, or an internal tool — built by developers who stay on the project through launch, not handed off partway.",
     },
     {
       id: "digitalise",
       label: "Digitalise",
-      image: { src: "/images/services/step-digitalise.png", alt: "" },
-      body: "We welcome digitization opportunities for your organization's transformation to achieve goals. We integrate digital and physical activities across channels. Our experts help you deliver a quick, safe, and lasting experience to customers.",
+      image: {
+        src: "/images/services/step-digitalise.png",
+        alt: "Glowing abstract app interface panel with navigation icons on a dark background",
+      },
+      body: "Once it's built, we help it go live properly — integrated with the systems and channels your customers already use, not launched in isolation.",
     },
   ],
 };
@@ -49,7 +58,7 @@ export const whatWeDo = {
   eyebrow: "What We Do",
   title: "Everything You Need to Build Digitally",
   intro:
-    "From UI/UX design to web, mobile, AI, and data solutions, we cover the entire product lifecycle with clarity and confidence.",
+    "Everything below is a service we practice regularly, not a list padded out to look complete.",
   /**
    * One image per service, shown beside the active accordion row and keyed by
    * the service `id` from `serviceItems`. Add an entry as each service's art

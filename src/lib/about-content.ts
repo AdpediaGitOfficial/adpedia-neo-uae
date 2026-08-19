@@ -2,7 +2,7 @@
 
 export const aboutHero = {
   title: "About Us.",
-  intro: "When you think about easiness, we make it easy.",
+  intro: "We make the hard parts feel simple.",
 };
 
 /** Small badge pinned to the right of the stats marquee. */
@@ -13,10 +13,10 @@ export const aboutBadge = {
 
 export const aboutIntro = {
   statement: "Art and Technology Converge for Stunning Designs.",
-  body: "We've been diving into the tech world since 2012, and we're all about helping our clients design, develop, and digitize their businesses. In just a short time, we've grown our network by offering awesome services like branding, UI/UX design, and creative content that our clients really love.",
+  body: "Adpedia started in 2012 as a small design studio and grew into a full digital partner — branding, UI/UX, web and app development, and the AI work our clients are asking for now. The services list has grown; what hasn't changed is working directly with the people building the product, not through layers of account management.",
   photo: {
-    src: "/images/about/team.png",
-    alt: "The Adpedia team together in the studio",
+    src: "/images/about/about-team.png",
+    alt: "The Adpedia team together in the studio, in black and white",
   },
 };
 
@@ -26,28 +26,28 @@ export const whyHireUs = {
   eyebrow: "Why hire us",
   title: "The Advantage of Working with Us",
   subtitle:
-    "We simplify complexity with strategy, design, and execution. Our collaborative process delivers effective solutions that grow with your business.",
+    "Strategy, design, and execution under one roof, so a project doesn't stall waiting for a handoff between teams.",
   /** Order matches the comp: reading left-to-right, top-to-bottom. */
   advantages: [
     {
       id: "focus" as AdvantageId,
       title: "Focus",
-      body: "You get a dedicated team of experts fully committed to your project—working exclusively to understand your goals, challenges, and vision. This close collaboration enables clear communication, faster decision-making, and a more refined execution process. Together, we efficiently transform your ideas into a robust, scalable, and valuable digital product that delivers real impact.",
+      body: "Your project gets a team that isn't splitting attention across five other clients that week. That focus is what makes fast decisions possible without the usual back-and-forth.",
     },
     {
       id: "transparency" as AdvantageId,
       title: "Transparency",
-      body: "Every two weeks, we share a detailed progress report along with a working prototype, keeping you closely connected to the development process from start to finish. Through regular calls, emails, daily updates, and onsite visits when needed, we ensure open communication, quick feedback resolution, and complete transparency at every stage.",
+      body: "Every two weeks you get a working build, not just a status update — so you're reacting to something real instead of a slide deck.",
     },
     {
       id: "quick-results" as AdvantageId,
       title: "Quick Results",
-      body: "You may promptly introduce your product to the market through the agile methodology. You will receive an updated version of the app to test, tweak, or provide feedback after each iteration.",
+      body: "Agile sprints mean you're looking at a testable version early, giving feedback before assumptions get baked in too deep to change cheaply.",
     },
     {
       id: "partnership" as AdvantageId,
       title: "Partnership",
-      body: "Our valued clients and an extensive portfolio of successfully delivered projects stand as a true reflection of our expertise, consistency, and teamwork. The trust we build through quality execution and dependable collaboration has led many clients to work with us continuously since the company's inception, forming long-term partnerships rooted in shared growth and success.",
+      body: "Most of our work comes from clients who came back for a second project, or referred us to someone who needed one — that's the track record we'd rather point to than a portfolio page.",
     },
   ],
 };

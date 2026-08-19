@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Heading, Text } from "@/components/ui/typography";
-import { Reveal } from "@/components/ui/Reveal";
 import { careersHero } from "@/lib/careers-content";
 
 /**
@@ -26,18 +25,17 @@ export function CareersHero() {
         </Text>
       </div>
 
-      <Reveal className="mt-12">
-        <div className="relative aspect-[1720/609] w-full overflow-hidden bg-ink-800">
-          <Image
-            src={careersHero.photo.src}
-            alt={careersHero.photo.alt}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 1720px"
-            className="object-cover"
-          />
-        </div>
-      </Reveal>
+      {/* Rendered immediately (no Reveal) since it's the LCP image. */}
+      <div className="relative mt-12 aspect-[1720/609] w-full overflow-hidden bg-ink-800">
+        <Image
+          src={careersHero.photo.src}
+          alt={careersHero.photo.alt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 1720px"
+          className="object-cover"
+        />
+      </div>
     </Section>
   );
 }

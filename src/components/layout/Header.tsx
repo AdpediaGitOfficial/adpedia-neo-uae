@@ -15,6 +15,7 @@ import {
 } from "@/components/layout/MegaMenuPanels";
 import { mainNav, type MegaKey } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { useContactModal } from "@/components/providers/ContactModalProvider";
 
 const CLOSE_DELAY = 140; // ms — grace period so moving cursor into the panel never flickers
 
@@ -30,6 +31,7 @@ export function Header() {
   const [menuPrimed, setMenuPrimed] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
+  const { openContactModal } = useContactModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -84,8 +86,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        solid ? "border-b border-white/10 bg-ink/90 backdrop-blur-md" : "bg-transparent"
+        "fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-colors duration-300",
+        solid ? "bg-ink/90 backdrop-blur-md" : "bg-transparent"
       )}
       onMouseLeave={scheduleClose}
       onBlur={(e) => {
@@ -100,12 +102,12 @@ export function Header() {
           onMouseEnter={closeNow}
         >
           <Image
-            src="/images/brand/logo-white.png"
+            src="/images/logos/logo-white.svg"
             alt="Adpedia Neo"
-            width={172}
-            height={50}
+            width={144}
+            height={43}
             priority
-            className="h-7 w-auto md:h-8"
+            className="h-9 w-auto md:h-12"
           />
         </Link>
 
@@ -176,7 +178,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3" onMouseEnter={closeNow}>
-          <Button href="/contact" className="hidden sm:inline-flex">
+          <Button onClick={openContactModal} className="hidden sm:inline-flex">
             Book a call
           </Button>
           <MobileMenu />

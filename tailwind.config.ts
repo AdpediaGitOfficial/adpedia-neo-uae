@@ -14,30 +14,22 @@ const config: Config = {
         // Core surfaces
         ink: {
           DEFAULT: "#000000", // primary dark background
-          900: "#0a0a0a",
           800: "#0e0e0e", // elevated dark cards / footer
           700: "#141414",
-          600: "#1a1a1a",
         },
         paper: {
           DEFAULT: "#ffffff", // light section background
-          100: "#fafafa",
           200: "#f7f7f7", // light inner cards
-          300: "#efefef",
         },
         // Brand accent (indigo) — exact fill sampled from Figma buttons: #3631BF
         accent: {
           DEFAULT: "#3631bf",
           50: "#eeedfb",
-          100: "#d9d7f4",
-          200: "#b3aee9",
           300: "#8d86de",
           400: "#645cd0",
           500: "#4a43cc",
           600: "#3631bf", // primary
           700: "#2c289b",
-          800: "#221f78",
-          900: "#191655",
         },
       },
       fontFamily: {
@@ -94,7 +86,6 @@ const config: Config = {
         xl: "0",
         "2xl": "0",
         "3xl": "0",
-        card: "0",
         full: "9999px",
       },
       keyframes: {

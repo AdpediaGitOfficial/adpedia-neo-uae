@@ -34,11 +34,11 @@ export function Footer() {
             {/* Brand */}
             <div className="max-w-xs sm:col-span-2 lg:col-span-1">
               <Image
-                src="/images/brand/logo-white.png"
+                src="/images/logos/logo-white.svg"
                 alt="Adpedia Neo"
-                width={172}
-                height={50}
-                className="h-8 w-auto"
+                width={144}
+                height={43}
+                className="h-12 w-auto"
               />
               <Text className="mt-6">
                 We are a creative digital studio crafting impactful brand experiences through strategy,
@@ -104,21 +104,10 @@ export function Footer() {
           </div>
 
           {/* Bottom bar — inside the card, matching Figma */}
-          <div className="relative mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-body-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
+          <div className="relative mt-14 border-t border-white/10 pt-6 text-body-sm text-white/45">
             <p>
               {siteConfig.shortName} © {year} All rights reserved
             </p>
-            <div className="flex items-center gap-3">
-              <Link href="/privacy-policy" className="transition-colors hover:text-white">
-                Privacy Policy
-              </Link>
-              <span aria-hidden className="text-white/25">
-                |
-              </span>
-              <Link href="/terms" className="transition-colors hover:text-white">
-                Terms &amp; Conditions
-              </Link>
-            </div>
           </div>
         </Card>
       </Container>

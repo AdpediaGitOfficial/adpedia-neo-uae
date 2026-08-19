@@ -3,7 +3,7 @@
 export const contactHero = {
   title: "Get in Touch.",
   intro:
-    "Have an idea? Let's discuss and create something meaningful. Share your vision, and we'll help turn it into a user-focused experience.",
+    "Tell us what you're building and where it's stuck. We'll reply with next steps, not a sales deck.",
 };
 
 export const contactForm = {
@@ -27,5 +27,23 @@ export const serviceOptions = [
   "AI & Data Science",
   "Product Development",
   "DevOps Services",
-  "Something else",
+  "General Inquiry",
 ];
+
+/** Copy for the quick-contact modal opened from the header's "Book a call" CTA. */
+export const quickContactModal = {
+  eyebrow: "Let's Talk.",
+  title: "Tell us what you're building.",
+  intro: "Share a few details and we'll get back to you within a day.",
+  fields: {
+    name: { label: "Name", placeholder: "Name*" },
+    email: { label: "Email", placeholder: "Email*" },
+    phone: { label: "Phone Number", placeholder: "Phone Number*" },
+    service: { label: "Service", placeholder: "Select a service" },
+    message: { label: "Message", placeholder: "Message*" },
+  },
+  submit: "Send message",
+  success: "Thanks — your message is on its way. We'll be in touch shortly.",
+  error: "Something went wrong sending your message. Please try again or email us directly.",
+  footnote: "We typically reply within one business day.",
+};
